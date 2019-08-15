@@ -9,8 +9,8 @@ body {
 	background: #fff;
 }
 
-.navbar-light {
-	background-color: #ffffff;
+.nav-item.active{
+	border-bottom: 0.1px solid #000000;
 }
 
 .main-container {

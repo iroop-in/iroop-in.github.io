@@ -13,6 +13,12 @@ body {
 	border-bottom: 0.1px solid #000000;
 }
 
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
 
 @media (max-width: 767px) {
   body { padding-right: 0px; padding-left: 0px; }
@@ -47,7 +53,7 @@ h5 {
 h6 {
 	font-family: "Karla", sans-serif;
 	color: black;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: lighter;
 }
 
@@ -121,58 +127,3 @@ p {margin-bottom: 20px;}
 	text-indent:-9999px;
 	z-index:12; 
 }
-
-.effect {
-	max-width: 10%; 
-	margin-right: 20px;
-}
-
-/* Image Effect */
-
-.photo{
-	display: block;
-  }
-  
-  .photo img{
-	object-fit: cover;
-	box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
-	display: block;
-	transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-	margin-top: -10px;
-  }
-  
-  .photo:hover img{
-	box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
-  }
-  
-  .photo .glow-wrap{
-	overflow: hidden;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	margin-top: -10px;
-  }
-  
-  .photo .glow{
-	display: block;
-	position:absolute;
-	width: 40%;
-	height: 200%;
-	background: rgba(255,255,255,.2);
-	top: 0;
-	filter: blur(5px);
-	transform: rotate(45deg) translate(-450%, 0);
-	transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  
-  .photo:hover .glow{
-	transform: rotate(45deg) translate(450%, 0);
-	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-  }
-  
-  .photo:hover img,
-  .photo:hover .glow-wrap{
-	margin-top: 0;
-  }
-  

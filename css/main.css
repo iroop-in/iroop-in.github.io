@@ -1,8 +1,8 @@
 html, body {
 	font-size:12px; 
 	line-height:18px;
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	margin: 0;
  }
 
 body {
@@ -20,15 +20,8 @@ body {
 }
 
 
-@media (max-width: 767px) {
-  body { padding-right: 0px; padding-left: 0px; }
-  .container {margin-right: 20px; margin-left: 20px;}
- }
 
 
-.col-center {
-	display: inline-block;
-}
 
 
 h2, h6,  {
@@ -37,10 +30,10 @@ h2, h6,  {
 }	
 
 h4 {
-	font-family: "Karla", sans-serif;
+	font-family: "minion-pro", sans-serif;
 	color: grey;
 	font-weight: lighter;
-	
+	font-size: 18px;
 }
 
 h5 {
@@ -51,9 +44,9 @@ h5 {
 }
 
 h6 {
-	font-family: "Karla", sans-serif;
+	font-family: "minion-pro", sans-serif;
 	color: black;
-	font-size: 18px;
+	font-size: 23px;
 	font-weight: lighter;
 }
 
@@ -64,49 +57,19 @@ h3 {
 }
  
 h1 {
-	font-family: "Karla", sans-serif;
-	font-weight: bolder;
+    font-family: "minion-pro-condensed-subhead", sans-serif;
+    font-weight: 700;
 	line-height: 1;
-	font-size: 92px;
-}
-
-
-h1.title-bg, h2.title-bg, h3.title-bg, h4.title-bg , h5.title-bg, h6.title-bg {
-	background:#fff; 
-	padding:5px 5px;
-	margin: 20px 10px 0px 0px;
-	/*border-bottom: 1px solid #000;*/
-}
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {color:#7f7f7f;}
-h2 small {font-size: 30px;}
-h5 small {font-size: 14px;}
-h6 small {font-size: 12px;}
-
-h5.title-bg button {
-	float: right; 
-	text-transform: none;
-	margin-left:5px;
+	font-size: 62px;
 }
 
 /***** Links *****/
 
 a, a:hover { 
 	color: #33375A;
+	font-family: "minion-pro", sans-serif;
 }
 
-/***** Misc *****/
-i {margin-right: 3px;}
-p {margin-bottom: 20px;}
-
-
-@media only screen and  (max-width: 767px) {
-	.btn {margin-bottom: 20px;}
-}
-
-.left {float: left;}
-.right {float: right;}
-.align-left{float: left; margin: 0px 20px 20px 0px;}
-.align-right{float: right; margin: 0px 0px 20px 20px;}
 
 .color-bg { background:#292783; }
 .color { color:#292783; }
@@ -114,16 +77,3 @@ p {margin-bottom: 20px;}
 .color-bar { background: linear-gradient(to right, #FF9933 0%, #FF9933 33%, #fcfcfc 33%, #fcfcfc 66%, #138808 66%, #138808 100%); height:5px; position: fixed; }
 
 
-#toTop {
-	width:47px;
-	height:47px;
-	background:url(../img/back-top-btn.png) no-repeat;
-	text-align:center;
-	position:fixed;
-	bottom:25px;
-	right:20px;
-	cursor:pointer;
-	display:none;
-	text-indent:-9999px;
-	z-index:12; 
-}

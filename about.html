@@ -7,18 +7,10 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- BOOTSTRAP 4  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+  
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- SASS-->
-    <link rel="stylesheet" href="css/image.scss"> 
+    <!-- <link rel="stylesheet" href="css/debug.css"> --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 
     <!-- FONTS  -->
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
@@ -31,6 +23,7 @@
 
     <!-- JS -->
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(window).focus(function(){
@@ -43,63 +36,91 @@
       });
     </script>
 
+    <style>
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .newfont{
+        font-family: "";
+      }
+
+      .Site {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .Site-content {
+        flex: 1;
+      }
+
+    </style>
+
 </head>
 
-<body>
-	<div class="color-bar"></div>
-    <div class="containers h-100 w-100" >
-      <div class="row align-items-center h-100 w-100">
-          <div class="col-sm-3"></div>
-          <div class="col-sm-6 d-flex justify-content-center">
-              <!--<img src="beard.png" alt="Myself" style="width: 180px; margin-right: 20px;" > -->
-              <div class="text-left">
-                <h4 href="translate.google.com" id="demo"></h4>
-                <br>
-                <h6>I'm a lead designer for nurtr. Recently graduated from Indian Institute of Information Technology, Allahabad. Lorem Ipsum.  </h6>
-                <br>
-                <h6>Lorem Ipsum </h6>
-                <br>
-                <h6><a href="https://facebook.com" style="color: #292783"> Email</a> / <a href="https://iliospower.in" style="color: #292783">Linkedin</a> / <a href="www.facebook.com" style="color: #292783">Facebook</a></h6>
-                <br>
-                <br>
-              </div>
+<body class="Site">
+
+    <section class="hero">
+        <div class="hero-body">
+            <!-- ... -->
+        </div>
+    </section>
+
+    <section class="section Site-content">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-three-fifths">
+                <h1>I'm a lead designer for nurtr. Recently graduated from Indian Institute of Information Technology, Allahabad.
+                </h1>
+            </div>
+            
           </div>
-                <nav class="navbar navbar-expand-sm navbar-light fixed-bottom">
-                  <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="index.html">Roop Krrish</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="design.html">Design</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="code.html">Code</a>
-                      </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="final_resume.pdf">Resume</a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="about.html">About</a>
-                    </li>
-                  </ul>
-                </nav>
-      </div>
-    </div>
-  </div>
+        </div>
+    </section>
+
+    <nav class="level is-mobile">
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Home</a>
+        </p>
+        <p class="level-item has-text-centered">
+            <a class="link is-info">Home</a>
+        </p>
+        <p class="level-item has-text-centered">
+            <a class="link is-info">Home</a>
+        </p>
+        <p class="level-item has-text-centered">
+            <a class="link is-info">Home</a>
+        </p>
+    </nav>
+
+    <footer class="footer is-fixed-bottom">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Designed & Developed</strong> by <a href="https://jgthms.com">me</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+    </footer>
+
 
     
-  <script>
-  	  var greeting;
-	  var time = new Date().getHours();
-	  if (time < 12) {
-	    greeting = "Śubhōdayaṁ";
-	  } else if (time < 17) {
-	    greeting = "Śubha Madyāhnaṁ";
-	  } else {
-	    greeting = "Śubha Sāyantraṁ";
-	  }
-	  document.getElementById("demo").innerHTML = greeting ;
-	</script>  
+    <script>
+        var greeting;
+      var time = new Date().getHours();
+      if (time < 12) {
+        greeting = "Śubhōdayaṁ";
+      } else if (time < 17) {
+        greeting = "Śubha Madyāhnaṁ";
+      } else {
+        greeting = "Śubha Sāyantraṁ";
+      }
+      document.getElementById("demo").innerHTML = greeting ;
+    </script>  
 
     
 </body>

@@ -7,15 +7,10 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- BOOTSTRAP 4  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+  
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 
     <!-- FONTS  -->
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
@@ -28,6 +23,7 @@
 
     <!-- JS -->
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(window).focus(function(){
@@ -40,61 +36,77 @@
       });
     </script>
 
+    <style>
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      html,body{
+        height: 100%;
+      }
+
+
+    </style>
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="row" >
-            <div class="card-deck" style="margin-top:150px" href="gamification.html"  >
-                    <div class="card shadow-sm border-0">
-                      <img class="card-img-top"  src="beard.png" href="gamification.html" alt="Card image cap">
-                      <div class="card-body stretched-link">
-                        <h5 class="card-title" style="color: black; font-weight: bolder;">Gamification @nurtr</h5>
-                        <h2 class="card-subtitle mb-3 text-muted" style="color:grey">To enhance user engagement</h2>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img class="card-img-top" src="roop.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <img class="card-img-top" src="roop.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                      </div>
-                    </div>
-            </div>   
-
+  <section class="hero is-fullheight is-backgroundwhite is-medium">
+      <!-- Hero head: will stick at the top -->
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              
+            </div>
+            
+          </div>
+        </nav>
+      </div>
     
-              <nav class="navbar navbar-expand-sm navbar-light fixed-bottom" style="background-color: #fff">
-                    <ul class="navbar-nav mx-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Roop Krrish</a>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" href="design.html">Design</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="code.html">Code</a>
-                        </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="final_resume.pdf">Resume</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                      </li>
-                    </ul>
-                  </nav>
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            Roopesh Krishna L
+          </h1>
+          <h2 class="subtitle">
+              A Digital Product Designer who codes based in India
+          </h2>
         </div>
       </div>
-    </div>
+    
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-foot">
+        <nav class="tabs">
+          <div class="container">
+            <ul>
+              <li><a href="index.html">Roop Krrish</a></li>
+              <li class="is-active"><a>Design</a></li>
+              <li><a>Code</a></li>
+              <li><a>About</a></li>
+              <li><a>Resume</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+    
+    <script>
+        var greeting;
+      var time = new Date().getHours();
+      if (time < 12) {
+        greeting = "Śubhōdayaṁ";
+      } else if (time < 17) {
+        greeting = "Śubha Madyāhnaṁ";
+      } else {
+        greeting = "Śubha Sāyantraṁ";
+      }
+      document.getElementById("demo").innerHTML = greeting ;
+    </script>  
 
     
 </body>

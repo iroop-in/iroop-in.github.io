@@ -1,0 +1,79 @@
+html, body {
+	font-size:12px; 
+	line-height:18px;
+	height: 100vh;
+	margin: 0;
+ }
+
+body {
+	background: #fff;
+}
+
+.nav-item.active{
+	border-bottom: 0.1px solid #000000;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+
+
+
+
+
+h2, h6,  {
+	font-family: "Raleway", sans-serif; 
+	font-weight: normal; 
+}	
+
+h4 {
+	font-family: "minion-pro", sans-serif;
+	color: grey;
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+h5 {
+	font-family: "Karla", sans-serif;
+	color: grey;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+h6 {
+	font-family: "minion-pro", sans-serif;
+	color: black;
+	font-size: 23px;
+	font-weight: lighter;
+}
+
+h3 {
+	font-family: "Karla", sans-serif;
+	font-weight: lighter;
+	line-height: 1.4;
+}
+ 
+h1 {
+    font-family: "minion-pro-condensed-subhead", sans-serif;
+    font-weight: 700;
+	line-height: 1;
+	font-size: 62px;
+}
+
+/***** Links *****/
+
+a, a:hover { 
+	color: #33375A;
+	font-family: "minion-pro", sans-serif;
+}
+
+
+.color-bg { background:#292783; }
+.color { color:#292783; }
+.color-bar { width:100% }
+.color-bar { background: linear-gradient(to right, #FF9933 0%, #FF9933 33%, #fcfcfc 33%, #fcfcfc 66%, #138808 66%, #138808 100%); height:5px; position: fixed; }
+
+

@@ -11,11 +11,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/casestudy.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/casestudy.scss">
 
     <!-- FONTS  -->
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
 
 
@@ -29,7 +31,7 @@
     <link rel="shortcut icon" id="changingFavicon" type="image/png" href="https://img.icons8.com/color/48/000000/captain-america.png"/>
 
     <!-- JS -->
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
     <script type="text/javascript">
@@ -41,35 +43,104 @@
         $("#changingFavicon").attr("href", "https://img.icons8.com/color/48/000000/hulk.png");
         document.title = "Aah! Come Back.";
       });
-    </script>
-    
+    </script>  
 
 </head>
 
+
+
 <body>
 
-    <ul class="breadcrumb">
-        <li><a href="index.html">Roop Krrish</a></li>
-        <li><a href="design.html">Design</a></li>
-        <li>Gamification</li>
-    </ul>
+    <div id="rpi-progress-bar-container" 
+      role="progressbar" 
+      aria-valuemin="0" 
+      aria-valuemax="100" 
+      aria-valuenow="0">
+      
+      <div class="rpi-progress-bar-container__position" aria-hidden="true"></div>
+      <div class="rpi-progress-bar-container__percentage"></div> 
 
+    </div>
+  
+  <top>
+
+
+
+  </top>  
+
+  
 
   <header>
-      
-      <h4>March 2019 - August 2019</h4>
-      <h1 style="font-size:60px;">Gamification</h1>
-      <h4 style="color: grey; ">To enhance user engagement</h4>
 
+      <!-- <div class="grid-container-1">
+          <div class="item1">
+              <ul class="breadcrumb">
+                  <li><a href="index.html">Roop Krrish</a></li>
+                  <li><a href="design.html">Design</a></li>
+                  <li>Gamification</li>
+              </ul> 
+          </div>
+          <div class="item2">
+            
+          </div>
+          
+          <div class="item3" style="text-align:left; margin: 10px 0px;">
+              <h4 style="font-size: 18px;" >Factmata</h4>
+          </div>
+      </div> -->
+
+      <div class="header-1">
+          <a href="#default" class="logo">Roop Krrish</a>
+          <div class="header-right">
+            <a class="active" style="font-size: 15px; font-family: 'Poppins', sans-serif;" href="#contact"><img class="arrow-1" src="arrow.png"> nurtr </a>
+            <a class="active" style="font-size: 15px; font-family: 'Poppins', sans-serif;" href="#contact">Factmata <img class="arrow" src="arrow.png"></a>
+            
+          </div>
+      </div>
+      
+
+      <h4 style="">March 2019 - August 2019</h4>
+      <h1 style="font-size:8vw;">Gamification</h1>
+        
+      <div class="grid-container-2">
+        <div class="item1">
+
+        </div>
+        <div class="item2">
+         <img class = "game" src="gamified.jpg" alt="Gamification" style="margin-right:15px;">
+        </div>
+        <div class="item3">  
+         <div class="grid-container">
+        
+            <div class="item1">
+              <h4 style="font-size: 15px;font-family: 'Poppins', sans-serif;">Company</h4>
+              <h3 style="font-family: 'Poppins',sans-serif;">nurtr</h3>
+            </div>
+            <div class="item2">
+              <h4 style="font-size: 15px;font-family: 'Poppins', sans-serif;">Role</h4>
+              <h3 style="font-family: 'Poppins',sans-serif;">UX Research, Interface Design & Algorithm Design</h3>
+            </div>
+            <div class="item3">
+              <h4 style="font-size: 15px;font-family: 'Poppins',sans-serif;" >Challenge</h4>
+              <h3 style="font-family: 'Poppins',sans-serif;">To enhance user engagement</h3>
+            </div> 
+            
+         </div>
+        </div>
+      </div>
+
+      
   </header>
+
   
+
   <nav>
       <ul >
         <li><a href="#section-2" style="padding-top: 80px;" >Brief</a></li>
         <li><a href="#section-3">Problem</a></li>
         <li><a href="#section-4">Objectives</a></li>
         <li><a href="#section-5">Process</a></li>
-        <li><a href="#section-6">UX Research</a></li>
+        <li><a href="#section-6">Research</a></li>
         <li><a href="#section-7">Model</a></li>
         <li><a href="#section-8">Inferences</a></li>
         <li><a href="#section-9">Section 9</a></li>
@@ -234,7 +305,177 @@
 
     
                 
-                
+   <script type="text/javascript">
+     function getTransformVendorPrefixAsString() {
+          // http://shouldiprefix.com/#transforms
+          const el = document.createElement('div');
+          const names = {
+            transform: 'transform',  // Modern
+            WebkitTransition: 'webkitTransform', // iOS7+
+            MsTransform: 'msTransform', // IE9+
+          };
+
+          /* eslint-disable */
+          for (var name in names) {
+            if (el.style[name] !== undefined) {
+              return names[name];
+            }
+          }
+          /* eslint-enable */
+          return 'transform';
+        }
+
+        // Cross-browser
+        function getScrollPosition() {
+          return window.pageYOffset || document.documentElement.scrollTop || 0;
+        }
+
+        // Cross-browser http://stackoverflow.com/a/11077758/815507
+        function getDocumentHeight() {
+          return Math.max(
+            document.documentElement.clientHeight,
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight,
+          );
+        }
+
+        // Cross-browser
+        function getViewHeight() {
+          return Math.max(
+            window.innerHeight,
+            0);
+        }
+
+        // https://john-dugan.com/javascript-debounce/
+        function debounce(e, t, n) {
+          /* eslint-disable */
+          var a;
+          return function () {
+            var r = this,
+              i = arguments,
+              o = function () {
+                a = null, n || e.apply(r, i)
+              },
+              s = n && !a;
+            clearTimeout(a), a = setTimeout(o, t || 200), s && e.apply(r, i)
+          }
+          /* eslint-enable */
+        }
+
+        // export default 
+        class ReadingPositionIndicator {
+          constructor(props = {
+            color: null,
+            percentage: {
+              show: false,
+              displayBeforeScroll: false,
+              color: null,
+              opacity: null,
+            },
+          }) {
+            this.props = props;
+            this.scroll = {
+              maxHeight: 1,
+              last_known_scroll_position: 0,
+              ticking: false,
+            };
+          }
+
+          init() {
+            this._transformName = getTransformVendorPrefixAsString();
+
+            this.progressBarContainerEl = document.getElementById('rpi-progress-bar-container');
+            this.progressBarEl = this.progressBarContainerEl.querySelector('.rpi-progress-bar-container__position');
+            this.progressBarPercentageEl = this.progressBarContainerEl.querySelector('.rpi-progress-bar-container__percentage');
+
+            if (this.props.color) {
+              this.progressBarEl.style.background = this.props.color;
+            }
+            if (this.props.percentage) {
+              if (this.props.percentage.color) {
+                this.progressBarPercentageEl.style.color = this.props.percentage.color;
+              }
+              if (this.props.percentage.opacity) {
+                this.progressBarPercentageEl.style.opacity = this.props.percentage.opacity;
+              }
+            }
+
+            this._onResize = debounce(() => {
+              this._update();
+              this._updateProgressBar(getScrollPosition());
+            }, 200);
+
+            this._update();
+
+            this._onScroll = this._onScroll.bind(this);
+            this._onResize = this._onResize.bind(this);
+
+            window.addEventListener('scroll', this._onScroll);
+            window.addEventListener('resize', this._onResize);
+
+            return this;
+          }
+
+          destroy() {
+            window.removeEventListener('scroll', this._onScroll);
+            window.removeEventListener('resize', this._onResize);
+            return this;
+          }
+
+          _update() {
+            this.scroll.documentHeight = getDocumentHeight();
+            this.scroll.viewHeight = getViewHeight();
+            this.scroll.maxHeight = this.scroll.documentHeight - this.scroll.viewHeight;
+            
+          }
+
+          _onScroll() {
+            // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
+            this.scroll.last_known_scroll_position = getScrollPosition();
+            if (!this.scroll.ticking) {
+              window.requestAnimationFrame(() => {
+                this._updateProgressBar(this.scroll.last_known_scroll_position);
+                this.scroll.ticking = false;
+              });
+            }
+            this.scroll.ticking = true;
+          }
+
+          _updateProgressBar(scrollPosition) {
+            const value = Math.min(scrollPosition || 0, this.scroll.maxHeight);
+            const percentage = Math.round((100 * value) / Math.max(this.scroll.maxHeight, 1));
+            this.progressBarContainerEl.setAttribute('aria-valuenow', percentage);
+            this.progressBarEl.style[this._transformName] = `scaleX(${percentage / 100})`;
+
+            if (this.props.percentage && this.props.percentage.show) {
+              if (this.scroll.viewHeight >= this.scroll.documentHeight) {
+                this.progressBarPercentageEl.textContent = '';
+              } else {
+                this.progressBarPercentageEl.textContent = `${percentage}%`;
+              }
+            }
+          }
+        }
+
+
+        /* -------------------------------------------------------------- 
+          Demo 
+        */
+        const readingPositionIndicator = new ReadingPositionIndicator({
+          color: 'rgba(0,128,255,.5)',
+          percentage: {
+            show: false,
+            displayBeforeScroll: false,
+            color: '#000',
+            opacity: .3,
+          },
+        }).init();
+
+        //readingPositionIndicator.destroy(); // use when to be removed
+        
+    </script>              
     
     
                 
@@ -259,7 +500,10 @@
     <script>
       const swup = new Swup();
     </script>
+
+
     <script>
+
       let mainNavLinks = document.querySelectorAll("nav ul li a");
       let mainSections = document.querySelectorAll("main section");
 
@@ -292,6 +536,8 @@
         });
       });
     </script>
+
+
   
 
     

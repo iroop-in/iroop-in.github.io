@@ -1,205 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hello Bulma!</title>
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+        <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+		<style>
 
-<head>
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-    <title>Gamification @nurtr</title>
+        .content h1, .content h2, .content p, .content h3 {
+          color: black;
+        }
+        
+        h1{
+            font-family: "minion-pro-condensed-subhead", sans-serif;
+            font-weight: 700;
+            color: black;
+        }
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        h2, h3, h4, h6, p{
+            font-family: "minion-pro", "karla", sans-serif;
+            color: black;
+        }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/test.css">
+        .breadcrumb a {
+          color: black;
+        }
 
+        .breadcrumb li :hover{
+          text-decoration: underline;
+        }
 
-    <!-- FONTS  -->
-    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
+        .title {
+          font-size: 60px;
+          color: black;
+          font-family: "minion-pro", "karla", sans-serif;
+        }
 
-    <!-- FAVICON -->
-    <link rel="shortcut icon" id="changingFavicon" type="image/png" href="https://img.icons8.com/color/48/000000/captain-america.png"/>
+        blockquote {
+            font-family: "minion-pro", "karla", sans-serif;
+            font-style: italic;
+        }
 
-    <!-- JS -->
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      $(window).focus(function(){
-        $("#changingFavicon").attr("href", "https://img.icons8.com/color/48/000000/captain-america.png");
-        document.title = "Roop Krrish";
-      });
-      $(window).blur(function(){
-        $("#changingFavicon").attr("href", "https://img.icons8.com/color/48/000000/hulk.png");
-        document.title = "Aah! Come Back.";
-      });
-    </script>
+        #gameimage {
+          z-index: 1;
+          margin-top: -100px;
+        }
 
-</head>
+        .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+        .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 150px; }
+        .is-paddingless-horizontal-new1 { padding-left: 0; padding-right: 0; padding-bottom: 0; }
+        .is-paddingless-horizontal-vertical { padding-left: 0; padding-right: 0; padding-top:0; }
 
-<body>
-    <div class="wrapper" >
-            <div class="left role">
-                    
-                    <h2 class="tp"><strong> Challenge </strong></h2>
-                    <h4> To enhance the user engagement in nurtr platform and examine the analytics</h4>
-                    <br>
-                    <h2 style="font-weight: bolder;"> Role </h2>
-                    <h4 class="btm"> UX Research, Interface Design, Illustrations and algorithm building</h4>
-                </div>
-              <div class="right"> 
+        .grid {
+          display: grid;
+          grid-template-columns:
+            [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+        }
 
-                <!-- Abstract-->
-                
-                <h1 style="margin: 10;">Overview</h1>
-                <blockquote> "Growth without engagement is a leaky bucket. You have to retain users to grow sustainability"
-                <span></span>- Nir eyal
-                </blockquote>
-                <h4>Modern era is that of mushrooming startups where these companies expects success over nights rather than years. With digital India pushing its way forward, more and more people are getting connected over internet setting their footprints. Today companies are vying for user engagement resulting in never seen competition among the firms to acquire traffic on web.
-                <br>   
-                <br>    
-                <span style="font-style: italic;">Gamification</span> as per recent researches has found its way in user engagement and retention. Consumers of e-Learning platforms tend to get bored with one way communication, followed by poor retention of users in this competitive world. Thus studying user behavior to get things done has become a popular among platforms. Game elements helps to engage user by giving sense of achievement, loss of progress or competitiveness among peers. Major giants like Facebook and Instagram thrive on gamification for maintaining the huge user base.
-                <br>
-                <br>
-                This report introduces the gamification model that is being implemented at nurtr. The model includes user behavior analytics over implemented game elements like popup of daily puzzle, email campaign management for cold users by sending passive notification and introduction of games for competitiveness. All this can help to tackle the problem of user attrition and enhance user experience on platform as well.
-                </h4>
+        .grid *  { grid-column: md; }
+        .grid-xl { grid-column: xl; }
 
-                <br>
-                <br>
+        @media (max-width: 672px) {
 
-                <!-- 1.Introduction-->
+          .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 100px; }
 
-                <!-- <h4 style="color:grey; margin: 0;">Chapter 1</h4> -->
-                <h1 style="margin: 10;">Introduction</h1>
-                <h4>The volumes are large, the information comes in a variety of data types, and it’s coming in at a high velocity. Yes, I am talking about organizations processing thousands of events a day, such as nurtr, with about 12000 subscribers generating gigabytes of data. The huge volume of log data generated by today’s enterprises presents IT professionals with both a challenge and an opportunity. The challenge is managing large amounts of unstructured data. The opportunity is turning that data into actionable insights that can have a meaningful impact on the business or organization. Two of the biggest barriers to timely problem resolution are managing the volume of log data and knowing the right questions to ask to increase engagement.
-                <br>
-                <br>
-                Also, in this scalable environment, monitoring the infrastructures is of utmost importance for the organization.
-                <br>   
-                <br>   
-                <br> 
-                </h4>
+          #gameimage {
+            margin-top: -70px;
+          }
+          
+          .title{
+            font-size: 40px;
+          }
 
-                <!-- 1.1 E-Learning-->
+          :root {
+            font-size: 90%;
+          }
+        }
 
-                <h2 style="margin-bottom:20px;">E-Learning</h2>
-                <h4>
-                A learning system based on formalised teaching but with the help of electronic resources is known as E-learning. While teaching can be based in or out of the classrooms, the use of computers and the Internet forms the major component of E-learning. E-learning can also be termed as a network enabled transfer of skills and knowledge, and the delivery of education is made to a large number of recipients at the same or different times. Earlier, it was not accepted wholeheartedly as it was assumed that this system lacked the human element required in learning.
-                <br>
-                <br>
-                <strong>Description :</strong> E-Learning has proved to be the best means in the corporate sector, especially when training programs are conducted by MNCs for professionals across the globe and employees are able to acquire important skills while sitting in a board room, or by having seminars, which are conducted for employees of the same or the different organizations under one roof. The schools which use E-learning technologies are a step ahead of those which still have the traditional approach towards learning.
-                <br>
-                <br>
-                <br>
-                </h4>
+		</style>
+	</head>
+	<body >
 
-                <!-- 1.2 Customer Disengagement -->
+		<!-- .section -->
+		<section class="section is-paddingless-horizontal" style="background-color: rgb(202, 220, 238);">
+			<div class="container grid">
+				<nav class="breadcrumb" aria-label="breadcrumbs">
+					<ul>
+            <li><a href="design.html">Design</a></li>
+						<li class="is-active"><a href="#" aria-current="page">Gamification</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+		<!-- /.section -->
+		
+		<!-- .section  1 -->
+		<section class="section is-paddingless-horizontal-new" style="padding-top: 0; background-color:rgb(202, 220, 238);">
+			<div class="container grid" style="max-width: 1024px;">
 
-                <h2 style="margin-bottom:20px;">Customer Disengagement</h2>
-                <h4>
-                Recently, plenty of research was conducted on engagement more particular on enhancing Customer Engagement (CE). The flip side of CE, namely Customer Disengagement (CDE), seems to be uncharted. Thus,this report elaborates a working definition on CDE. This includes the interrelation of CE and CDE. According to this report, CDE is described as a psychological process that can cause the state of complete detachment from a Brand or Service (B/S). CDE could have behavioural outcomes in terms of Negative Customer Engagement (NCE). Additionally, it interrelates with former CE levels and varies across contexts. CDE is supposed to be a promising research field.
-                <br>
-                <br>
-                <br>
-                </h4>
+				<!-- .media -->
+			<!-- 	<article class="media center">
+					<figure class="media-left">
+						<span class="image is-64x64">
+							<img src="roop.jpg">
+						</span>
+					</figure>
+					<div class="media-content">
+						<div class="content">
+							<p>
+								<strong>Roop Krrish</strong> <a href="#">@roopkrrish_1313</a><br>
+								<span class="has-text-grey">nurtr<br>
+								<time datetime="2018-04-20">Jan '19 - Aug '19</time> · 20 min read</span>
+							</p>
+						</div>
+					</div>
+				</article> -->
+				<!-- /.media -->
 
-                <!-- 2. Gamification-->
+				<!-- .section -->
+				<div class="section is-paddingless-horizontal-vertical">
+          <h1 class="title is-3">
+            nurtr
+          </h1>
+					<h1 class="title">
+						Gamification to enhance user engagement
+					</h1>
+				
+          <p style="font-family:inherit;">
+              <span class="has-text-grey"> Jan 2019 - Aug 2019 · 20 min read</span>
+          </p>
+          
+				</div>
+        <!-- /.section -->
+        
+        
 
-                <!-- <h4 style="color:grey; margin: 0;">Chapter 1</h4> -->
-                <h1 style="margin: 10;">What is Gamification?</h1>
-                <h4>Gamification is the process of taking something that already exists – a website, an enterprise application, an online community – and integrating game mechanics into it to motivate participation, engagement, loyalty and to obtain game dynamics from it.
-                <br>
-                <div class="right role">
-                    <img class = "image" src="game.jpg" alt="Gamification">
-                </div>
-                <br>
-                Also, in this scalable environment, monitoring the infrastructures is of utmost importance for the organization.
-                <br>   
-                <br>   
-                <br> 
-                </h4>
+				<div class="content is-medium">
+          
+					<p>
+						This came to my mind when I realized the engagement rate is par low along with the conversion rate. I tried to change the inner pages which resulted in v2 of the website and discussed in other project but Gamification is much more interesting than what we think.
+						
+					</p>
+					<p>
+						This case study introduces the gamification model that is being implemented at nurtr. The model includes user behavior analytics over implemented game elements like of <strong> daily puzzle, email campaign management for cold users by sending passive notification and introduction of games for competitiveness</strong>. All this can help to tackle the problem of user attrition and enhance user experience on platform as well.
+          </p>
 
-                <!-- Problem Statement -->
+          <!-- /.columns -->
 
-                <h1 style="margin: 10;">Problem Statement</h1>
-                <h4>In starting phase of a product based startup, the most delicate concern surmounts the lead generation. Though decent userbase exist for the company (20000+ registrations of professional chess players as well as aspirants) the stats clearly projects retention of users as the major issue for the time being. This indicated that although the organization exhibit expansive growth in registrations, it still lacked a good retention of students on our e-learning platform. The log analysis report (section 3.1) put forward the dropout rates across existing content on platform, thus depicting the lack of favourable consumer interaction elements on the platform.
-                <br>
-                <br>
-                Following points jot down the major issues involved:
-                <br>    
-                <ol>
-                  <li>
-                     <strong>Lack of data point in log analysis</strong> to measure existing engaging components on company’s website.
+        </div>
+        
+      </div>
+      
+    </section>
+          	
+    <!-- /.section 1-->
 
-                  </li>
-                  <br>
-                  <li>
-                      <strong>Non-existence of feedback forms</strong> to capture direct experiences of the students engaging on platform: The sales team in collaboration of world class GMs was responsible for introducing and materializing the products, but still lacked the user feedbacks (qualitative as well as quantitative) capturing consumer experience on the newly launched platform
+    <!-- .img section 1 -->
+		<section class="section is-paddingless-horizontal-new1" style="padding-top: 0; background-color: white;">
+        <div class="container grid" style="max-width: 1024px;">
+          
+  
+          <div class="content is-medium">
+                <!-- .columns -->
 
- 
-                   </li>
-                   <br>
-                   <li>
-                      <strong>Absence of tracking behavioural aspects of users </strong> engaging on platform followed by lack of user profiling for personalization: User dynamics play a vital role in retention. Capturing and analysing user interaction data (clicks, scrolls, hovers) across various product categories (dream room, camp room, live room) becomes crucial on what times across global locations
-                   </li>
-                   <br>
-                   <li>
-                      <strong>Lack of behavioural studies</strong> to employ great engaging elements that works in today’s world.
- 
-                   </li>
-                </ol> 
-                <br> 
-                
-                </h4>
+              <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                  <div class="column">
+                    <div id="gameimage" class="image card">
+                      <a><img src="game.jpg"></a>
+                    </div>
+                  </div>
+                  <!-- <div class="column">
+                    <div class="image card">
+                      <a><img src="gamified.jpg"></a>
+                    </div>
+                  </div> -->
+                  <!-- <div class="column">
+                    <div class="image card">
+                      <a><img src="images/blog-3.png"></a>
+                    </div>
+                  </div> -->
+              </figure>
 
-                <!-- Objectives -->
-
-                <h1 style="margin: 10;">Objectives</h1>
-                <h4>To solve the above mentioned problem statements, there are some objectives to be completed in order so that it can result in positive outcomes of user engagements. The objectives are decided on what kind of problems are to be solved and they are segmented according to those. If the mentioned objectives are not met, the effectiveness of the solution will not meet the expected metrics. Here below are the objectives that I finished and are being implemented in shortime.
-                <br>
-                <br>
-                Following points jot down the major objectives involved:
-                <br>    
-                <ol>
-                  <li>
-                     <strong>Exploration of game mechanics - </strong> Game mechanics which are part of gamification along with game dynamics play a major role in increasing user engagement by introducing different game elements into the platform. Game mechanics include elements known by most of the present generation where they are totally motivated and trigged by them. Some of the game mechanics and elements are explained later.
-
-                  </li>
-                  <br>
-                  <li>
-                      <strong>To analyse and profile users based on level of engagement - </strong> Game mechanics which are part of gamification along with game dynamics play a major role in increasing user engagement by introducing different game elements into the platform. Game mechanics include elements known by most of the present generation where they are totally motivated and trigged by them. Some of the game mechanics and elements are explained later
-
- 
-                   </li>
-                   <br>
-                   <li>
-                      <strong>Propose a model for enhancing user engagement on nurtr’s platform - </strong> To continue further and analyse the problem statements and to have a solution, there should be a model to be produced which states how the process is going to be carried on from the very first by analyzing data points. This will be the core for user engagement metrics for the future endeavours. The whole point of having model is that some states in the model at some stage can be modified according to the data points received. This will give an advantage to move further and solve future objectives with utmost ease.
-                   </li>
-                   <br>
-                   <li>
-                      <strong>To measure the effectiveness of the proposed model - </strong> There should be constant testing and improvement of the model to gain 40% plus metrics within certain time. The model should be measured after implementing and then again should be proposed again which includes further improvements. So, the effectiveness should be measured efficiently along with iteration of design elements for gaining more traction and to increase user engagement.
-                   </li>
-                </ol> 
-                <br> 
-                </h4>
+              <figcaption class="level">
+                  <small class="level-item has-text-grey">
+                    Use cases of Gamification
+                  </small>
+              </figcaption>
             
-              </div>
-    </div>
-
+          </div>
+  
+        </div>
+      </section>
+      <!-- /.img section 1 -->
     
-  <script>
-  	  var greeting;
-	  var time = new Date().getHours();
-	  if (time < 12) {
-	    greeting = "Śubhōdayaṁ";
-	  } else if (time < 17) {
-	    greeting = "Śubha Madyāhnaṁ";
-	  } else {
-	    greeting = "Śubha Sāyantraṁ";
-	  }
-	  document.getElementById("demo").innerHTML = greeting ;
-	</script>  
-
     
-</body>
+    <!-- .section  2 -->
+		<section class="section is-paddingless-horizontal" style="padding-top: 0; background-color: white;">
+        <div class="container grid" style="max-width: 1024px;">
+          
+  
+          <div class="content is-medium" style="margin-top: 50px; ">
+            
+            <h1>Introduction</h1>
+            <blockquote>"Growth without engagement is a leaky bucket. You have to retain users to grow sustainability"
+                <div class="has-text-right"> - Nir eyal </div></blockquote>
+            <p>
+              The volumes are large, the information comes in a variety of data types, and it’s coming in at a high velocity. Yes, I am talking about organizations processing thousands of events a day, such as <strong>nurtr</strong>, with about <strong>12000 subscribers </strong>generating gigabytes of data. The huge volume of log data generated by today’s enterprises presents IT professionals with both a challenge and an opportunity. The challenge is managing large amounts of unstructured data. The opportunity is turning that data into actionable insights that can have a meaningful impact on the business or organization. Two of the biggest barriers to timely problem resolution are managing the volume of log data and knowing the right questions to ask to increase engagement.
+              <br>
+              <br>
+              Also, in this scalable environment, monitoring the infrastructures is of utmost importance for the organization.
+            </p>
+            <h3>E-Learning</h3>
+            <p>
+              A learning system based on formalised teaching but with the help of electronic resources is known as E-learning. While teaching can be based in or out of the classrooms, the use of computers and the Internet forms the major component of E-learning. E-learning can also be termed as a network enabled transfer of skills and knowledge, and the delivery of education is made to a large number of recipients at the same or different times. Earlier, it was not accepted wholeheartedly as it was assumed that this system lacked the human element required in learning.
+              <br>
+              <br>
+              <strong>Description :</strong> E-Learning has proved to be the best means in the corporate sector, especially when training programs are conducted by MNCs for professionals across the globe and employees are able to acquire important skills while sitting in a board room, or by having seminars, which are conducted for employees of the same or the different organizations under one roof. The schools which use E-learning technologies are a step ahead of those which still have the traditional approach towards learning.
+            </p>
+            <h3>Customer Disengagement</h3>
+            <p>
+              Recently, plenty of research was conducted on engagement more particular on enhancing Customer Engagement (CE). The flip side of CE, namely Customer Disengagement (CDE), seems to be uncharted. Thus,this report elaborates a working definition on CDE. This includes the interrelation of CE and CDE. According to this report, CDE is described as a psychological process that can cause the state of complete detachment from a Brand or Service (B/S). CDE could have behavioural outcomes in terms of Negative Customer Engagement (NCE). Additionally, it interrelates with former CE levels and varies across contexts. CDE is supposed to be a promising research field.
+            </p>
+          </div>
+  
+        </div>
+      </section>
+      <!-- /.section 2 -->
+
+	</body>
 </html>

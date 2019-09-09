@@ -27,9 +27,16 @@
             color: black;
         }
 
-        h2, h3, h4, h6, p{
+        h2, h3, h4, h5, h6, p{
             font-family: "minion-pro", "karla", sans-serif;
             color: black;
+        }
+
+        hr {
+          color: black;
+          border-color: black;
+          background-color: black;
+          height: 1px;
         }
 
         .breadcrumb a {
@@ -38,6 +45,10 @@
 
         .breadcrumb li :hover{
           text-decoration: underline;
+        }
+
+        .columns {
+          margin-bottom: 0;
         }
 
         .title {
@@ -51,28 +62,48 @@
             font-style: italic;
         }
 
+        .isnarrow p {
+          font-size: 10px;
+        }
+
         #gameimage {
           z-index: 1;
           margin-top: -100px;
         }
 
+        .vl {
+          border-left: 0.3px solid black; 
+          height: 90px; 
+          position:absolute; 
+          left: 45%;
+        }
+
         .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
         .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 150px; }
         .is-paddingless-horizontal-new1 { padding-left: 0; padding-right: 0; padding-bottom: 0; }
-        .is-paddingless-horizontal-vertical { padding-left: 0; padding-right: 0; padding-top:0; }
+        .is-paddingless-horizontal-vertical { padding-left: 0; padding-right: 0; padding-top:0; padding-bottom: 15px; }
 
         .grid {
           display: grid;
           grid-template-columns:
-            [xl-start] 1fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+            [xl-start] 1fr 2.0rem [md-start] minmax(0, 624px) [md-end] 2.0rem 1fr [xl-end];
+        }
+
+        .grid-1 {
+          display: grid;
+          grid-template-columns:
+            [xl-start] 0fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
         }
 
         .grid *  { grid-column: md; }
         .grid-xl { grid-column: xl; }
 
+        .grid-1 *  { grid-column: md; }
+        .grid-1-xl { grid-column: xl; }
+
         @media (max-width: 672px) {
 
-          .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 100px; }
+          .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 100px; padding-top: 0;}
 
           #gameimage {
             margin-top: -70px;
@@ -85,13 +116,26 @@
           :root {
             font-size: 90%;
           }
+
+          .vl {
+            display: none;
+          }
+        
+        }
+
+        @media (max-width: 768px){
+
+          .vl{
+            display: none;
+          }
+          
         }
 
 		</style>
 	</head>
 	<body >
 
-		<!-- .section -->
+		<!-- .breadcumb -->
 		<section class="section is-paddingless-horizontal" style="background-color: rgb(202, 220, 238);">
 			<div class="container grid">
 				<nav class="breadcrumb" aria-label="breadcrumbs">
@@ -102,30 +146,11 @@
 				</nav>
 			</div>
 		</section>
-		<!-- /.section -->
+		<!-- /.breadcumb -->
 		
 		<!-- .section  1 -->
-		<section class="section is-paddingless-horizontal-new" style="padding-top: 0; background-color:rgb(202, 220, 238);">
+		<section class="section is-paddingless-horizontal-vertical" style="padding-top: 0; background-color:rgb(202, 220, 238);">
 			<div class="container grid" style="max-width: 1024px;">
-
-				<!-- .media -->
-			<!-- 	<article class="media center">
-					<figure class="media-left">
-						<span class="image is-64x64">
-							<img src="roop.jpg">
-						</span>
-					</figure>
-					<div class="media-content">
-						<div class="content">
-							<p>
-								<strong>Roop Krrish</strong> <a href="#">@roopkrrish_1313</a><br>
-								<span class="has-text-grey">nurtr<br>
-								<time datetime="2018-04-20">Jan '19 - Aug '19</time> · 20 min read</span>
-							</p>
-						</div>
-					</div>
-				</article> -->
-				<!-- /.media -->
 
 				<!-- .section -->
 				<div class="section is-paddingless-horizontal-vertical">
@@ -141,29 +166,65 @@
           </p>
           
 				</div>
-        <!-- /.section -->
-        
-        
-
-				<div class="content is-medium">
-          
-					<p>
-						This came to my mind when I realized the engagement rate is par low along with the conversion rate. I tried to change the inner pages which resulted in v2 of the website and discussed in other project but Gamification is much more interesting than what we think.
-						
-					</p>
-					<p>
-						This case study introduces the gamification model that is being implemented at nurtr. The model includes user behavior analytics over implemented game elements like of <strong> daily puzzle, email campaign management for cold users by sending passive notification and introduction of games for competitiveness</strong>. All this can help to tackle the problem of user attrition and enhance user experience on platform as well.
-          </p>
-
-          <!-- /.columns -->
-
-        </div>
         
       </div>
       
     </section>
           	
     <!-- /.section 1-->
+
+
+    <!-- .section  1.1 -->
+
+		<section class="section is-paddingless-horizontal-new" style="padding-top: 0; background-color:rgb(202, 220, 238);">
+
+          <div class="container grid" style="max-width: 1024px;">
+
+            <div class="columns">
+              <div class="column is-half">
+                  
+                      <!-- <hr style="margin: 0; margin-bottom: 10px;"> -->
+                      <h1 style="color: black; margin: 0; font-family: inherit;">Role</h1>
+                      <p style="font-family: inherit;">
+                        UX Research, Interface Design & Algorithm Design
+                      </p>
+                      <!-- <hr style="margin: 0; margin-top:10px;"> -->
+                      <!-- <div class="vl"></div> -->
+              </div>
+
+              <div class="vl"></div>
+              
+              <div class="column auto">
+                  <!-- <hr style="margin: 0; margin-bottom: 10px;"> -->
+                      <h1 style="color: black; margin: 0; font-family: inherit;">Challenge</h1>
+                      <p style="font-family: inherit;">
+                        To enhance user engagement
+                      </p>
+                      <!-- <hr style="margin-top: 34px;"> -->
+              </div>
+              </div>
+          
+
+           
+                  <div class="content is-medium">
+                      <p style="margin-top: 0;">
+                        This came to my mind when I realized the engagement rate is par low along with the conversion rate. I tried to change the inner pages which resulted in v2 of the website and discussed in other project but Gamification is much more interesting than what we think.
+                        
+                      </p>
+                      <p>
+                        This case study introduces the gamification model that is being implemented at nurtr. The model includes user behavior analytics over implemented game elements like of <strong> daily puzzle, email campaign management for cold users by sending passive notification and introduction of games for competitiveness</strong>. All this can help to tackle the problem of user attrition and enhance user experience on platform as well.
+                      </p>
+            
+                    </div>
+              
+              
+          </div>
+          
+          
+        
+      </section>
+              
+      <!-- /.section 1.1-->
 
     <!-- .img section 1 -->
 		<section class="section is-paddingless-horizontal-new1" style="padding-top: 0; background-color: white;">

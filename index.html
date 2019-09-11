@@ -44,10 +44,171 @@
         align-content: center;
       }
 
-      html,body{
-        height: 100%;
+      .card {
+        box-shadow: none;
       }
 
+      html,body{
+        height: 100%;
+        font-family: "karla", sans-serif;
+      }
+
+      h1{
+            font-family: "minion-pro-condensed-subhead", sans-serif;
+            font-weight: 900;
+            color: black;
+        }
+
+      
+      h2, h3, h4, h5, h6, p{
+            font-family: "karla", sans-serif;
+            color: black;
+      }
+
+      .name {
+           
+           margin-top: 1.5rem; 
+           font-size: 1.2rem; 
+           color: black;
+           font-weight: bolder;
+       }
+ 
+       .name1 {
+            
+            
+            font-size: 1.2rem; 
+            color: black;
+            font-weight: bolder;
+        }
+
+      .hero.is-medium .hero-body{
+        padding-top: 4rem;
+        padding-bottom:0;
+      }
+
+      .title {
+          max-width: 70%;
+          font-size: 60px;
+          font-weight: 900;
+          color: black;
+          font-family: "minion-pro", "karla", sans-serif;
+      }
+
+      @media (min-width: 768px and max-width: 1024px;){
+
+        .center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .card {
+        box-shadow: none;
+      }
+
+      html,body{
+        height: 100%;
+        font-family: "karla", sans-serif;
+      }
+
+      h1{
+            font-family: "minion-pro-condensed-subhead", sans-serif;
+            font-weight: 900;
+            color: black;
+        }
+
+      
+      h2, h3, h4, h5, h6, p{
+            font-family: "karla", sans-serif;
+            color: black;
+      }
+
+      .name {
+           
+           margin-top: 1.5rem; 
+           font-size: 1.2rem; 
+           color: black;
+           font-weight: bolder;
+       }
+ 
+       .name1 {
+            
+            
+            font-size: 1.2rem; 
+            color: black;
+            font-weight: bolder;
+        }
+      
+
+      .hero.is-medium .hero-body{
+        padding-top: 4rem;
+        padding-bottom:0;
+      }
+
+      .title {
+          max-width: 70%;
+          font-size: 60px;
+          font-weight: 900;
+          color: black;
+          font-family: "minion-pro", "karla", sans-serif;
+      }
+
+      .navbar, .nav-item, .navbar-start, .navbar-menu, .navbar-end {
+            display: flex;
+            align-items: stretch;
+      }
+
+      .hero.is-medium .hero-body {
+            padding-top: 1rem;
+            padding-bottom: 0;
+          } 
+
+    }
+
+      @media (max-width: 768px) {
+        
+          .title{
+            font-size: 30px;
+            max-width: none;
+            margin: 0;
+            color: black;
+            font-family: "minion-pro", "karla", sans-serif;
+          }
+
+          :root {
+            font-size: 90%;
+          }
+
+          .navbar, .nav-item, .navbar-start, .navbar-menu, .navbar-end {
+            display: flex;
+            align-items: stretch;
+          }
+
+          .hero.is-medium .hero-body {
+            padding-top: 1rem;
+            padding-bottom: 0;
+          } 
+
+          .navbar-menu {
+            box-shadow: none;
+            padding:none;
+          }          
+
+          .hero-head {
+            padding: 1rem 1.5rem;
+          }
+
+          .navbar-end {
+            display: none;
+          }
+
+          .navbar-start{
+            display: inline-flex;
+            overflow-x: auto;
+            white-space: nowrap;
+          }
+        
+      }
 
     </style>
 
@@ -57,27 +218,163 @@
 
   <section class="hero is-fullheight is-backgroundwhite is-medium">
 
-      <!-- Hero head: will stick at the top -->
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              
-            </div>
-            
+         <!-- Hero head: will stick at the top -->
+         <div class="hero-head" style="padding-bottom: 0rem;">
+            <nav class="navbar is-transparent">
+              <div class="container">
+                
+                <div id="navbarMenuHeroA" class="navbar-menu">
+
+                  <div class="navbar-start">
+                    <h2 class="navbar-item is-active name">
+                      Roopesh Krishna L
+                    </h2>
+
+                   
+                  </div>
+                </div>
+
+              </div>
+            </nav>
           </div>
-        </nav>
-      </div>
+
+          <!-- Hero head: will stick at the top -->
+          <div class="hero-head" style="padding-top: 0rem;">
+            <nav class="navbar is-flex-mobile is-transparent is-tab">
+              <div class="container">
+                
+                <div id="navbarMenuHeroA" class="navbar-menu" style="padding-top:0;">
+                  <div class="navbar-start">
+                    <s class="navbar-item is-active" >
+                      Selected Works
+                    </s>
+                    <a class="navbar-item">
+                      Articles & Passions
+                    </a>
+                    <a class="navbar-item">
+                      Resume
+                    </a>
+                    <a class="navbar-item">
+                      About
+                    </a>
+                  </div>
+                  <div class="navbar-end">
+                    <!-- <span class="navbar-item">
+                      <a class="button is-primary" style="background-color: black;">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Download Resume</span>
+                      </a>
+                    </span> -->
+
+                    <a class="navbar-item name1">    
+                        <span class="icon">
+                            <i class="fab fa-instagram"></i>
+                       </span>
+                    </a>
+
+                    <a class="navbar-item name1">    
+                        <span class="icon">
+                            <i class="fab fa-linkedin"></i>
+                       </span>
+                    </a>
+
+                    <a class="navbar-item name1">    
+                        <span class="icon">
+                            <i class="fab fa-facebook-messenger"></i>
+                       </span>
+                    </a>
+
+                    
+
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        
     
       <!-- Hero content: will be in the middle -->
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title">
-            Roopesh Krishna L
-          </h1>
-          <h2 class="subtitle">
+      <div class="hero-body" >
+        <div class="container" style="padding: 0.5rem 0.75rem;"> 
+          <h1 class="title" >
               A Digital Product Designer who codes based in India
-          </h2>
+          </h1>
+          <br>
+          
+
+          <a style="color: black; font-weight: 300;">Selected case studies</a>
+
+          
+          
+
+          
+
+          <div class="columns" style="max-width:100%; padding-top: 1rem;">
+
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-2by1">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                      </div>
+                      <div class="card-content" style="padding-left:0; padding-top: 10px;">
+                        <div class="media">
+                          <div class="media-content">
+                            <h1 class="title is-3">Gamification</h1>
+                            <p class="subtitle is-6">To enhance user engagement @nurtr</p>
+                          </div>
+                          </div>
+                    
+                        
+                      </div>
+                  </div>
+              </div>
+
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-2by1">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                          </div>
+                          </div>
+                    
+                        
+                      </div>
+                  </div>
+              </div>
+
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image is-2by1">
+                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-content">
+                            <p class="title is-4">John Smith</p>
+                            <p class="subtitle is-6">@johnsmith</p>
+                          </div>
+                          </div>
+                    
+                        
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+
         </div>
       </div>
     

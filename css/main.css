@@ -1,79 +1,160 @@
-html, body {
-	font-size:12px; 
-	line-height:18px;
-	height: 100vh;
-	margin: 0;
- }
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
 
-body {
-	background: #fff;
-}
-
-.nav-item.active{
-	border-bottom: 0.1px solid #000000;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 15vw;
-    object-fit: cover;
-}
-
-
-
-
-
-
-h2, h6,  {
-	font-family: "Raleway", sans-serif; 
-	font-weight: normal; 
-}	
-
-h4 {
-	font-family: "minion-pro", sans-serif;
-	color: grey;
-	font-weight: lighter;
-	font-size: 18px;
-}
-
-h5 {
-	font-family: "Karla", sans-serif;
-	color: grey;
-	font-size: 20px;
-	font-weight: lighter;
-}
-
-h6 {
-	font-family: "minion-pro", sans-serif;
+  .content h1, .content h2, .content p, .content h3, .content h4{
 	color: black;
-	font-size: 23px;
-	font-weight: lighter;
-}
+  }
+  
+  .content p {
+	font-weight: 500;
+	font-size: 21px;
+  }
 
-h3 {
-	font-family: "Karla", sans-serif;
-	font-weight: lighter;
-	line-height: 1.4;
-}
- 
-h1 {
-    font-family: "minion-pro-condensed-subhead", sans-serif;
-    font-weight: 700;
-	line-height: 1;
-	font-size: 62px;
-}
+  .content ol {
+	font-family: "minion-pro", "karla", sans-serif;
+	color: black;
+  }
 
-/***** Links *****/
+  ol { 
+	  counter-reset: item;
+	  list-style-type: none;
+  }
 
-a, a:hover { 
-	color: #33375A;
-	font-family: "minion-pro", sans-serif;
-}
+  li { display: block; }
 
+  li:before { 
+	  content: counter(item) "  "; 
+	  counter-increment: item ;
+  }
 
-.color-bg { background:#292783; }
-.color { color:#292783; }
-.color-bar { width:100% }
-.color-bar { background: linear-gradient(to right, #FF9933 0%, #FF9933 33%, #fcfcfc 33%, #fcfcfc 66%, #138808 66%, #138808 100%); height:5px; position: fixed; }
+  .content blockquote {
+	background-color: #fff9e9;
+	border-left: 5px solid #ffd220;
+  }
 
+  blockquote p {
+	color: #443818;
+  }
 
+  strong {
+	color: black;
+	font-size: 22px;
+  }
+
+  h1{
+	  font-family: "minion-pro-condensed-subhead", sans-serif;
+	  font-weight: 700;
+	  color: black;
+  }
+
+  h2, h3, h4, h5, h6, p{
+	  font-family: "minion-pro", "karla", sans-serif;
+	  color: black;
+  }
+
+  hr {
+	color: black;
+	border-color: black;
+	background-color: black;
+	height: 1px;
+  }
+
+  .breadcrumb a {
+	color: black;
+  }
+
+  .breadcrumb li :hover{
+	text-decoration: underline;
+  }
+
+  .columns {
+	margin-bottom: 0;
+  }
+
+  .title {
+	font-size: 60px;
+	color: black;
+	font-family: "minion-pro", "karla", sans-serif;
+  }
+
+  blockquote {
+	  font-family: "minion-pro", "karla", sans-serif;
+	  font-style: italic;
+  }
+
+  .isnarrow p {
+	font-size: 10px;
+  }
+
+  #gameimage {
+	z-index: 1;
+	margin-top: -100px;
+  }
+
+  #gameimage1 {
+	
+  }
+
+  .vl {
+	border-left: 1px solid black; 
+	height: 90px; 
+	position: relative;; 
+	left: -3%;
+	z-index: 2;
+  }
+
+  .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+  .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 150px; }
+  .is-paddingless-horizontal-new1 { padding-left: 0; padding-right: 0; padding-bottom: 0; }
+  .is-paddingless-horizontal-vertical { padding-left: 0; padding-right: 0; padding-top:0; padding-bottom: 25px; }
+
+  .grid {
+	display: grid;
+	grid-template-columns:
+	  [xl-start] 1fr 2.0rem [md-start] minmax(0, 624px) [md-end] 2.0rem 1fr [xl-end];
+  }
+
+  .grid-1 {
+	display: grid;
+	grid-template-columns:
+	  [xl-start] 0fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+  }
+
+  .grid *  { grid-column: md; }
+  .grid-xl { grid-column: xl; }
+
+  .grid-1 *  { grid-column: md; }
+  .grid-1-xl { grid-column: xl; }
+
+  @media (max-width: 672px) {
+
+	.is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 100px; padding-top: 0;}
+
+	#gameimage {
+	  margin-top: -70px;
+	}
+	
+	.title{
+	  font-size: 40px;
+	}
+
+	:root {
+	  font-size: 90%;
+	}
+
+	.vl {
+	  display: none;
+	}
+  
+  }
+
+  @media (max-width: 768px){
+
+	.vl{
+	  display: none;
+	}
+	
+  }

@@ -17,6 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" id="changingFavicon" type="image/png" href="https://img.icons8.com/color/48/000000/captain-america.png"/>
@@ -35,8 +36,53 @@
         document.title = "Aah! Come Back.";
       });
     </script>
-
+   
     <style>
+
+      .night{
+        background: #f1ede3;
+        color: #e9e5d5;
+      }
+      .night #intro-text {
+        color: black;
+      }
+
+      .night .time-circle{
+        background: linear-gradient(to bottom, #111936, #285A7B);
+        border-color: #e9e5d5;
+      }
+
+      #switch,
+        #circle {
+          height: 25px;
+          -webkit-transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+                  transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+        } 
+        #switch {
+          width: 50px;
+          margin: 0 auto;
+          border: 2px solid #DA8508;
+          border-radius: 27px;
+          background: #DA8508;
+          position: relative;
+        }
+        #circle {
+          margin-top: 5%;
+          margin-left: 7%;
+          width: 38%;
+          height: 80%;
+          border-radius: 50%;
+          box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
+          background: #e9e5d5;
+        }
+        .switched {
+          border-color: #1C3958 !important;
+          background: #1C3958 !important;
+        }
+        .switched #circle {
+          margin-left: 55%;
+          background: #e9e5d5;
+        }
 
       .center {
         display: flex;
@@ -50,26 +96,32 @@
 
       html,body{
         height: 100%;
-        font-family: "karla", sans-serif;
+        font-family: "Karla", sans-serif;
+        background-color: #1e1e1e;
       }
 
       h1{
-            font-family: "minion-pro-condensed-subhead", sans-serif;
+            
             font-weight: 900;
-            color: black;
+            color: white;
         }
 
       
       h2, h3, h4, h5, h6, p{
-            font-family: "karla", sans-serif;
-            color: black;
+            font-family: "Karla", sans-serif;
+            color: white;
+      }
+
+      p {
+         line-height: 1.5em;
+         font-size: 1.2em;
       }
 
       .name {
            
            margin-top: 1.5rem; 
            font-size: 1.2rem; 
-           color: black;
+           color: white;
            font-weight: bolder;
        }
  
@@ -77,26 +129,54 @@
             
             
             font-size: 1.2rem; 
-            color: black;
+            color: white;
             font-weight: bolder;
         }
 
       .hero.is-medium .hero-body{
-        padding-top: 4rem;
+        padding-top: 0rem;
         padding-bottom:0;
       }
 
       .title {
           max-width: 70%;
-          font-size: 60px;
-          font-weight: 900;
-          color: black;
-          font-family: "minion-pro", "karla", sans-serif;
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 1.5em;
+          color: white;
+          font-family:  'Lora', "Karla", sans-serif;
       }
+
+      .link-highlight {
+          text-decoration: none;
+          color: white;
+          display: inline-block;
+          padding: 0px 7px;
+          transition: all .2s ease-in-out;
+          box-sizing: border-box;
+          text-decoration: none;
+          box-shadow: inset 0 -17px 0 rgba(255, 145, 0, 0.356);
+        }
+      
+      .link-highlight:hover {
+          box-shadow: inset 0 -55px 0 0 rgb(255, 166, 0);
+          color: white;
+
+      }  
 
       .colis{
         max-width:100%;
         padding-top: 1rem;
+      }
+
+      #palm {
+        background-image:url('india_palm.png');
+        position: relative;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:right;
+        background-position-y: -8rem;
+       
       }
 
       @media (min-width: 768px and max-width: 1024px;){
@@ -124,20 +204,20 @@
       h1{
             font-family: "minion-pro-condensed-subhead", sans-serif;
             font-weight: 900;
-            color: black;
+            color: white;
         }
 
       
       h2, h3, h4, h5, h6, p{
             font-family: "karla", sans-serif;
-            color: black;
+            color: white;
       }
 
       .name {
            
            margin-top: 1.5rem; 
            font-size: 1.2rem; 
-           color: black;
+           color: white;
            font-weight: bolder;
        }
  
@@ -145,7 +225,7 @@
             
             
             font-size: 1.2rem; 
-            color: black;
+            color: white;
             font-weight: bolder;
         }
       
@@ -159,7 +239,7 @@
           max-width: 70%;
           font-size: 60px;
           font-weight: 900;
-          color: black;
+          color: white;
           font-family: "minion-pro", "karla", sans-serif;
       }
 
@@ -186,7 +266,7 @@
             font-size: 50px;
             max-width: none;
             margin: 0;
-            color: black;
+            color: white;
             font-family: "minion-pro", "karla", sans-serif;
           }
 
@@ -229,23 +309,45 @@
 
 </head>
 
-<body>
+<body >
 
-  <section class="hero is-fullheight is-backgroundwhite is-medium">
+  <section class="hero is-backgroundwhite is-medium" id="fullpage">
 
          <!-- Hero head: will stick at the top -->
-         <div class="hero-head" style="padding-bottom: 0rem;">
+         <div class="hero-head" style="padding-bottom: 0rem;" >
             <nav class="navbar is-transparent">
               <div class="container">
                 
                 <div id="navbarMenuHeroA" class="navbar-menu">
 
                   <div class="navbar-start">
-                    <h2 class="navbar-item is-active name">
+                    <h2 class="navbar-item is-active name" id="fullpage" id="introtext">
                       Roopesh Krishna L
                     </h2>
+                    
+                  </div>
 
-                   
+                  <div class="navbar-end name">
+
+
+                      <a class="navbar-item name1">    
+                          <span class="icon">
+                              <i class="fab fa-instagram"></i>
+                         </span>
+                      </a>
+  
+                      <a class="navbar-item name1">    
+                          <span class="icon">
+                              <i class="fab fa-linkedin"></i>
+                         </span>
+                      </a>
+  
+                      <a class="navbar-item name1">    
+                          <span class="icon">
+                              <i class="fab fa-facebook-messenger"></i>
+                         </span>
+                      </a>
+
                   </div>
                 </div>
 
@@ -254,13 +356,13 @@
           </div>
 
           <!-- Hero head: will stick at the top -->
-          <div class="hero-head" style="padding-top: 0rem;">
+          <div class="hero-head" style="padding-top: 0rem;" id="introtext">
             <nav class="navbar is-flex-mobile is-transparent is-tab">
               <div class="container">
                 
                 <div id="navbarMenuHeroA" class="navbar-menu" style="padding-top:0;">
                   <div class="navbar-start">
-                    <s class="navbar-item is-active" >
+                    <s class="navbar-item is-active" style="color: white">
                       Selected Works
                     </s>
                     <a class="navbar-item">
@@ -275,7 +377,7 @@
                   </div>
                   <div class="navbar-end">
                     <!-- <span class="navbar-item">
-                      <a class="button is-primary" style="background-color: black;">
+                      <a class="button is-primary" style="background-color: white;">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
@@ -283,24 +385,13 @@
                       </a>
                     </span> -->
 
-                    <a class="navbar-item name1">    
-                        <span class="icon">
-                            <i class="fab fa-instagram"></i>
-                       </span>
-                    </a>
+                   
 
-                    <a class="navbar-item name1">    
-                        <span class="icon">
-                            <i class="fab fa-linkedin"></i>
-                       </span>
+                    <a class="navbar-item name1">
+                      <div id="switch">
+                        <div id="circle"></div>
+                      </div>
                     </a>
-
-                    <a class="navbar-item name1">    
-                        <span class="icon">
-                            <i class="fab fa-facebook-messenger"></i>
-                       </span>
-                    </a>
-
                     
 
                   </div>
@@ -311,84 +402,114 @@
         
     
       <!-- Hero content: will be in the middle -->
-      <div class="hero-body" >
+      <div class="hero-body" style="padding-top: 50px;" >
         <div class="container" style="padding: 0.5rem 0.75rem;"> 
-          <h1 class="title" >
-              A Digital Product Designer who codes based in India
-          </h1>
+          <p class="title">
+              A digital product designer who codes based in <a class="link-highlight">India</a>. Working as lead designer for <a class="link-highlight" href="https://nurtr.com">nurtr</a> and consultant for Factmata. Previously at Facebook & Ilios Power. I love user psychology case studies.
+              <br>
+              <br>
+              <!-- I love user psychology case studies, design systems. --> Presently practising Machine Learning.
+          </p>
+          <!-- <img class="palm" src="india_palm.png"> -->
           <br>
           <br>
+        </div>
+      </div>
+      <div class="hero-body">
+          <div class="container" style="padding: 0.5rem 0.75rem; padding-top: -100px;"> 
+          <a style="color: grey; font-weight: 700; pointer:cursor;" href="#">Selected Works</a>
 
-          <a style="color: black; font-weight: 300;">Selected Works</a>
-
+          <br>
+          <br>
           
           
 
           
 
-          <div class="columns colis">
-
-              <div class="column">
-                  <div class="card">
-                      <div class="card-image">
-                        <figure class="image is-2by1">
-                          <img src="game_frame.png" alt="Placeholder image">
-                        </figure>
-                      </div>
+          
+                  <div class="card" style="background-color: #1e1e1e;">
+                      
                       <div class="card-content" style="padding-left:0; padding-top: 10px;">
                         <div class="media">
-                          <div class="media-content">
-                            <h1 class="title is-3">Gamification</h1>
-                            <p class="subtitle is-6">To enhance user engagement @nurtr</p>
+                          <div class="media-content" >
+                            <h1 class="title is-3" style="background-color: rgba(211, 211, 211, 0.144)">Gamification</h1>
+                            <p class="subtitle is-7">Jan 2019 - Aug 2019</p>
                           </div>
-                          </div>
-                    
-                        
+                        </div>    
                       </div>
                   </div>
-              </div>
+              
 
-              <div class="column">
-                  <div class="card">
-                      <div class="card-image">
-                        <figure class="image is-2by1">
-                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-4">John Smith</p>
-                            <p class="subtitle is-6">@johnsmith</p>
-                          </div>
-                          </div>
-                    
+
+          
+                    <div class="card" style="background-color: #1e1e1e;">
                         
-                      </div>
-                  </div>
-              </div>
+                        <div class="card-content" style="padding-left:0; padding-top: 10px;">
+                          <div class="media">
+                            <div class="media-content" >
+                              <h1 class="title is-3">Brainiac</h1>
+                              <p class="subtitle is-7">Jan 2019 - Aug 2019</p>
+                            </div>
+                          </div>    
+                        </div>
+                    </div>
+              
 
-              <div class="column">
-                  <div class="card">
-                      <div class="card-image">
-                        <figure class="image is-2by1">
-                          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        </figure>
-                      </div>
-                      <div class="card-content">
-                        <div class="media">
-                          <div class="media-content">
-                            <p class="title is-4">John Smith</p>
-                            <p class="subtitle is-6">@johnsmith</p>
-                          </div>
-                          </div>
-                    
+
+            
+                    <div class="card" style="background-color: #1e1e1e;">
                         
-                      </div>
-                  </div>
-              </div>
+                        <div class="card-content" style="padding-left:0; padding-top: 10px;">
+                          <div class="media">
+                            <div class="media-content" >
+                              <h1 class="title is-3">Second Version</h1>
+                              <p class="subtitle is-7">Jan 2019 - Aug 2019</p>
+                            </div>
+                          </div>    
+                        </div>
+                    
+  
+                
 
-            </div>
+              
+                      <div class="card" style="background-color: #1e1e1e;">
+                          
+                          <div class="card-content" style="padding-left:0; padding-top: 10px;">
+                            <div class="media">
+                              <div class="media-content" >
+                                <h1 class="title is-3">Rebrand & Style Guide</h1>
+                                <p class="subtitle is-7">Jan 2019 - Aug 2019</p>
+                              </div>
+                            </div>    
+                          </div>
+                      </div>
+
+                      <div class="card" style="background-color: #1e1e1e;">
+                          
+                          <div class="card-content" style="padding-left:0; padding-top: 10px;">
+                            <div class="media">
+                              <div class="media-content" >
+                                <h1 class="title is-3">Gameloft</h1>
+                                <p class="subtitle is-7">Jan 2019 - Aug 2019</p>
+                              </div>
+                            </div>    
+                          </div>
+                      </div>
+
+                      <div class="card" style="background-color: #1e1e1e;">
+                          
+                          <div class="card-content" style="padding-left:0; padding-top: 10px;">
+                            <div class="media">
+                              <div class="media-content" >
+                                <h1 class="title is-3">Ilios Power</h1>
+                                <p class="subtitle is-7">Jan 2019 - Aug 2019</p>
+                              </div>
+                            </div>    
+                          </div>
+                      </div>
+                      <br>
+                  
+  
 
         </div>
       </div>
@@ -397,18 +518,33 @@
       <div class="hero-foot">
         <nav class="tabs">
           <div class="container">
-            <ul>
+            <a style="color: grey; font-weight: bolder;">Version 1 is designed and developed by me. Last Updated on 19th September, 2019.</a>
+            <!-- <ul>
               <li class="is-active"><a>Roop Krrish</a></li>
               <li><a href="design.html">Design</a></li>
               <li><a>Code</a></li>
               <li><a>About</a></li>
               <li><a>Resume</a></li>
-            </ul>
+            </ul> -->
           </div>
         </nav>
-      </div>
+      </div> 
 
   </section>
+
+  <script type="text/javascript">
+    $("#switch").click(function () {
+        if ($("#fullpage").hasClass("night")) {
+            $("#fullpage").removeClass("night");
+            $("#switch").removeClass("switched");
+        }
+        else {
+            $("#fullpage").addClass("night");
+            $("#switch").addClass("switched");
+
+        }
+    });
+  </script>
     
 </body>
 </html>

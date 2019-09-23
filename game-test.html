@@ -11,11 +11,21 @@
         <!-- <link rel="stylesheet" href="styles/debug.css"> -->
 		<style>
 
+
+        
+        .navbar {
+           background-color: none;
+           box-shadow: none;
+           padding: 0;
+        }
+
+
         .center {
           display: flex;
           justify-content: center;
           align-items: center;
         }
+        
 
         .content h1, .content h2, .content p, .content h3, .content h4{
           color: black;
@@ -179,11 +189,27 @@
 		<!-- .breadcumb -->
 		<section class="section is-paddingless-horizontal" style="background-color: rgba(95, 167, 255, 0.281);">
 			<div class="container grid">
-				<nav class="breadcrumb" aria-label="breadcrumbs">
-					<ul>
-            <li><a href="design.html">Design</a></li>
-						<li class="is-active"><a href="#" aria-current="page">Gamification</a></li>
-					</ul>
+				<nav class="navbar" aria-label="breadcrumbs">
+            <div id="navbarMenuHeroA" class="navbar-menu" >
+
+                <div class="navbar-start">
+                  <a class="navbar-item name1" href="index.html">
+                    Go back
+                  </a>
+                  
+                </div>
+
+                <div class="navbar-end name">
+
+
+                    <a class="navbar-item name1">    
+                        Next
+                    </a>
+
+                  
+
+                </div>
+              </div>
 				</nav>
 			</div>
 		</section>

@@ -11,12 +11,15 @@
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="css/debug.css"> --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css">
 
     <!-- FONTS  -->
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
 
     <!-- FAVICON -->
     <link rel="shortcut icon" id="changingFavicon" type="image/png" href="https://img.icons8.com/color/48/000000/captain-america.png"/>
@@ -35,8 +38,153 @@
         document.title = "Aah! Come Back.";
       });
     </script>
-
+   
     <style>
+
+
+
+        .underlined {
+          color: white;
+          text-decoration: none;
+          background-image: linear-gradient(to right, #56b8e6 0, #56b8e6 100%);
+          background-position: 0 1.2em;
+          background-size: 0 100%;
+          background-repeat: no-repeat;
+          transition: background .5s;
+        }
+        .underlined:hover {
+          background-size: 100% 100%;
+        }
+        .underlined--thin {
+          background-image: linear-gradient(to right, black 0, black 100%);
+        }
+        .underlined--thick {
+          background-position: 0 -0.1em;
+        }
+        .underlined--offset {
+          background-position: 0 0.2em;
+          box-shadow: inset 0 -.5em 0 0 white;
+        }
+        .underlined--gradient {
+          background-position: 0 -0.1em;
+          background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+        }
+        .underlined--reverse {
+          background-position: 100% -0.1em;
+          transition: background 1s;
+          background-image: linear-gradient(to right, yellow 0, yellow 100%);
+        }
+
+
+        .column.is-2{
+          width: 9%;
+        }
+        .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+        .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 150px; }
+        .is-paddingless-horizontal-new1 { padding-left: 0; padding-right: 0; padding-bottom: 0; }
+        .is-paddingless-horizontal-vertical { padding-left: 0; padding-right: 0; padding-top:25px; padding-bottom: 25px; }
+
+        .grid {
+          display: grid;
+          grid-template-columns:
+            [xl-start] 1fr 2.0rem [md-start] minmax(0, 624px) [md-end] 2.0rem 1fr [xl-end];
+        }
+
+        .grid-1 {
+          display: grid;
+          grid-template-columns:
+            [xl-start] 0fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+        }
+
+        .grid *  { grid-column: md; }
+        .grid-xl { grid-column: xl; }
+
+        .grid-1 *  { grid-column: md; }
+        .grid-1-xl { grid-column: xl; }
+
+      .spec{
+          display: block;
+          position: relative;
+          transform: translate3d(0, 0, 0);
+          transition: all 400ms;
+          margin: 0 0 48px;
+          cursor: pointer;
+      }
+
+      .spec:hover::after {
+          content: "→";
+          position: absolute;
+          top: 0;
+          right: 0px;
+          font-size: 4.4em;
+          opacity: 0;
+          transform: translate3d(24px, 0, 0);
+          transition: all 400ms;
+          color: white;
+          -webkit-animation: fadein 4s linear backwards;
+          animation: fadein 4s linear forwards;
+          
+      }
+
+      @-webkit-keyframes fadein {
+          50% { opacity: 1; }
+      }
+
+      @keyframes fadein {
+        50% { opacity: 1; }
+      }
+      
+
+      .spec1 {
+          position: relative;
+          display: inline-block;
+      }
+
+      .spec1:hover::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #f7cac9;
+          /* transform: translate3d(0, 0, 0) scale(0, 1);
+          transform-origin: center left;
+          transition: all 400ms; */
+          z-index: -1;
+      }
+
+      #project-list .project-list-item--info {
+          font-family: "Inconsolata",monospace
+      }
+
+      #project-list .project-list-item--coming-soon {
+          pointer-events: none
+      }
+
+      #project-list .project-list-item--coming-soon .project-list-item--title:after {
+          background: rgba(238,238,238,0.5);
+          left: calc(-1 * 8px);
+          right: calc(-1 * 8px);
+          transform: scale(1, 1)
+      }
+
+
+
+      .spec:focus {
+          outline-color: rgba(0,0,0,0.1);
+          outline-width: 1px;
+          outline-offset: -3px
+      }
+
+      .navbar-menu {
+            background-color: none;
+      }
+
+      .hero-body {
+       padding-top: 30px;
+      }
+
 
       .center {
         display: flex;
@@ -44,83 +192,534 @@
         align-content: center;
       }
 
-      .newfont{
-        font-family: "";
+      .card {
+        box-shadow: none;
       }
 
-      .Site {
+      html,body{
+        height: 100%;
+        font-family: "Karla", "Lora";
+        background-color: #272727;
+      }
+
+      h1{
+            
+            font-weight: 900;
+            color: white;
+        }
+
+      
+      h2, h3, h4, h5, h6, p{
+            font-family: "Lora", sans-serif;
+            color: white;
+      }
+
+      p {
+         line-height: 1.5em;
+         font-size: 1.2em;
+      }
+
+      .name {
+           
+           margin-top: 1.5rem; 
+           font-size: 1.2rem; 
+           color: white;
+           font-weight: bolder;
+           font-family: "Karla", "Lora";
+       }
+ 
+       .name1 {
+            
+            
+            font-size: 1.2rem; 
+            color: white;
+            font-weight: bolder;
+        }
+
+      .hero.is-medium .hero-body{
+        padding-top: 3.4rem;
+        padding-bottom: 0rem;
+      } 
+
+     
+  
+      .title {
+          max-width: 100%;
+          font-size: 28px;
+          font-weight: 500;
+          line-height: 1.5em;
+          color: white;
+          font-family:  'Lora', "Karla", sans-serif;
+      }
+
+      .title-1 {
+        max-width: 70%;
+          font-size: 28px;
+          font-weight: 400;
+          line-height: 1.5em;
+          color: white;
+          font-family:  'Lora', "Karla", sans-serif;
+      }
+
+      .link-highlight {
+          text-decoration: none;
+          color: white;
+          display: inline-block;
+          padding: 0px 7px;
+          transition: all .2s ease-in-out;
+          box-sizing: border-box;
+          text-decoration: none;
+          box-shadow: inset 0 -17px 0 #56b8e6;
+        }
+      
+      .link-highlight:hover {
+          box-shadow: inset 0 -55px 0 0 rgb(25, 196, 226);
+          color: white;
+
+      }  
+
+      .colis{
+        max-width:100%;
+        padding-top: 1rem;
+      }
+
+      #palm {
+        background-image:url('india_palm.png');
+        position: relative;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:right;
+        background-position-y: -8rem;
+       
+      }
+      
+
+      
+            
+      button {
+        margin: 0;
+        padding: 8px 19px 0 16px;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        color: transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+      }
+
+
+      @media (min-width: 768px and max-width: 1024px;){
+
+        .navbar-menu {
+            background-color: none;
+          }
+
+        .center {
         display: flex;
-        min-height: 100vh;
-        flex-direction: column;
+        justify-content: center;
+        align-content: center;
       }
 
-      .Site-content {
-        flex: 1;
+      .colis{
+        max-width:100%;
+        padding-top: 2rem;
+      }
+
+      .card {
+        box-shadow: none;
+      }
+
+      html,body{
+        height: 100%;
+        font-family: "karla", sans-serif;
+      }
+
+      h1{
+            font-family: "minion-pro-condensed-subhead", sans-serif;
+            font-weight: 900;
+            color: white;
+        }
+
+      
+      h3, h4, h5, h6, p{
+            font-family: "karla", sans-serif;
+            color: white;
+      }
+
+      .name {
+           
+           margin-top: 1.5rem; 
+           font-size: 1.2rem; 
+           color: white;
+           font-weight: bolder;
+           font-family: "Karla", "Lora";
+       }
+ 
+       .name1 {
+            
+            
+            font-size: 1.2rem; 
+            color: white;
+            font-weight: bolder;
+        }
+      
+
+      .hero.is-medium .hero-body{
+        padding-top: 4rem;
+        padding-bottom:0;
+      }
+
+      .title {
+          max-width: 100%;
+          font-size: 60px;
+          font-weight: 900;
+          color: white;
+          font-family: "minion-pro", "karla", sans-serif;
+      }
+
+      .navbar, .nav-item, .navbar-start, .navbar-menu, .navbar-end {
+            display: flex;
+            align-items: stretch;
+            
+      }
+
+      .hero.is-medium .hero-body {
+            
+            padding-bottom: 0;
+          } 
+
+    }
+
+      @media (max-width: 768px) {
+
+        .navbar-menu {
+            background-color: #1a1a1a;
+          }
+
+          .headheight {
+            padding-top: 10px;
+          }
+
+          .title.is-2 {
+            font-size: 2.2rem;
+          }
+
+          .colis{
+              max-width:100%;
+              padding-top: 1.5rem;
+          }
+        
+          .title{
+            font-size: 30px;
+            max-width: none;
+            margin: 0;
+            color: white;
+            font-family: "minion-pro", "karla", sans-serif;
+          }
+
+          :root {
+            font-size: 90%;
+          }
+
+          .navbar, .nav-item, .navbar-start, .navbar-menu, .navbar-end {
+            display: flex;
+            align-items: stretch;
+          }
+
+          .hero.is-medium .hero-body {
+            padding-top: 1rem;
+            padding-bottom: 0;
+          } 
+
+          .navbar-menu {
+            box-shadow: none;
+            padding:none;
+          }          
+
+          .hero-head {
+            padding: 1rem 1.5rem;
+          }
+
+          .navbar-end {
+            display: none;
+          }
+
+          .navbar-start{
+            display: inline-flex;
+            overflow-x: auto;
+            white-space: nowrap;
+          }
+        
       }
 
     </style>
 
 </head>
 
-<body class="Site">
-
-    <section class="hero">
-        <div class="hero-body">
-            <!-- ... -->
-        </div>
-    </section>
-
-    <section class="section Site-content">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-three-fifths">
-                <h1>I'm a lead designer for nurtr. Recently graduated from Indian Institute of Information Technology, Allahabad.
-                </h1>
-            </div>
-            
-          </div>
-        </div>
-    </section>
-
-    <nav class="level is-mobile">
-        <p class="level-item has-text-centered">
-          <a class="link is-info">Home</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a class="link is-info">Home</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a class="link is-info">Home</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a class="link is-info">Home</a>
-        </p>
-    </nav>
-
-    <footer class="footer is-fixed-bottom">
-        <div class="content has-text-centered">
-          <p>
-            <strong>Designed & Developed</strong> by <a href="https://jgthms.com">me</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </p>
-        </div>
-    </footer>
-
+<body >
 
     
-    <script>
-        var greeting;
-      var time = new Date().getHours();
-      if (time < 12) {
-        greeting = "Śubhōdayaṁ";
-      } else if (time < 17) {
-        greeting = "Śubha Madyāhnaṁ";
-      } else {
-        greeting = "Śubha Sāyantraṁ";
-      }
-      document.getElementById("demo").innerHTML = greeting ;
-    </script>  
+
+  <section class="hero is-backgroundwhite is-medium " id="fullpage">
+
+         <!-- Hero head: will stick at the top -->
+         <div class="hero-head container grid" style="padding-bottom: 0rem; max-width: 1024px; padding-right: 1rem ;" >
+            <nav class="navbar is-transparent">
+              <div class="container">
+                
+                <div id="navbarMenuHeroA" class="navbar-menu">
+
+                  <div class="navbar-start">
+                    <h2 class="navbar-item is-active name" id="fullpage" id="introtext">
+                      Roopesh Krishna L
+                    </h2>
+                    
+                  </div>
+
+                  <!-- <div class="navbar-end name">
+
+
+                      <a class="navbar-item name">    
+                          <span class="icon">
+                              <i class="fab fa-instagram"></i>
+                         </span>
+                      </a>
+  
+                      <a class="navbar-item name">    
+                          <span class="icon">
+                              <i class="fab fa-linkedin"></i>
+                         </span>
+                      </a>
+  
+                      <a class="navbar-item name">    
+                          <span class="icon">
+                              <i class="fab fa-facebook-messenger"></i>
+                         </span>
+                      </a>
+
+                  </div> -->
+                </div>
+
+              </div>
+            </nav>
+          </div>
+
+          <!-- Hero head: will stick at the top -->
+          <div class="hero-head container grid" style="padding-top: 0rem; max-width: 1024px; padding-right: 1rem;" id="introtext">
+            <nav class="navbar is-flex-mobile is-transparent is-tab">
+              <div class="container">
+                
+                <div id="navbarMenuHeroA" class="navbar-menu" style="padding-top:0;">
+                  <div class="navbar-start" style="font-family;Karla;">
+                    <a class="navbar-item" href="index.html">
+                      Selected Works
+                    </a>
+                    <a class="navbar-item">
+                        Machine Learning and NLP
+                    </a>
+                    <a class="navbar-item">
+                      Illustrations
+                    </a>
+                    <s class="navbar-item is-active" style="color: white">
+                      About
+                    </s>
+                  </div>
+                  <div class="navbar-end">
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        
+    
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body " >
+        <div class="container grid" style="max-width: 1024px;padding-left: 0.4rem; "> 
+          <p class="title is-4">
+              I'm a digital product designer who codes based in India. Working as lead product designer for <a style="font-weight: 700;" class="link-highlight" href="https://nurtr.com">nurtr</a> and consultant for <a style="font-weight: 700;" class="link-highlight" href="https://nurtr.com">Factmata</a>. I love user psychology case studies.
+              <br>
+              <br>
+              <!-- I love user psychology case studies, design systems. --> Previously at <a class="link-highlight" style="font-weight:700">Facebook</a>  & <a class="link-highlight" style="font-weight:700">Ilios Power</a>.
+          </p>
+          <!-- <img class="palm" src="india_palm.png"> -->
+          
+          <br>
+          
+          
+        </div>
+      </div>
+      <div class="hero-body">
+          <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"> 
+           
+          <p style="color: rgba(255,255,255, 0.6); font-weight: 700; cursor: none; font-family: Karla;" href="#">Selected Works</p>
+
+          
+          <br>
+          <br>
+          
+          
+          <div class="columns">
+             <!-- <div class="column is-2 card4">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">01</h1>
+                  </div>
+              </div> -->
+            
+             <div class="column is-11" href="#">
+                 
+                      <h1 class="title is-4"><a href="game-test.html" class="underlined underlined--thick" >Gamification</a></h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">To enhance user engagement for nurtr</p> 
+                      <p class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · nurtr</p>
+                       
+          
+             </div>  
+
+           
+             
+          </div> 
+
+          <br>
+          <br>
+          
+          <div class="columns">
+              <!-- <div class="column is-2 card4">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">02</h1>
+                  </div>
+              </div> -->
+              <div class="column is-11">
+                 
+                      <h1 class="title is-4 spec1">Brainiac</h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Factmata's intelligence tool</p> 
+                      <p class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · Factmata</p>
+              </div>
+          </div> 
+
+          <br>
+          <br>
+          
+          <div class="columns">
+              <!-- <div class="column is-2">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">03</h1>
+                  </div>
+              </div> -->
+              <div class="column is-11">
+                 
+                      <h1 class="title is-4">Swift Design System</h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Design principles & components at one place</p> 
+                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · nurtr</a>
+              </div>
+          </div> 
+
+          <br>
+          <br>
+          
+          <div class="columns">
+              <!-- <div class="column is-1">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">04</h1>
+                  </div>
+              </div> -->
+              <div class="column is-11">
+                 
+                      <h1 class="title is-4">Second Version</h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Revamping the website of nurtr</p> 
+                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · nurtr</a>
+              </div>
+          </div> 
+
+          <br>
+          <br>
+          
+          <div class="columns">
+              <!-- <div class="column is-1">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">05</h1>
+                  </div>
+              </div> -->
+              <div class="column is-11">
+                 
+                      <h1 class="title is-4">Gameloft</h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Dungeon game</p> 
+                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019</a>
+              </div>
+          </div> 
+
+          <br>
+          <br>
+          
+          <div class="columns">
+              <!-- <div class="column is-1">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">06</h1>
+                  </div>
+              </div> -->
+              <div class="column is-11">
+                 
+                      <h1 class="title is-4">Countering Extreme Violence</h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Avoiding violence on facebook platform</p> 
+                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019</a>
+              </div>
+          </div> 
+
+          <br>
+          <br>
+          
+          <div class="columns">
+              <!-- <div class="column is-1">
+                  <div style="padding-top: 20px;">
+                      <h1 class="title is-4">07</h1>
+                  </div>
+              </div> -->
+              <div class="column is-11">
+                 
+                      <h1 class="title is-4">Ilios Power</h1>
+                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Branding and building new softwares</p> 
+                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019</a>
+              </div>
+          </div> 
+
+         <br>
+         <br>          
+     
+        </div>
+      </div>
+    
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="container grid" style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;">
+          
+            <a style="color: grey; font-weight: bolder;">Version 1 is designed and developed by me. Last Updated on 19th September, 2019.</a>
+        <br>
+      </div> 
+
+  </section>
+
+  <script type="text/javascript">
+    $("#switch").click(function () {
+        if ($("#fullpage").hasClass("night")) {
+            $("#fullpage").removeClass("night");
+            $("#switch").removeClass("switched");
+        }
+        else {
+            $("#fullpage").addClass("night");
+            $("#switch").addClass("switched");
+
+        }
+    });
+  </script>
+
+ 
 
     
 </body>

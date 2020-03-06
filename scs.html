@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Social Rating system</title>
+    
+     <!-- FONTS  -->
+     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
+     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
+     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Libre+Franklin:500|Lora:400,700" rel="stylesheet">
+
+		<link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+        <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+		<style>
+
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        .home-title{
+            color: white; 
+            font-family: Lora; 
+            font-weight: 400;  
+            font-size: 4em;
+        }
+
+        .home-title span{
+            position: relative;
+            overflow: hidden;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .home-title span::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(-101%);
+        }
+
+        .home-title span::before{
+            
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(0);
+        }
+
+        .home-title span:nth-of-type(1)::before,
+        .home-title span:nth-of-type(1)::after{
+            animation-delay: 1s;
+        }
+
+        .home-title span:nth-of-type(2)::before,
+        .home-title span:nth-of-type(2)::after{
+            animation-delay: 1.5s;
+        }
+
+        @keyframes a-ltr-after{
+            0% {transform: translateX(-100%)}
+            100% {transform: translateX(101%)}
+        }
+
+        @keyframes a-ltr-before{
+            0% {transform: translateX(0)}
+            100% {transform: translateX(200%)}
+        }
+
+        body{
+          background-color: #272727;
+        }
+        
+        .navbar {
+           background-color: none;
+           box-shadow: none;
+           padding: 0;
+        }
+
+
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        /* navbar */
+        .hero.is-medium .hero-body{
+        padding-top: 3.4rem;
+        padding-bottom: 0rem;
+        }
+
+        .name {
+           
+           margin-top: 1.5rem; 
+           font-size: 1.2rem; 
+           color: white;
+           font-weight: bolder;
+           font-family: "Karla", sans-serif;
+
+        }
+
+
+
+        .content h1, .content h2, .content p, .content h3, .content h4{
+          color: black;
+        }
+        
+        .content p {
+          font-weight: 500;
+          font-size: 21px;
+        }
+
+        .content ol {
+          font-family: "Lora", "karla", sans-serif;
+          color: black;
+        }
+
+        ol { 
+            counter-reset: item;
+            list-style-type: none;
+        }
+
+        li { display: block; }
+
+        li:before { 
+            content: counter(item) "  "; 
+            counter-increment: item ;
+        }
+
+        .content blockquote {
+          background-color: #fff9e9;
+          border-left: 5px solid #ffd220;
+        }
+
+        blockquote p {
+          color: #443818;
+        }
+
+        strong {
+          color: black;
+          font-size: 22px;
+        }
+
+        h1{
+            font-family: "minion-pro-condensed-subhead", sans-serif;
+            font-weight: 700;
+            color: black;
+        }
+
+        h2, h3, h4, h5, h6, p{
+            font-family: "Lora", "karla", sans-serif;
+            color: black;
+        }
+
+        hr {
+          color: black;
+          border-color: black;
+          background-color: black;
+          height: 1px;
+        }
+
+        .breadcrumb a {
+          color: black;
+        }
+
+        .breadcrumb li :hover{
+          text-decoration: underline;
+        }
+
+        .columns {
+          margin-bottom: 0;
+        }
+
+        .title {
+          font-size: 60px;
+          color: black;
+          font-family: "Lora", "karla", sans-serif;
+        }
+
+        blockquote {
+            font-family: "Lora", "karla", sans-serif;
+            font-style: italic;
+        }
+
+        .isnarrow p {
+          font-size: 10px;
+        }
+
+        #gameimage {
+          z-index: 1;
+          margin-top: -100px;
+        }
+
+        #gameimage1 {
+          
+        }
+
+        .vl {
+          border-left: 1px solid white; 
+          opacity: 30%;
+          height: 90px; 
+          position: relative;; 
+          left: -3%;
+          z-index: 2;
+        }
+
+        .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
+        .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 150px; }
+        .is-paddingless-horizontal-new1 { padding-left: 0; padding-right: 0; padding-bottom: 0; }
+        .is-paddingless-horizontal-vertical { padding-left: 0; padding-right: 0; padding-top:25px; padding-bottom: 25px; }
+
+        .grid {
+          display: grid;
+          grid-template-columns:
+            [xl-start] 1fr 2.0rem [md-start] minmax(0, 624px) [md-end] 2.0rem 1fr [xl-end];
+        }
+
+        .grid-1 {
+          display: grid;
+          grid-template-columns:
+            [xl-start] 0fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+        }
+
+        .grid *  { grid-column: md; }
+        .grid-xl { grid-column: xl; }
+
+        .grid-1 *  { grid-column: md; }
+        .grid-1-xl { grid-column: xl; }
+
+        @media (max-width: 672px) {
+
+          .is-paddingless-horizontal-new { padding-left: 0; padding-right: 0; padding-bottom: 100px; padding-top: 0;}
+
+          #gameimage {
+            margin-top: -70px;
+          }
+          
+          .title{
+            font-size: 40px;
+          }
+
+          :root {
+            font-size: 90%;
+          }
+
+          .vl {
+            display: none;
+          }
+        
+        }
+
+        @media (max-width: 768px){
+
+          .vl{
+            display: none;
+          }
+          
+        }
+
+		</style>
+	</head>
+	<body >
+
+      <section class="hero is-backgroundwhite is-medium">
+
+          <!-- Hero head: will stick at the top -->
+          <div class="hero-head container grid" style="padding-bottom: 0rem; max-width: 1024px; padding-right: 1rem;" >
+             <nav class="navbar is-transparent">
+               <div class="container">
+                 
+                 <div id="navbarMenuHeroA" class="navbar-menu">
+ 
+                   <div class="navbar-start">
+                     <h2 class="navbar-item is-active name" style="opacity: 100%;">
+                      <a href="index.html" style="color: darkgray;">Roopesh Krishna L </a>
+                     </h2>
+                     
+                   </div>
+ 
+                   <!-- <div class="navbar-end name">
+ 
+ 
+                       <a class="navbar-item name">    
+                           <span class="icon">
+                               <i class="fab fa-instagram"></i>
+                          </span>
+                       </a>
+   
+                       <a class="navbar-item name">    
+                           <span class="icon">
+                               <i class="fab fa-linkedin"></i>
+                          </span>
+                       </a>
+   
+                       <a class="navbar-item name">    
+                           <span class="icon">
+                               <i class="fab fa-facebook-messenger"></i>
+                          </span>
+                       </a>
+ 
+                   </div> -->
+                 </div>
+ 
+               </div>
+             </nav>
+           </div>
+      </section>
+		
+		<!-- .section  1 -->
+		<section class="section is-paddingless-horizontal-vertical" style="padding-top: 70px;">
+			<div class="container grid" style="max-width: 1024px;">
+
+				<!-- .section -->
+				<div class="section is-paddingless-horizontal-vertical">
+
+          <!-- <h1 class="title is-3" style="color: antiquewhite;; opacity: 10%;">
+                nurtr
+          </h1> -->
+          
+					<h1 class="home-title">
+            <span>Gamification to enhance</span>
+            <span>User Engagement</span>
+          </h1>
+          
+          
+				
+          <p style="font-family:inherit; padding-top: 20px;">
+              <span class="has-text-grey;" style="color: darkgray ;"> Jan 2019 - Aug 2019 · 20 min read</span>
+          </p>
+          
+				</div>
+        
+      </div>
+      
+    </section>
+          	
+    <!-- /.section 1--> 
+
+
+    <!-- .section  1.1 -->
+
+		<section class="section is-paddingless-horizontal-new" style="padding-top: 40px;">
+
+          <div class="container grid" style="max-width: 1024px;">
+
+              <!-- <div class="columns">
+                  <div class="column is-half">
+                      
+                          
+                          <h1 style="color: darkgray; margin: 0; font-family: inherit;">Company</h1>
+                          <p style="font-family: inherit; color: white;">
+                            nurtr
+                          </p>
+                          
+                  </div>
+    
+              </div> -->
+
+            <div class="columns">
+              <div class="column is-half">
+                  
+                      <!-- <hr style="margin: 0; margin-bottom: 10px;"> -->
+                      <h1 style="color: darkgray; margin: 0; font-family: inherit;">Role</h1>
+                      <p style="font-family: inherit; color: white;">
+                        Design Lead, UX Research, Interface Design & Algorithm Design
+                      </p>
+                      <!-- <hr style="margin: 0; margin-top:10px;"> -->
+                      <!-- <div class="vl"></div> -->
+              </div>
+
+              <div class="vl" style="color: white;"></div>
+              
+              <div class="column auto">
+                  <!-- <hr style="margin: 0; margin-bottom: 10px;"> -->
+                      <h1 style="color: darkgray; margin: 0; font-family: inherit;">Challenge</h1>
+                      <p style="font-family: inherit; color: white;">
+                        To enhance user engagement in chess platform
+                      </p>
+                      <!-- <hr style="margin-top: 34px;"> -->
+              </div>
+            </div>
+          
+
+           
+                  <div class="content is-medium">
+                      <p style="padding-top: 50px; color: white;">
+                          Modern era is that of mushrooming startups where these companies expects success over nights rather than years. With digital India pushing its way forward, more and more people are getting connected over internet setting their footprints. Today companies are vying for user engagement resulting in never seen competition among the firms to acquire traffic on web.
+                        
+                      </p>
+                      
+                      <p style="color: white;">
+                        This case study introduces the gamification model that is being implemented at nurtr. The model includes user behavior analytics over implemented game elements like of <strong style="color: white;"> daily puzzle, email campaign management for cold users by sending passive notification and introduction of games for competitiveness</strong>. All this can help to tackle the problem of user attrition and enhance user experience on platform as well.
+                      </p>
+            
+                    </div>
+              
+              
+          </div>
+          
+          
+        
+      </section>
+              
+      <!-- /.section 1.1-->
+
+    <!-- .img section 1 -->
+		<section class="section is-paddingless-horizontal-new1" style="padding-top: 0; background-color: #272727;">
+        <div class="container grid" style="max-width: 1024px;">
+          
+  
+          <div class="content is-medium">
+                <!-- .columns -->
+
+              <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                  <div class="column">
+                    <div id="gameimage" class="image card">
+                      <a><img src="game.jpg"></a>
+                    </div>
+                  </div>
+                  <!-- <div class="column">
+                    <div class="image card">
+                      <a><img src="gamified.jpg"></a>
+                    </div>
+                  </div> -->
+                  <!-- <div class="column">
+                    <div class="image card">
+                      <a><img src="images/blog-3.png"></a>
+                    </div>
+                  </div> -->
+              </figure>
+
+              <figcaption class="level">
+                  <small class="level-item has-text-grey">
+                    Use cases of Gamification
+                  </small>
+              </figcaption>
+            
+          </div>
+  
+        </div>
+      </section>
+
+      <br>
+      <!-- /.img section 1 -->
+    
+    
+    <!-- .section  2 -->
+		<section class="section is-paddingless-horizontal" style="padding-top: 0; background-color: #272727;">
+        <div class="container grid" style="max-width: 1024px;">
+          
+  
+          <div class="content is-medium" style="margin-top: 50px; ">
+
+
+
+            
+             
+
+                  <h2 style="font-family: Lora; font-weight: 700; color: white;">The Beginning</h2>
+            
+                    <p style="color: white;">
+                      Its only after my final graduation exam, I started working for nurtr. I have been a consultant for two months but it was my first month in person there. 
+                      <br>
+                      <br>
+                      Small tech team. One designer apart from me. No DLS. Everyone trying to maximize the conversion rate and engagement. Many things need to be changed. 
+                      
+                      Got assigned as design lead for upcoming new version of the website. One month gone, still the website is in process. Less user traction from website, no engagement online to conduct user research and learn the things from people. 
+                      <br>
+                      <br>
+                      Only one thing in everyone's mind. Increase User Engagement. Increase. 
+                      <br>
+                      <br>
+                      There it has all begun, <strong style="color: white;">Gamification..</strong>
+                      
+                    </p>
+                    <br>
+                  <h2 style="font-family: Lora; font-weight: 700; color: white;">About nurtr</h2>
+
+                  <figure class="columns is-mobile is-variable is-0 is-marginless grid-xl">
+                      <div class="column">
+                        <div id="gameimage1" class="image card">
+                          <a><img src="nurtr_logo.svg"></a>
+                        </div>
+                      </div>
+                      <!-- <div class="column">
+                        <div class="image card">
+                          <a><img src="gamified.jpg"></a>
+                        </div>
+                      </div> -->
+                      <!-- <div class="column">
+                        <div class="image card">
+                          <a><img src="images/blog-3.png"></a>
+                        </div>
+                      </div> -->
+                  </figure>
+                  <br>
+                  <p style="color: white;">
+                      nurtr is a data-driven mentoring and skilling platform.
+                      <br>
+                      <br>
+                      Launched in June 2018, today nurtr is one of the fastest growing Online Skilling Academies in the world. We solve the problem of access – access to credible, best in class, deep course content and world-class mentors and trainers in “extra-curriculars” (chess, music, cricket, etc.).
+                      <br>
+                      <br>
+                      We launched our first course (Chess) in June 2018 and today have thousands of paying customers from countries across all continents. While Chess is our first vertical, we are not a Chess company. Our vision is to be the most comprehensive, data-driven career skilling and mentoring company in the world.
+                    
+                  </p>
+                  <br>
+            
+
+            <h2 style="font-family: Lora; font-weight: 700; color: white;">Understanding the platform</h2>
+            
+            <p style="color: white;">
+              Its only after my final graduation exam, I started working for nurtr. I have been a consultant for two months but it was my first month in person there. 
+              <br>
+              <br>
+              Small tech team. One designer apart from me. No DLS. Everyone trying to maximize the conversion rate and engagement. Many things need to be changed. 
+              
+              Got assigned as design lead for upcoming new version of the website. One month gone, still the website is in process. Less user traction from website, no engagement online to conduct user research and learn the things from people. 
+              <br>
+              <br>
+              Only one thing in everyone's mind. Increase User Engagement. Increase. 
+              <br>
+              <br>
+
+              <blockquote>"Growth without engagement is a leaky bucket. You have to retain users to grow sustainability"
+                  <div class="has-text-right"> - Nir eyal </div></blockquote>
+              
+              <br>
+            </p>
+
+            <h4 style="font-family:Lora; font-weight: 700; color: white;">E-Learning</h4>
+            <p style="color: white;">
+              E-learning can be described as a learning system comprised of structured/unstructured teaching made possible with the help of online and electronic resources. While teaching can be based in or out of the classrooms, the use of computers and the Internet forms the major component of E-learning. E-learning can also be termed as a network enabled transfer of skills and knowledge, and the delivery of education is made to a large number of recipients at the same or different times. Earlier, it was not accepted wholeheartedly as it was assumed that this system lacked the human element required in learning.
+              
+            </p>
+            <h4 style="font-family:Lora; font-weight: 700; color: white;">Customer Disengagement</h4>
+            <p style="color: white;">
+              Recently, plenty of research was conducted on engagement more particular on enhancing Customer Engagement (CE). The flip side of CE, namely Customer Disengagement (CDE), seems to be uncharted. Thus,this report elaborates a working definition on CDE. This includes the interrelation of CE and CDE. According to this report, CDE is described as a psychological process that can cause the state of complete detachment from a Brand or Service (B/S). CDE could have behavioural outcomes in terms of Negative Customer Engagement (NCE). Additionally, it interrelates with former CE levels and varies across contexts. CDE is supposed to be a promising research field.
+            </p>
+
+            <br>
+
+
+            <h2 style="font-family:Lora; font-weight: 700; color: white;">What is Gamification?</h2>
+            <blockquote>Gamification is the process of taking something that already exists – a website, an enterprise application, an online community – and integrating game mechanics into it to motivate participation, engagement, loyalty and to obtain game dynamics from it.
+                <div class="has-text-right"> - Nir eyal </div></blockquote>
+            <p style="color: white;">
+                Gamification — the application of game mechanics into nongame activities and processes—is a proven, powerful strategy for engaging, influencing and motivating diverse groups of people. The business community has just begun to realize the power of gamification to enhance customer interaction, build loyalty, andincentivize employees and partners. And the concept has the potential to solve a variety of obstacles outside the traditional business environment as well, in areas such as Health & Wellness, Education & Training and Public Policy & Government.
+            </p>
+
+            <p style="color: white;">
+                Gamification as per recent researches has found its way in user engagement and retention. Consumers of e-Learning platforms tend to get bored with one way communication, followed by poor retention of users in this competitive world. Thus studying user behavior to get things done has become a popular among platforms. Game elements helps to engage user by giving sense of achievement, loss of progress or competitiveness among peers. Major giants like Facebook and Instagram thrive on gamification for maintaining the huge user base.
+            </p>
+
+
+          
+  
+        </div>
+      </section>
+      <!-- /.section 2 -->
+
+      <section class="section is-paddingless-horizontal" style="padding-top: 0; background-color: lavenderblush;">
+          <div class="container grid" style="max-width: 1024px;">
+            
+    
+            <div class="content is-medium" style="margin-top: 50px; ">
+  
+  
+              <h1>Problem</h1>
+              
+              <p>
+                  In starting phase of a product based startup, the most delicate concern surmounts the lead generation. Though decent userbase exist for the company (20000+ registrations of professional chess players as well as aspirants) the stats clearly projects retention of users as the major issue for the time being. This indicated that although the organization exhibit expansive growth in registrations, it still lacked a good retention of students on our e-learning platform. The log analysis report (section 3.1) put forward the dropout rates across existing content on platform, thus depicting the lack of favourable consumer interaction elements on the platform.
+                  <br>
+                  <br>
+                  Following points jot down the major issues involved:
+                  <br>    
+                  <ol>
+                    <li>
+                      <strong>Lack of data point in log analysis</strong> to measure existing engaging components on company’s website.
+  
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Non-existence of feedback forms</strong> to capture direct experiences of the students engaging on platform: The sales team in collaboration of world class GMs was responsible for introducing and materializing the products, but still lacked the user feedbacks (qualitative as well as quantitative) capturing consumer experience on the newly launched platform
+  
+  
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Absence of tracking behavioural aspects of users </strong> engaging on platform followed by lack of user profiling for personalization: User dynamics play a vital role in retention. Capturing and analysing user interaction data (clicks, scrolls, hovers) across various product categories (dream room, camp room, live room) becomes crucial on what times across global locations
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Lack of behavioural studies</strong> to employ great engaging elements that works in today’s world.
+  
+                    </li>
+                  </ol> 
+              </p>
+  
+             
+  
+            </div>
+  
+    
+          </div>
+        </section>
+        <!-- /.section 2 -->
+
+        <!-- /.section 2 -->
+
+      <section class="section is-paddingless-horizontal" style="padding-top: 0; background-color: white;">
+          <div class="container grid" style="max-width: 1024px;">
+            
+    
+            <div class="content is-medium" style="margin-top: 50px; ">
+  
+  
+                <h1>Objectives</h1>
+            
+            <p>
+                To solve the above mentioned problem statements, there are some objectives to be completed in order so that it can result in positive outcomes of user engagements. The objectives are decided on what kind of problems are to be solved and they are segmented according to those. If the mentioned objectives are not met, the effectiveness of the solution will not meet the expected metrics. Here below are the objectives that I finished and are being implemented in shortime.
+                <br>
+                <br>
+                Following points jot down the major objectives involved:
+                <br>    
+                <ol>
+                  <li>
+                    <strong>Exploration of game mechanics - </strong> Game mechanics which are part of gamification along with game dynamics play a major role in increasing user engagement by introducing different game elements into the platform. Game mechanics include elements known by most of the present generation where they are totally motivated and trigged by them. Some of the game mechanics and elements are explained later.
+
+                  </li>
+                  <br>
+                  <li>
+                      <strong>To analyse and profile users based on level of engagement - </strong> Game mechanics which are part of gamification along with game dynamics play a major role in increasing user engagement by introducing different game elements into the platform. Game mechanics include elements known by most of the present generation where they are totally motivated and trigged by them. Some of the game mechanics and elements are explained later
+
+
+                  </li>
+                  <br>
+                  <li>
+                      <strong>Propose a model for enhancing user engagement on nurtr’s platform - </strong> To continue further and analyse the problem statements and to have a solution, there should be a model to be produced which states how the process is going to be carried on from the very first by analyzing data points. This will be the core for user engagement metrics for the future endeavours. The whole point of having model is that some states in the model at some stage can be modified according to the data points received. This will give an advantage to move further and solve future objectives with utmost ease.
+                  </li>
+                  <br>
+                  <li>
+                      <strong>To measure the effectiveness of the proposed model - </strong> There should be constant testing and improvement of the model to gain 40% plus metrics within certain time. The model should be measured after implementing and then again should be proposed again which includes further improvements. So, the effectiveness should be measured efficiently along with iteration of design elements for gaining more traction and to increase user engagement.
+                  </li>
+                </ol> 
+            </p>
+
+          </div>
+
+  
+             
+  
+            </div>
+  
+    
+          </div>
+        </section>
+        <!-- /.section 2 -->
+
+	</body>
+</html>

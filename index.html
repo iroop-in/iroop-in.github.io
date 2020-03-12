@@ -243,7 +243,10 @@
         padding-top: 1.4rem;
         padding-bottom: 0rem;
       } 
-
+      
+      .tabs a {
+        padding-left: 0px;
+      }
      
       .title.is-3{
         margin: 0;
@@ -541,8 +544,8 @@
       </div>
 
 
-      <div class="hero-body">
-          <div class="container grid">
+      <div class="hero-body" style="padding-top : 0px;">
+          <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;">
             <div class="tabs is-medium">
               <ul>
                 <li class="tab is-active" onclick="openTab(event,'design')"><a>Design</a></li>
@@ -553,7 +556,7 @@
           </div>
       </div>
 
-      <div class="hero-body">
+      <div class="hero-body" style="padding-top: 0px;">
         <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;">
           <div class="columns">
              <div class="column is-11"  href="#">

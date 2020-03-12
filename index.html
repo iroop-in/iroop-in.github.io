@@ -39,6 +39,7 @@
         document.title = "Aah! Come Back.";
       });
     </script>
+    
    
     <style>
 
@@ -244,6 +245,9 @@
       } 
 
      
+      .title.is-3{
+        margin: 0;
+      }
   
       .title {
           max-width: 100%;
@@ -487,6 +491,9 @@
                 <div id="navbarMenuHeroA" class="navbar-menu">
 
                   <div class="navbar-start">
+
+                    
+
                     <h2 class="navbar-item is-active name" id="fullpage" id="introtext">
                       Roopesh Krishna L
                     </h2>
@@ -520,145 +527,64 @@
               </div>
             </nav>
           </div>
-
-          <!-- Hero head: will stick at the top 
-          <div class="hero-head container grid" style="padding-top: 0rem; max-width: 1024px; padding-right: 1rem;" id="introtext">
-            <nav class="navbar is-flex-mobile is-transparent is-tab">
-              <div class="container">
-                
-                <div id="navbarMenuHeroA" class="navbar-menu" style="padding-top:0;">
-                  <div class="navbar-start" style="font-family;Karla;">
-                    <s class="navbar-item is-active" style="color: white">
-                      Selected Works
-                    </s>
-                    <a class="navbar-item">
-                        Machine Learning
-                    </a>
-                    <a class="navbar-item">
-                      Illustrations
-                    </a>
-                    <a class="navbar-item" href="about.html">
-                      About
-                    </a>
-                  </div>
-                  <div class="navbar-end">
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div> -->
         
     
       <!-- Hero content: will be in the middle -->
       <div class="hero-body " >
         <div class="container grid" style="max-width: 1024px;padding-left: 0.4rem; "> 
-          <!--<p class="title">
-              I'm a digital product designer. Working as lead product designer for <a style="font-weight: 700;color: #a0ce4e;" href="https://nurtr.com">nurtr</a> and <a style="font-weight: 700;color: skyblue;" href="https://factmata.com">Factmata</a>. Previously at <a style="font-weight:700; color: #ADB9D3">Facebook</a>  & <a style="font-weight:700;color: #F3E357;">Ilios Power</a>.
-          </p> -->
           <p class="title">
             Since 2017, I’ve been a digital product designer, helped some of the world’s top startups design amazing products and services.
           </p>
-          <!-- <img class="palm" src="india_palm.png"> -->
-          
           <br>
-          
-          
+          <p style="color: rgba(255,255,255, 0.6); font-weight: 600; cursor: none; font-family: Karla;" href="#">Selected Works</p>
         </div>
       </div>
+
+
       <div class="hero-body">
-          <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"> 
-                       
-            <p style="color: rgba(255,255,255, 0.6); font-weight: 600; cursor: none; font-family: Karla;" href="#">Selected Works</p>
+          <div class="container grid">
+            <div class="tabs is-medium">
+              <ul>
+                <li class="tab is-active" onclick="openTab(event,'design')"><a>Design</a></li>
+                <li class="tab" onclick="openTab(event,'network')"><a>Network Analysis</a></li>
+                <li class="tab" onclick="openTab(event,'nlp')"><a>NLP</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
 
-          
-          <br>
-          <br>
-          
-          
+      <div class="hero-body">
+        <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;">
           <div class="columns">
-             <!-- <div class="column is-2 card4">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">01</h1>
-                  </div>
-              </div> -->
-            
-             <div class="column is-11" href="#">
-                 
-                      <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Gamification</a></h1>
-                      <!-- <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">To enhance user engagement for nurtr</p> 
-                      <a class="subtitle is-6" style="padding-top: 0; cursor: inherit;">Jan 2019 - Aug 2019 · nurtr</a> -->
-                       
-          
+             <div class="column is-11"  href="#">
+                <div id = "design" class="content-tab">
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Social Rating System</a></h1>
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Gamification</a></h1>
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Monitoring Intelligence</a></h1>
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Chess game app</a></h1>
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Second Version 2.1</a></h1>
+                </div>
+                <div id="network" class="content-tab" style="display: none;">
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Coronavirus Network</a></h1>
+                </div> 
+                <div id="nlp" class="content-tab" style="display: none;">
+                  <h1 class="title is-3"><a href="game-test.html" class="underlined underlined--thick" >Second Version 2.1</a></h1>
+                </div> 
              </div>  
-          </div> 
-
-          
-          
-          <div class="columns">
-              <!-- <div class="column is-2 card4">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">02</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                <h1 class="title is-3" ><a class = "underlined">Brainiac</a></h1>
-                <!--<p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px; opacity: 0.5;">Factmata's Opinion Monitorting and Intelligence Tool</p> 
-                <a class="subtitle is-6" style="padding-top: 0;color: rgb(182, 182, 182);cursor: none;">Coming Soon</a> -->
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-2">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">03</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                    <h1 class="title is-3" ><a class = "underlined">Swift Design System</a></h1>
-                      <!--<p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px; opacity: 0.5;">Design principles, Constraints & Components at one place</p> 
-                      <a class="subtitle is-6" style="padding-top: 0;color: rgb(182, 182, 182);cursor: none;">Coming Soon</a>-->
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-1">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">04</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                <h1 class="title is-3" ><a class = "underlined">Second Version 2.1</a></h1>
-                <!--<p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px; opacity: 0.5;">Revamping the website of nurtr</p> 
-                <a class="subtitle is-6" style="padding-top: 0;color: rgb(182, 182, 182);cursor: none;">Coming Soon</a></a> -->
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <br>
-          <br>
-          
-         
-
-         <br>
-         <br>          
-     
+         </div> 
         </div>
       </div>
     
       <!-- Hero footer: will stick at the bottom -->
-      <div class="container grid" style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;">
-          
+      <div class="container grid navbar-menu" style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;">
+
+        <div class="navbar-start">
+          <a class="navbar-item title underlined">
+            About
+          </a>
+        </div>
+
+        
             <a style="color: grey; font-weight: bolder;">Version 1 is designed and developed by me. Last Updated on 12th March, 2020.</a>
         <br>
       </div> 
@@ -676,9 +602,24 @@
             $("#switch").addClass("switched");
 
         }
-    });
+    }); 
   </script>
-
+  <script>
+    function openTab(evt, tabName) {
+      var i, z, x, tablinks;
+      x = document.getElementsByClassName("content-tab");
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+      }
+      z = document.getElementById(tabName)
+      z.style.display = "block";
+      evt.currentTarget.className += " is-active";
+    }
+  </script>
  
 
     

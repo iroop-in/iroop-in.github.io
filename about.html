@@ -11,8 +11,9 @@
     <!-- CSS -->
     <!-- <link rel="stylesheet" href="css/debug.css"> --> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+  
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
 
     <!-- FONTS  -->
     <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
@@ -38,13 +39,36 @@
         document.title = "Aah! Come Back.";
       });
     </script>
+    
    
     <style>
 
+          .navbar-item {
+            
+            font-size: large;
+          }
+
+          .cardbg {
+            
+            width: 100%;
+            height: 120%;
+            
+            background: #272727;
+            background-repeat: repeat;
+            
+          }
+
+          .gridify.tiny {
+            background-image: 
+              linear-gradient(transparent 11px, rgba(220,220,200,.1) 12px, transparent 12px),
+              linear-gradient(90deg, transparent 11px, rgba(220,220,200,.1) 12px, transparent 12px);
+              background-size: 100% 20px, 20px 100%;
+          }
 
 
         .underlined {
           color: white;
+          font-weight: 800;
           text-decoration: none;
           background-image: linear-gradient(to right, #56b8e6 0, #56b8e6 100%);
           background-position: 0 1.2em;
@@ -169,6 +193,8 @@
           transform: scale(1, 1)
       }
 
+    
+
 
 
       .spec:focus {
@@ -198,7 +224,7 @@
 
       html,body{
         height: 100%;
-        font-family: "Karla", "Lora";
+        font-family: 'larsseitregular', "Karla", "Lora";
         background-color: #272727;
       }
 
@@ -210,7 +236,7 @@
 
       
       h2, h3, h4, h5, h6, p{
-            font-family: "Lora", sans-serif;
+            font-family: 'larsseitregular', "Lora", sans-serif;
             color: white;
       }
 
@@ -219,13 +245,63 @@
          font-size: 1.2em;
       }
 
+      a, a > span {
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        line-height: 24px;
+      }
+      a:before, a:after, a > span:before, a > span:after {
+        content: '';
+        position: absolute;
+        transition: transform .5s ease;
+      }
+
+      .effect-1 {
+        padding-top: 10px;
+      }
+      .effect-1:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #0883a4;
+        transform: scaleX(0);
+      }
+      .effect-1:hover:before {
+        transform: scaleX(1);
+      }
+
       .name {
            
            margin-top: 1.5rem; 
            font-size: 1.2rem; 
            color: white;
            font-weight: bolder;
-           font-family: "Karla", "Lora";
+           font-family: 'larsseitregular', "Karla", "Lora";
+       }
+
+       .namesmall {
+           
+           margin-top: 1.6rem; 
+           font-size: 1.0rem; 
+           color: white;
+           font-weight: bolder;
+           font-family: 'larsseitregular', "Karla", "Lora";
+           text-decoration: underline;
+           text-decoration-color: #f7cac9;
+           text-decoration-thickness: 1.2rem;
+       }
+
+       .nameunder {
+           
+           margin-top: 1.5rem; 
+           font-size: 1.2rem; 
+           color: white;
+           font-weight: bolder;
+           text-decoration: underline;
+           
+           font-family: 'larsseitregular', "Karla", "Lora";
        }
  
        .name1 {
@@ -237,19 +313,33 @@
         }
 
       .hero.is-medium .hero-body{
-        padding-top: 3.4rem;
+        padding-top: 1.4rem;
         padding-bottom: 0rem;
       } 
-
+      
+      .tabs a {
+        padding-left: 0px;
+      }
      
+      .title.is-3{
+        margin: 0;
+      }
+
+      .title.is-2{
+        margin: 0;
+      }
+
+      .title.is-5{
+        margin: 0;
+      }
   
       .title {
           max-width: 100%;
-          font-size: 28px;
-          font-weight: 500;
+          font-size: 18px;
+          font-weight: 400;
           line-height: 1.5em;
-          color: white;
-          font-family:  'Lora', "Karla", sans-serif;
+          color: rgba(255,255,255, 0.6);
+          font-family:  'larsseitregular' ,"Karla", 'Lora', sans-serif;
       }
 
       .title-1 {
@@ -315,6 +405,11 @@
         border-radius: 1px;
         width: 100%;
         height: 100%;
+      }
+
+      .column {
+        padding-top: 0px;
+        padding-bottom: 0px;
       }
 
 
@@ -466,11 +561,9 @@
 
 </head>
 
-<body >
-
-    
-
-  <section class="hero is-backgroundwhite is-medium " id="fullpage">
+<body class="cardbg gridify tiny">
+   
+  <section class="hero is-backgroundwhite is-medium" id="fullpage">
 
          <!-- Hero head: will stick at the top -->
          <div class="hero-head container grid" style="padding-bottom: 0rem; max-width: 1024px; padding-right: 1rem ;" >
@@ -480,63 +573,32 @@
                 <div id="navbarMenuHeroA" class="navbar-menu">
 
                   <div class="navbar-start">
+
+                    
+
                     <h2 class="navbar-item is-active name" id="fullpage" id="introtext">
                       Roopesh Krishna L
                     </h2>
                     
                   </div>
 
-                  <!-- <div class="navbar-end name">
-
-
-                      <a class="navbar-item name">    
-                          <span class="icon">
-                              <i class="fab fa-instagram"></i>
-                         </span>
-                      </a>
-  
-                      <a class="navbar-item name">    
-                          <span class="icon">
-                              <i class="fab fa-linkedin"></i>
-                         </span>
-                      </a>
-  
-                      <a class="navbar-item name">    
-                          <span class="icon">
-                              <i class="fab fa-facebook-messenger"></i>
-                         </span>
-                      </a>
-
-                  </div> -->
-                </div>
-
-              </div>
-            </nav>
-          </div>
-
-          <!-- Hero head: will stick at the top -->
-          <div class="hero-head container grid" style="padding-top: 0rem; max-width: 1024px; padding-right: 1rem;" id="introtext">
-            <nav class="navbar is-flex-mobile is-transparent is-tab">
-              <div class="container">
-                
-                <div id="navbarMenuHeroA" class="navbar-menu" style="padding-top:0;">
-                  <div class="navbar-start" style="font-family;Karla;">
-                    <a class="navbar-item" href="index.html">
-                      Selected Works
-                    </a>
-                    <a class="navbar-item">
-                        Machine Learning and NLP
-                    </a>
-                    <a class="navbar-item">
-                      Illustrations
-                    </a>
-                    <s class="navbar-item is-active" style="color: white">
-                      About
-                    </s>
-                  </div>
                   <div class="navbar-end">
+
+                      <a class="navbar-item namesmall" href="index.html">    
+                        Work
+                      </a>
+
+                      <a class="navbar-item namesmall" style="text-decoration:line-through;">    
+                          About
+                      </a>
+  
+                      <a class="navbar-item namesmall">    
+                          Résumé
+                      </a>
+
                   </div>
                 </div>
+
               </div>
             </nav>
           </div>
@@ -545,164 +607,88 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body " >
         <div class="container grid" style="max-width: 1024px;padding-left: 0.4rem; "> 
-          <img src="roop.jpg">
-          <p class="title is-4">
-              I'm a digital product designer who codes based in India. Working as lead product designer for <a style="font-weight: 700;" class="link-highlight" href="https://nurtr.com">nurtr</a> and consultant for <a style="font-weight: 700;" class="link-highlight" href="https://nurtr.com">Factmata</a>. I love user psychology case studies.
-              <br>
-              <br>
-              <!-- I love user psychology case studies, design systems. --> Previously at <a class="link-highlight" style="font-weight:700">Facebook</a>  & <a class="link-highlight" style="font-weight:700">Ilios Power</a>.
+          <p class="title">
+            <span>I'm a digital product designer who sits at the intersection of design, data and cyberpsychology. My passion is towards working at some reliable solutions for better user experience with the help of above three domains. </span>
+            <br>
+            <br>
+            <span>
+            Currently working as lead designer for nurtr and Factmata. Previously with Facebook, Ilios Power. Moreover, I'm exploring and building things under network analysis, Speech and language processing.</span>
           </p>
-          <!-- <img class="palm" src="india_palm.png"> -->
-          
-          <br>
-          
-          
+          <p style="color: rgba(255,255,255, 0.6); font-weight: 600;  padding-top:50px;" href="#">More about me</p>
         </div>
       </div>
-      <div class="hero-body">
-          <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"> 
-           
-          <p style="color: rgba(255,255,255, 0.6); font-weight: 700; cursor: none; font-family: Karla;" href="#">Selected Works</p>
 
-          
-          <br>
-          <br>
-          
-          
+
+      <div class="hero-body" style="padding-top : 0px;">
+          <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;">
+            <div class="tabs is-medium">
+              <ul>
+                <li class="tab is-active" onclick="openTab(event,'design')"><a>Experience</a></li>
+                <li class="tab" onclick="openTab(event,'network')"><a>Education</a></li>
+                <li class="tab" onclick="openTab(event,'network')"><a>Skills</a></li>
+                <li class="tab" onclick="openTab(event,'network')"><a>Interests</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+
+      <div class="hero-body" style="padding-top: 0px;">
+        <div class="container grid" style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;">
           <div class="columns">
-             <!-- <div class="column is-2 card4">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">01</h1>
-                  </div>
-              </div> -->
-            
-             <div class="column is-11" href="#">
-                 
-                      <h1 class="title is-4"><a href="game-test.html" class="underlined underlined--thick" >Gamification</a></h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">To enhance user engagement for nurtr</p> 
-                      <p class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · nurtr</p>
-                       
-          
+             <div class="column is-11"  href="#">
+                <div id = "design" class="content-tab">
+                  <h1 class="title is-2"><a href="game-test.html" class="underlined underlined--thick" >nurtr</a></h1>
+                  <h1 class="title is-2"><a href="game-test.html" class="underlined underlined--thick" >Factmata</a></h1>
+                  <h1 class="title is-2"><a href="game-test.html" class="underlined underlined--thick" >Facebook</a></h1>
+                  <h1 class="title is-2"><a href="game-test.html" class="underlined underlined--thick" >Ilios Power</a></h1>
+                  
+                </div>
+                <div id="network" class="content-tab" style="display: none;">
+                  <h1 class="title is-2"style="font-weight: 800; color:white;" >IIIT Allahabad</h1>
+                  <h1 class="title is-5" style="color: white;">Bachelor of Technology, Electronics and Communication Engineering</h1>
+                  <h1 class="title is-6">2015 - 2019</h1>
+                </div> 
+                <div id="nlp" class="content-tab" style="display: none;">
+                  <h1 class="title is-2"><a href="game-test.html" class="underlined underlined--thick" >Second Version 2.1</a></h1>
+                </div> 
              </div>  
-
-           
-             
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-2 card4">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">02</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                      <h1 class="title is-4 spec1">Brainiac</h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Factmata's intelligence tool</p> 
-                      <p class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · Factmata</p>
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-2">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">03</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                      <h1 class="title is-4">Swift Design System</h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Design principles & components at one place</p> 
-                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · nurtr</a>
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-1">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">04</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                      <h1 class="title is-4">Second Version</h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Revamping the website of nurtr</p> 
-                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019 · nurtr</a>
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-1">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">05</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                      <h1 class="title is-4">Gameloft</h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Dungeon game</p> 
-                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019</a>
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-1">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">06</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                      <h1 class="title is-4">Countering Extreme Violence</h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Avoiding violence on facebook platform</p> 
-                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019</a>
-              </div>
-          </div> 
-
-          <br>
-          <br>
-          
-          <div class="columns">
-              <!-- <div class="column is-1">
-                  <div style="padding-top: 20px;">
-                      <h1 class="title is-4">07</h1>
-                  </div>
-              </div> -->
-              <div class="column is-11">
-                 
-                      <h1 class="title is-4">Ilios Power</h1>
-                      <p class="subtitle is-5" style="color: rgba(255,255,255,0.6); margin-bottom: 6px;">Branding and building new softwares</p> 
-                      <a class="subtitle is-6" style="padding-top: 0;">Jan 2019 - Aug 2019</a>
-              </div>
-          </div> 
-
-         <br>
-         <br>          
-     
+         </div> 
         </div>
       </div>
     
       <!-- Hero footer: will stick at the bottom -->
-      <div class="container grid" style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;">
+      <div class="hero-body" style="padding-top: 0px;">
+        <div class="container grid navbar" style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;">
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+            
+            <div class="navbar-start name">
+  
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-instagram"></i>
+                 </span>
+              </a>
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-linkedin"></i>
+                 </span>
+              </a>
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-facebook-messenger"></i>
+                 </span>
+              </a>
+  
+          </div>
+          </div>
+  
+            <a style="color: grey; font-weight: bolder; padding-left: 0.4rem;">Website V1.0 is designed and developed by me. Last Updated on 13th March, 2020.</a>
           
-            <a style="color: grey; font-weight: bolder;">Version 1 is designed and developed by me. Last Updated on 19th September, 2019.</a>
-        <br>
-      </div> 
+        </div> 
+      </div>
 
   </section>
 
@@ -717,9 +703,24 @@
             $("#switch").addClass("switched");
 
         }
-    });
+    }); 
   </script>
-
+  <script>
+    function openTab(evt, tabName) {
+      var i, z, x, tablinks;
+      x = document.getElementsByClassName("content-tab");
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" is-active", "");
+      }
+      z = document.getElementById(tabName)
+      z.style.display = "block";
+      evt.currentTarget.className += " is-active";
+    }
+  </script>
  
 
     

@@ -43,6 +43,11 @@
    
     <style>
 
+          .tabs li.is-active a {
+              border-bottom-color: #f7cac9;
+              color: #f7cac9;
+          }
+
           .navbar-item {
             
             font-size: large;
@@ -634,7 +639,7 @@
               <ul>
                 <li class="tab is-active" onclick="openTab(event,'design')"><a>Experience</a></li>
                 <li class="tab" onclick="openTab(event,'network')"><a>Education</a></li>
-                <li class="tab" onclick="openTab(event,'skills')"><a>Skills</a></li>
+                <li class="tab" onclick="openTab(event,'skills')"><a>Achievements</a></li>
                 <li class="tab" onclick="openTab(event,'interest')"><a>Interests</a></li>
               </ul>
             </div>
@@ -678,7 +683,16 @@
                 </div> 
 
                 <div id="skills" class="content-tab" style="display: none;">
-                  <h1 class="title is-2"><a href="game-test.html" class="underlined underlined--thick" >Second Version 2.1</a></h1>
+                  <div>
+                    <h1 class="title is-2" style="font-weight: 800; color:white;">Global Entreprenuership award</h1>
+                    <h1 class="title is-5" style="color:white; margin-top: -10px;">Finalist</h1>
+                    <p class="title">Hyderabad, 2016</p>
+                  </div>
+                  <div>
+                    <h1 class="title is-2" style="font-weight: 800; color:white;">Puma Design Challenge</h1>
+                    <h1 class="title is-5" style="color:white; margin-top: -10px;">Finalist</h1>
+                    <p class="title">2016</p>
+                  </div>
                 </div> 
 
                 <div id = "interest" class="content-tab" style="display: none;">

@@ -74,12 +74,15 @@
     </script>
 
     <style>
-      .navbar-item a::after {
-        color: #f7cac9;
-      }
-
       .tabs li.is-active a {
         border-bottom-color: #f7cac9;
+        color: #f7cac9;
+      }
+      .breadcrumb li.is-active a {
+        color: white;
+      }
+
+      .breadcrumb a {
         color: #f7cac9;
       }
 
@@ -89,7 +92,7 @@
 
       .cardbg {
         width: 100%;
-        height: 120%;
+        height: 2050%;
 
         background: #272727;
         background-repeat: repeat;
@@ -114,7 +117,7 @@
         color: white;
         font-weight: 800;
         text-decoration: none;
-        background-image: linear-gradient(to right, #f7cac9 0, #f7cac9 100%);
+        background-image: linear-gradient(to right, #56b8e6 0, #56b8e6 100%);
         background-position: 0 1.2em;
         background-size: 0 100%;
         background-repeat: no-repeat;
@@ -320,6 +323,7 @@
         text-decoration: none;
         line-height: 24px;
       }
+
       a:before,
       a:after,
       a > span:before,
@@ -393,6 +397,18 @@
       }
 
       .title.is-2 {
+        margin-bottom: 0;
+      }
+
+      .title.is-1 {
+        margin: 0;
+      }
+
+      .title.is-5 {
+        margin: 0;
+      }
+
+      .title.is-4 {
         margin: 0;
       }
 
@@ -575,14 +591,11 @@
               </div>
 
               <div class="navbar-end">
-                <a
-                  class="navbar-item namesmall"
-                  style="text-decoration:line-through;"
-                >
+                <a class="navbar-item namesmall" href="index.html">
                   Work
                 </a>
 
-                <a class="navbar-item namesmall" href="about.html">
+                <a href="about.html" class="navbar-item namesmall">
                   About
                 </a>
 
@@ -601,15 +614,30 @@
           class="container grid"
           style="max-width: 1024px;padding-left: 0.4rem; "
         >
+          <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Selected Works</a></li>
+              <li
+                class="is-active"
+                style="color: white; background-color: null;"
+              >
+                <a href="#" aria-current="page">Chess game app</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="title is-1" style="font-size: 64px;">
+            <h1>Chess game app</h1>
+          </div>
+
           <p class="title">
-            Since 2017, I’ve been a digital product designer, helped some of the
-            world’s top startups design amazing products and services.
+            <span>"Play , Win, Learn through nurtr"</span>
           </p>
           <p
-            style="color: rgba(255,255,255, 0.6); font-weight: 600;  padding-top:50px;"
+            style="color: rgba(255,255,255, 0.6); font-weight: 600;  padding-top:10px;"
             href="#"
           >
-            Selected Works
+            Project Description
           </p>
         </div>
       </div>
@@ -622,13 +650,13 @@
           <div class="tabs is-medium">
             <ul>
               <li class="tab is-active" onclick="openTab(event,'design')">
-                <a>Design</a>
+                <a>Challenge</a>
               </li>
               <li class="tab" onclick="openTab(event,'network')">
-                <a>Network Analysis</a>
+                <a>Role</a>
               </li>
-              <li class="tab" onclick="openTab(event,'nlp')">
-                <a>CyberPsychology & NLP</a>
+              <li class="tab" onclick="openTab(event,'skills')">
+                <a>Company & Year</a>
               </li>
             </ul>
           </div>
@@ -643,38 +671,194 @@
           <div class="columns">
             <div class="column is-11" href="#">
               <div id="design" class="content-tab">
-                <h1 class="title is-2">
-                  <a href="srs.html" class="underlined underlined--thick"
-                    >Social Rating System</a
-                  >
-                </h1>
-                <h1 class="title is-2" style="font-weight: 800;">
-                  Gamification
-                </h1>
-                <h1 class="title is-2" style="font-weight: 800;">
-                  Monitoring Intelligence
-                </h1>
-                <h1 class="title is-2">
-                  <a href="chess.html" class="underlined underlined--thick"
-                    >Chess game app</a
-                  >
-                </h1>
-                <h1 class="title is-2 " style="font-weight: 800;">
-                  Second Version 2.1
-                </h1>
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    Design an interface for users to play chess online with
+                    people around the world and with friends.
+                  </h1>
+                </div>
               </div>
+
               <div id="network" class="content-tab" style="display: none;">
-                <h1 class="title is-2" style="font-weight: 800;">
-                  Coronavirus Network
-                </h1>
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    UX Design
+                  </h1>
+                </div>
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    User Interface
+                  </h1>
+                </div>
               </div>
-              <div id="nlp" class="content-tab" style="display: none;">
-                <h1 class="title is-2" style="font-weight: 800;">
-                  Coming Soon
+
+              <div id="skills" class="content-tab" style="display: none;">
+                <h1 class="title is-5" style="font-weight: 400; color:white;">
+                  nurtr.com ( Thought Roots India Pvt Ltd )
+                </h1>
+                <h1 class="title is-5" style="font-weight: 400;">
+                  February - March 2020
                 </h1>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Platform</h1>
+          </div>
+          <p class="title is-5">
+            <span>nurtr is a leading <br /><br /> </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Project Context</h1>
+          </div>
+          <p class="title is-5">
+            <span>nurtr is a leading <br /><br /> </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Constraints</h1>
+          </div>
+          <p class="title is-5">
+            <span>nurtr is a leading <br /><br /> </span>
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Process</h1>
+          </div>
+
+          <img src="img/process.png" />
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Discovering things</h1>
+          </div>
+          <p class="title is-5">
+            In the limited time frame I got, I came up with some wireframes
+            which depicts how the social rating system actually work.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>User Flow</h1>
+          </div>
+          <p class="title is-5">
+            In the limited time frame I got, I came up with some wireframes
+            which depicts how the social rating system actually work.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Sketching</h1>
+          </div>
+          <p class="title is-5">
+            In the limited time frame I got, I came up with some wireframes
+            which depicts how the social rating system actually work.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Finding a Visual Language</h1>
+          </div>
+          <p class="title is-5">
+            In the limited time frame I got, I came up with some wireframes
+            which depicts how the social rating system actually work.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Visualization Attempts</h1>
+          </div>
+          <p class="title is-5">
+            In the limited time frame I got, I came up with some wireframes
+            which depicts how the social rating system actually work.
+          </p>
         </div>
       </div>
 
@@ -685,30 +869,37 @@
           style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;"
         >
           <div id="navbarExampleTransparentExample" class="navbar-menu">
-            <div class="navbar-start name">
-              <a class="navbar-item name">
-                <span class="icon">
-                  <i class="fab fa-instagram"></i>
-                </span>
+            <!--  <div class="navbar-start name">
+  
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-instagram"></i>
+                 </span>
               </a>
-
-              <a class="navbar-item name">
-                <span class="icon">
-                  <i class="fab fa-linkedin"></i>
-                </span>
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-linkedin"></i>
+                 </span>
               </a>
-
-              <a class="navbar-item name">
-                <span class="icon">
-                  <i class="fab fa-facebook-messenger"></i>
-                </span>
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-facebook-messenger"></i>
+                 </span>
               </a>
-            </div>
+  
+          </div> -->
           </div>
 
           <a style="color: grey; font-weight: bolder; padding-left: 0.4rem;"
-            >Website V1.0 is designed and developed by me. Last Updated on 13th
-            March, 2020.</a
+            >PS: I'm a full time and part time employee, got little time on
+            weekdays and even on the weekends, I don’t see this as an excuse, I
+            love to participate and solve things, which is why I took this up
+            and doing what I can about this in the coming days. I barely spent
+            hours in the first 6 days of the competition, started on 13th march
+            officially, going on to something..</a
           >
         </div>
       </div>

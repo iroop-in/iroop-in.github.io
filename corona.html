@@ -1,0 +1,3820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Roop Krrish</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+
+    <!-- FONTS  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      id="changingFavicon"
+      type="image/png"
+      href="https://img.icons8.com/color/48/000000/captain-america.png"
+    />
+
+    <!-- JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.bokeh.org/bokeh/release/bokeh-2.0.0.min.js"
+      integrity="sha384-5Y+xuMRAbgBj/2WKUiL8yzV4fBFic1HJPo2hT3pq2IsEzbsJjj8kT2i0b1lZ7C2N"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      Bokeh.set_log_level("info");
+    </script>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).focus(function() {
+        $("#changingFavicon").attr(
+          "href",
+          "https://img.icons8.com/color/48/000000/captain-america.png"
+        );
+        document.title = "Roop Krrish";
+      });
+      $(window).blur(function() {
+        $("#changingFavicon").attr(
+          "href",
+          "https://img.icons8.com/color/48/000000/hulk.png"
+        );
+        document.title = "Aah! Come Back.";
+      });
+    </script>
+
+    <style>
+      .tabs li.is-active a {
+        border-bottom-color: #f7cac9;
+        color: #f7cac9;
+      }
+      .breadcrumb li.is-active a {
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: #f7cac9;
+      }
+
+      .navbar-item {
+        font-size: large;
+      }
+
+      .cardbg {
+        width: 100%;
+        height: 2050%;
+
+        background: #272727;
+        background-repeat: repeat;
+      }
+
+      .gridify.tiny {
+        background-image: linear-gradient(
+            transparent 11px,
+            rgba(220, 220, 200, 0.1) 12px,
+            transparent 12px
+          ),
+          linear-gradient(
+            90deg,
+            transparent 11px,
+            rgba(220, 220, 200, 0.1) 12px,
+            transparent 12px
+          );
+        background-size: 100% 20px, 20px 100%;
+      }
+
+      .underlined {
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+        background-image: linear-gradient(to right, #56b8e6 0, #56b8e6 100%);
+        background-position: 0 1.2em;
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background 0.5s;
+      }
+      .underlined:hover {
+        background-size: 100% 100%;
+      }
+      .underlined--thin {
+        background-image: linear-gradient(to right, black 0, black 100%);
+      }
+      .underlined--thick {
+        background-position: 0 -0.1em;
+      }
+      .underlined--offset {
+        background-position: 0 0.2em;
+        box-shadow: inset 0 -0.5em 0 0 white;
+      }
+      .underlined--gradient {
+        background-position: 0 -0.1em;
+        background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+      }
+      .underlined--reverse {
+        background-position: 100% -0.1em;
+        transition: background 1s;
+        background-image: linear-gradient(to right, yellow 0, yellow 100%);
+      }
+
+      .column.is-2 {
+        width: 9%;
+      }
+      .is-paddingless-horizontal {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .is-paddingless-horizontal-new {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 150px;
+      }
+      .is-paddingless-horizontal-new1 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+      .is-paddingless-horizontal-vertical {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: [xl-start] 1fr 2rem [md-start] minmax(0, 624px) [md-end] 2rem 1fr [xl-end];
+      }
+
+      .grid-1 {
+        display: grid;
+        grid-template-columns: [xl-start] 0fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+      }
+
+      .grid * {
+        grid-column: md;
+      }
+      .grid-xl {
+        grid-column: xl;
+      }
+
+      .grid-1 * {
+        grid-column: md;
+      }
+      .grid-1-xl {
+        grid-column: xl;
+      }
+
+      .spec {
+        display: block;
+        position: relative;
+        transform: translate3d(0, 0, 0);
+        transition: all 400ms;
+        margin: 0 0 48px;
+        cursor: pointer;
+      }
+
+      .spec:hover::after {
+        content: "→";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        font-size: 4.4em;
+        opacity: 0;
+        transform: translate3d(24px, 0, 0);
+        transition: all 400ms;
+        color: white;
+        -webkit-animation: fadein 4s linear backwards;
+        animation: fadein 4s linear forwards;
+      }
+
+      @-webkit-keyframes fadein {
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadein {
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .spec1 {
+        position: relative;
+        display: inline-block;
+      }
+
+      .spec1:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #f7cac9;
+        /* transform: translate3d(0, 0, 0) scale(0, 1);
+          transform-origin: center left;
+          transition: all 400ms; */
+        z-index: -1;
+      }
+
+      #project-list .project-list-item--info {
+        font-family: "Inconsolata", monospace;
+      }
+
+      #project-list .project-list-item--coming-soon {
+        pointer-events: none;
+      }
+
+      #project-list
+        .project-list-item--coming-soon
+        .project-list-item--title:after {
+        background: rgba(238, 238, 238, 0.5);
+        left: calc(-1 * 8px);
+        right: calc(-1 * 8px);
+        transform: scale(1, 1);
+      }
+
+      .spec:focus {
+        outline-color: rgba(0, 0, 0, 0.1);
+        outline-width: 1px;
+        outline-offset: -3px;
+      }
+
+      .navbar-menu {
+        background-color: none;
+      }
+
+      .hero-body {
+        padding-top: 30px;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .card {
+        box-shadow: none;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: "larsseitregular", "Karla", "Lora";
+        background-color: #272727;
+      }
+
+      h1 {
+        font-weight: 900;
+        color: white;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        font-family: "larsseitregular", "Lora", sans-serif;
+        color: white;
+      }
+
+      p {
+        line-height: 1.5em;
+        font-size: 1.2em;
+      }
+
+      a,
+      a > span {
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        line-height: 24px;
+      }
+
+      a:before,
+      a:after,
+      a > span:before,
+      a > span:after {
+        content: "";
+        position: absolute;
+        transition: transform 0.5s ease;
+      }
+
+      .effect-1 {
+        padding-top: 10px;
+      }
+      .effect-1:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #0883a4;
+        transform: scaleX(0);
+      }
+      .effect-1:hover:before {
+        transform: scaleX(1);
+      }
+
+      .name {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bolder;
+        font-family: "larsseitregular", "Karla", "Lora";
+      }
+
+      .namesmall {
+        margin-top: 1.6rem;
+        font-size: 1rem;
+        color: white;
+        font-weight: bolder;
+        font-family: "larsseitregular", "Karla", "Lora";
+        text-decoration: underline;
+        text-decoration-color: #f7cac9;
+        text-decoration-thickness: 1.2rem;
+      }
+
+      .nameunder {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bolder;
+        text-decoration: underline;
+
+        font-family: "larsseitregular", "Karla", "Lora";
+      }
+
+      .name1 {
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bolder;
+      }
+
+      .hero.is-medium .hero-body {
+        padding-top: 1.4rem;
+        padding-bottom: 0rem;
+      }
+
+      .tabs a {
+        padding-left: 0px;
+      }
+
+      .title.is-3 {
+        margin: 0;
+      }
+
+      .title.is-2 {
+        margin-bottom: 0;
+      }
+
+      .title.is-1 {
+        margin: 0;
+      }
+
+      .title.is-5 {
+        margin: 0;
+      }
+
+      .title.is-4 {
+        margin: 0;
+      }
+
+      .title {
+        max-width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: "larsseitregular", "Karla", "Lora", sans-serif;
+      }
+
+      .title-1 {
+        max-width: 70%;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: white;
+        font-family: "Lora", "Karla", sans-serif;
+      }
+
+      .link-highlight {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 0px 7px;
+        transition: all 0.2s ease-in-out;
+        box-sizing: border-box;
+        text-decoration: none;
+        box-shadow: inset 0 -17px 0 #56b8e6;
+      }
+
+      .link-highlight:hover {
+        box-shadow: inset 0 -55px 0 0 rgb(25, 196, 226);
+        color: white;
+      }
+
+      .colis {
+        max-width: 100%;
+        padding-top: 1rem;
+      }
+
+      #palm {
+        background-image: url("india_palm.png");
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        background-position-y: -8rem;
+      }
+
+      button {
+        margin: 0;
+        padding: 8px 19px 0 16px;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        color: transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .column {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media (min-width: 768px and max-width: 1024px;) {
+        .navbar-menu {
+          background-color: none;
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+        }
+
+        .colis {
+          max-width: 100%;
+          padding-top: 2rem;
+        }
+
+        .card {
+          box-shadow: none;
+        }
+
+        html,
+        body {
+          height: 100%;
+          font-family: "karla", sans-serif;
+        }
+
+        h1 {
+          font-family: "minion-pro-condensed-subhead", sans-serif;
+          font-weight: 900;
+          color: white;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          font-family: "karla", sans-serif;
+          color: white;
+        }
+
+        .name {
+          margin-top: 1.5rem;
+          font-size: 1.2rem;
+          color: white;
+          font-weight: bolder;
+          font-family: "Karla", "Lora";
+        }
+
+        .name1 {
+          font-size: 1.2rem;
+          color: white;
+          font-weight: bolder;
+        }
+
+        .hero.is-medium .hero-body {
+          padding-top: 4rem;
+          padding-bottom: 0;
+        }
+
+        .title {
+          max-width: 100%;
+          font-size: 60px;
+          font-weight: 900;
+          color: white;
+          font-family: "minion-pro", "karla", sans-serif;
+        }
+
+        .navbar,
+        .nav-item,
+        .navbar-start,
+        .navbar-menu,
+        .navbar-end {
+          display: flex;
+          align-items: stretch;
+        }
+
+        .hero.is-medium .hero-body {
+          padding-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="cardbg gridify tiny">
+    <section class="hero is-backgroundwhite is-medium" id="fullpage">
+      <!-- Hero head: will stick at the top -->
+      <div
+        class="hero-head container grid"
+        style="padding-bottom: 0rem; max-width: 1024px; padding-right: 1rem ;"
+      >
+        <nav class="navbar is-transparent">
+          <div class="container">
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-start">
+                <h2
+                  class="navbar-item is-active name"
+                  id="fullpage"
+                  id="introtext"
+                >
+                  Roopesh Krishna L
+                </h2>
+              </div>
+
+              <div class="navbar-end">
+                <a class="navbar-item namesmall" href="index.html">
+                  Work
+                </a>
+
+                <a href="about.html" class="navbar-item namesmall">
+                  About
+                </a>
+
+                <a class="navbar-item namesmall">
+                  Résumé
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Selected Works</a></li>
+              <li
+                class="is-active"
+                style="color: white; background-color: null;"
+              >
+                <a href="#" aria-current="page">Chess game app</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="title is-1" style="font-size: 64px;">
+            <h1>COVID 19 Network</h1>
+          </div>
+
+          <p class="title">
+            <span>"Novel Coronavirus pandemic"</span>
+          </p>
+          <p
+            style="color: rgba(255,255,255, 0.6); font-weight: 600;  padding-top:10px;"
+            href="#"
+          >
+            Project Description
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body" style="padding-top : 0px;">
+        <div
+          class="container grid"
+          style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"
+        >
+          <div class="tabs is-medium">
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'design')">
+                <a>Challenge</a>
+              </li>
+              <li class="tab" onclick="openTab(event,'network')">
+                <a>Role</a>
+              </li>
+              <li class="tab" onclick="openTab(event,'skills')">
+                <a>Company & Year</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-body" style="padding-top: 0px;">
+        <div
+          class="container grid"
+          style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"
+        >
+          <div class="columns">
+            <div class="column is-11" href="#">
+              <div id="design" class="content-tab">
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    Design an interface for users to play chess online with
+                    people around the world and with friends.
+                  </h1>
+                </div>
+              </div>
+
+              <div id="network" class="content-tab" style="display: none;">
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    UX Design
+                  </h1>
+                </div>
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    User Interface
+                  </h1>
+                </div>
+              </div>
+
+              <div id="skills" class="content-tab" style="display: none;">
+                <h1 class="title is-5" style="font-weight: 400; color:white;">
+                  nurtr.com ( Thought Roots India Pvt Ltd )
+                </h1>
+                <h1 class="title is-5" style="font-weight: 400;">
+                  February - March 2020
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 13px;"
+          >
+            <h1>Platform</h1>
+          </div>
+          <div
+            class="bk-root"
+            id="846d7960-fb9e-436a-ae41-495cb88ef7b7"
+            data-root-id="4768" style="height: 400px; width: 500px;"
+          ></div>
+          <p class="title is-5">
+            <span>nurtr is a leading <br /><br /> </span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Hero footer: will stick at the bottom -->
+      <div class="hero-body" style="padding-top: 0px;">
+        <div
+          class="container grid navbar"
+          style="max-width: 1024px; padding-bottom: 2rem; padding-top: 2rem;"
+        >
+          <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <!--  <div class="navbar-start name">
+  
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-instagram"></i>
+                 </span>
+              </a>
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-linkedin"></i>
+                 </span>
+              </a>
+  
+              <a class="navbar-item name">    
+                  <span class="icon">
+                      <i class="fab fa-facebook-messenger"></i>
+                 </span>
+              </a>
+  
+          </div> -->
+          </div>
+
+          <a style="color: grey; font-weight: bolder; padding-left: 0.4rem;"
+            >PS: I'm a full time and part time employee, got little time on
+            weekdays and even on the weekends, I don’t see this as an excuse, I
+            love to participate and solve things, which is why I took this up
+            and doing what I can about this in the coming days. I barely spent
+            hours in the first 6 days of the competition, started on 13th march
+            officially, going on to something..</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script type="application/json" id="5341">
+      {
+        "6e34aa68-657d-4a34-bac8-eaa7e6559563": {
+          "roots": {
+            "references": [
+              {
+                "attributes": {
+                  "callback": null,
+                  "tooltips": [
+                    ["connections", "@connections"],
+                    ["area", "@name"]
+                  ]
+                },
+                "id": "5032",
+                "type": "HoverTool"
+              },
+              {
+                "attributes": {
+                  "graph_layout": {
+                    "#192": [-0.8085840162411455, 0.018330638133718703],
+                    "#193": [-0.9207508694130543, 0.01894261241551411],
+                    "#194 return to home after disembarking the cruise ship Diamond Princess": [
+                      0.7243103867379347,
+                      -0.4956602300661835
+                    ],
+                    "#195/Hokkaido 55": [
+                      -0.0517084648715392,
+                      -0.3168203287026944
+                    ],
+                    "#196/Hokkaido 56": [
+                      0.0016187370136160997,
+                      -0.2995415093145131
+                    ],
+                    "#197/Hokkaido 57": [
+                      -0.05119736352677616,
+                      -0.29724775756105937
+                    ],
+                    "#198/Hokkaido 58": [
+                      -0.06914038626964318,
+                      -0.29324190432041086
+                    ],
+                    "#199/Hokkaido 59": [
+                      -0.03234948646948054,
+                      -0.2949611879096598
+                    ],
+                    "#200/Hokkaido 60": [
+                      -0.037966568226761366,
+                      -0.31325567745949406
+                    ],
+                    "#201/Hokkaido 61": [
+                      -0.08238576501968153,
+                      -0.30058418541783605
+                    ],
+                    "#202/Hokkaido 62": [
+                      -0.06693860063601208,
+                      -0.31176949952416416
+                    ],
+                    "#203/Hokkaido 63": [
+                      0.005556295854306621,
+                      -0.28400401001438313
+                    ],
+                    "#204/Hokkaido 64": [
+                      -0.023842530894966924,
+                      -0.31514980535932036
+                    ],
+                    "#205/Hokkaido 65": [
+                      -0.01446918536360886,
+                      -0.2883700487836135
+                    ],
+                    "#206/Hokkaido 66": [
+                      -0.012053185746439616,
+                      -0.30686014974422
+                    ],
+                    "#207": [-0.4255119101320155, -0.13937056569342432],
+                    "#208": [-0.25941756166000157, -0.10940581524916304],
+                    "#209": [-0.24938702369946872, -0.12362282351188991],
+                    "Aargau": [0.6771879310209123, -0.7015426038804851],
+                    "Abruzzo": [-0.04148226333434191, 0.8941094342947893],
+                    "Aichi Prefecture": [
+                      -0.36302122220717653,
+                      -0.1049682472553475
+                    ],
+                    "Anhui": [0.02549076261031377, 0.20100416128025558],
+                    "Arizona": [-0.07611805090095754, 0.053221804836532334],
+                    "Auvergne-Rhone-Alpes": [
+                      0.3251977891330783,
+                      0.5662099975404038
+                    ],
+                    "Baden-Wuerttemberg": [
+                      0.8310258641466752,
+                      0.3521526450810453
+                    ],
+                    "Baleares": [0.7085223816780009, -0.54657097564212],
+                    "Bangkok Metropolis": [
+                      -0.13073939519438857,
+                      0.011069291870916504
+                    ],
+                    "Baodi district department store in Tianjin": [
+                      0.05118435111119031,
+                      -0.1645848040808386
+                    ],
+                    "Baotou city": [-0.1842052365708932, 0.22509078829136106],
+                    "Bavaria, Germany": [
+                      0.3756029384678171,
+                      0.2866687192877512
+                    ],
+                    "Beihai, Guangxi": [
+                      0.20876634091303992,
+                      0.07150902588626562
+                    ],
+                    "Beijing": [-0.0263858561552312, 0.08768572084411444],
+                    "Beijing, Zhuzhou, Hunan, and Chengdu, Sichuan": [
+                      -0.043154150094886254,
+                      -0.13023380004378754
+                    ],
+                    "Beirut": [-0.39358725836501224, 0.05137086992672521],
+                    "Bengbu": [0.045554753768733414, 0.2896278690401226],
+                    "Brianza, Italy": [
+                      -0.04438378407848447,
+                      0.9461124472966422
+                    ],
+                    "British Columbia": [
+                      -0.11359132790139244,
+                      0.020756161039871643
+                    ],
+                    "California": [0.016498853175156775, 0.009189863846128877],
+                    "Campania": [0.272457170866838, -0.8672435208010623],
+                    "Canary Islands": [
+                      0.32323562900635106,
+                      0.24486828568808228
+                    ],
+                    "Castiglione d'Adda, Lombardy": [
+                      0.08835685792764525,
+                      -0.756790527024731
+                    ],
+                    "Castilla y Leon": [0.2886534647186053, 0.2167962928377271],
+                    "Catalonia": [0.2618336255937855, 0.2437937020745799],
+                    "Cebu": [-0.29937118629548043, -0.21408897936002358],
+                    "Changsha": [-0.12038895664018026, 0.28336881025097976],
+                    "Chengdu": [-0.038424808158412725, -0.10945348923159214],
+                    "Chiba Prefecture": [
+                      -0.21765447526232687,
+                      -0.010226525434035716
+                    ],
+                    "Chibi City": [-0.08204999622013788, 0.2787392101540497],
+                    "China": [0.027962172352930012, -0.0080206130128907],
+                    "Chongqing": [-0.07679428612621, -0.05900110864850561],
+                    "Codogno": [0.08410735581561611, -0.7897887580666929],
+                    "Contamines-Montjoie chalet": [
+                      0.32642252557366996,
+                      0.6030566759012083
+                    ],
+                    "Dongguan City, Guangdong Province": [
+                      -0.14449334678331166,
+                      0.27129626631862486
+                    ],
+                    "Dunhua City": [-0.1780069548883199, 0.2087998859326907],
+                    "Emilia-Romagna": [
+                      -0.1664735571669409,
+                      0.0013630046790270385
+                    ],
+                    "England": [0.09757132503331593, -0.049330370714482215],
+                    "Ezhou City, Hubei": [
+                      -0.17265220204860482,
+                      0.14048091388778408
+                    ],
+                    "France": [0.6861751792439342, -0.5473971994049486],
+                    "Fujian": [-0.15368513127424008, -0.04226233110474721],
+                    "Gansu": [-0.033761119876785706, -0.045094993954575856],
+                    "Gao'an City Jiangxi": [
+                      -0.19829962277964802,
+                      -0.1900146223064844
+                    ],
+                    "Gorj": [0.2725234212890794, 0.22071731465727096],
+                    "Grand Est": [0.3743363990626482, 0.5308666869353659],
+                    "Guangdong": [-0.11048735779902259, 0.0968883558040697],
+                    "Guangxi": [-0.11559187799553942, 0.08866165583591626],
+                    "Guangzhou": [-0.021870563074440835, 0.06177600967800035],
+                    "Guangzhou, Guangdong": [
+                      0.24365649360470426,
+                      0.06972721805230823
+                    ],
+                    "Guayas": [-0.7933312935744907, -0.5823328117519254],
+                    "Guiyang via Yunnan from Wuhan": [
+                      -0.11233206105018875,
+                      0.2649116756297471
+                    ],
+                    "Guizhou": [-0.09207847806082758, 0.20294751965181576],
+                    "Guizhou, China": [
+                      -0.09497676010106602,
+                      0.2878452215019446
+                    ],
+                    "Gyeonggi": [-0.08072645466715345, 0.11346859941063742],
+                    "Hainan": [-0.15150694503941503, -0.1253402908881235],
+                    "Hangzhou": [0.11422700617452487, 0.1318832290056671],
+                    "Hanuang District, Wuhan": [
+                      0.027443583105506156,
+                      0.27340408380839076
+                    ],
+                    "Harbin": [-0.16873476651260397, 0.2252184933869863],
+                    "Hawaii, USA": [-0.4325984744170435, -0.122063232018547],
+                    "He took a flight from Wuhan to Lijiang with his family on January 22 and a train from Lijiang to Dali on the 24th": [
+                      0.07516884268775136,
+                      0.14720321952493198
+                    ],
+                    "Hebei": [-0.1495084913515564, -0.00493434039584909],
+                    "Heilongjiang": [
+                      -0.10996020963866217,
+                      -0.020889821142318233
+                    ],
+                    "Henan": [-0.030275653104925103, 0.07861554331185233],
+                    "Herat": [-0.5443349544642968, 0.07577816333664587],
+                    "Hokkaido": [-0.04427619106095667, -0.235093846116413],
+                    "Hokkaido, Japan": [
+                      -0.27608089534537245,
+                      0.05538731702153635
+                    ],
+                    "Hong Kong": [-0.15668470450237243, 0.09488611698806507],
+                    "Hongshan District, Wuhan": [
+                      0.08734550054013585,
+                      0.24342037637379452
+                    ],
+                    "Huangshi, Wuhan, Guiyang": [
+                      0.08033493558848989,
+                      0.1647900118284043
+                    ],
+                    "Hubei": [-0.03313014998035209, 0.058122390885817735],
+                    "Hubei province": [0.0768635679124534, 0.06574413273249848],
+                    "Hunan": [-0.09157788500871694, 0.03839221187384812],
+                    "Ile-de-France": [
+                      -0.0176665260440625,
+                      0.013088300399671998
+                    ],
+                    "Illinois": [-0.1490916985244672, -0.030771740605792047],
+                    "Indonesia": [-0.32126736216629315, -0.07760432923778922],
+                    "Inner Mongolia": [
+                      -0.012376524938113267,
+                      -0.053194627136933154
+                    ],
+                    "Iran": [-0.2822006016236913, 0.03431211774611203],
+                    "Iran; returned to Iran": [
+                      -0.4045624604867912,
+                      -0.7059100099913129
+                    ],
+                    "Ishikawa": [-0.9774531144271797, -0.18969988956292813],
+                    "Italy": [0.2231648296941858, 0.18776570395827502],
+                    "Japan": [-0.13821238610454795, 0.13916385200607126],
+                    "Jiangsu": [-0.1306136964890312, -0.011502386259488743],
+                    "Jiangxi": [-0.09695504479226244, -0.07771751324871609],
+                    "Jiangxi, Guangzhou": [
+                      -0.10924653804663434,
+                      0.28920472573283795
+                    ],
+                    "Jilin": [-0.13335582607774854, 0.15376873713341443],
+                    "Jiran": [-0.20388047198672657, 0.18708738038244002],
+                    "Johor": [0.7552112774425519, -0.30216128513382573],
+                    "Kanagawa": [-0.8696127826107718, 0.01892153052877482],
+                    "Kanagawa Prefecture": [
+                      -0.058371060403930704,
+                      -0.002027354308213794
+                    ],
+                    "Kerala": [-0.12139287717403317, -0.04541655238932395],
+                    "Khanh Hoa": [0.8457727552061578, -0.16668325229761502],
+                    "Kirkuk": [-0.3556405619029965, 0.02841545134304929],
+                    "Kundi, Hunan": [0.09185705598863687, 0.13971914421881024],
+                    "Kunshan City, Jiangsu Province": [
+                      0.22650705565217663,
+                      0.04238486909098697
+                    ],
+                    "Kyoto Prefecture": [
+                      -0.1286916259646519,
+                      -0.06141389316453518
+                    ],
+                    "Lagos": [0.8790659399814273, 0.3819316752174194],
+                    "Lazio": [-0.11731004477892837, 0.04477706705987943],
+                    "Liaoning": [-0.04188870254360399, 0.02333327612236717],
+                    "Liguria": [0.08213220577071208, -0.7202613514091013],
+                    "Lijiawan then Bijie City": [
+                      -0.0965952612275944,
+                      0.27025973800148173
+                    ],
+                    "Lombardy Italy": [0.3860408855904169, 0.27051705316940344],
+                    "Lombardy, Italy": [
+                      0.34303613439581543,
+                      0.5352616905846515
+                    ],
+                    "Luxi County, Hubei": [
+                      0.25078818936083974,
+                      0.01879926734338066
+                    ],
+                    "Luzhou": [0.07504448443223806, 0.27457006986401844],
+                    "Luzhou Hunan, via Wuhan": [
+                      0.03165734694456443,
+                      0.2587633767419496
+                    ],
+                    "Macau": [-0.07090688109920922, 0.08571771130041725],
+                    "Macau, mainland China": [
+                      -0.03310746881245894,
+                      0.35135373380523377
+                    ],
+                    "Macedonia": [0.28988448147298235, 0.19980607192591585],
+                    "Macheng": [0.007956875975404032, 0.2665768532905993],
+                    "Madrid, Spain": [-0.8134531234357163, -0.5989881274291436],
+                    "Malaysia": [0.02237221050230695, -0.18179735317633547],
+                    "Massachusetts": [
+                      -0.08596630043674412,
+                      -0.045749747895446564
+                    ],
+                    "Meihekou City": [
+                      -0.18787244738602715,
+                      0.19646987919964326
+                    ],
+                    "Mie": [-0.16428758386964012, 0.015393519890814758],
+                    "Milan": [-1.0, 0.07122895778875847],
+                    "Milan, Italy": [0.8406671878864406, 0.3791483649735938],
+                    "Milan; not hospitalized": [
+                      0.2866960252209968,
+                      -0.9164141546624476
+                    ],
+                    "Milan; went to hospital on 25.02.2020 but was not hospitalized": [
+                      0.2541503962935591,
+                      -0.8047957604628422
+                    ],
+                    "Mudanjian City, Heilongjiang; Guangxi; Qiong; Thailand": [
+                      -0.2065450140962549,
+                      -0.17863054270324594
+                    ],
+                    "Najaf": [-0.3829153064147999, -0.6654593737151001],
+                    "Nakhon Pathom": [
+                      -0.14666502057121317,
+                      0.05169875112948357
+                    ],
+                    "National Capital Region (NCR)": [
+                      -0.17543312340413705,
+                      -0.08509065972043814
+                    ],
+                    "New South Wales": [
+                      -0.019223931276167755,
+                      -0.013681240485581506
+                    ],
+                    "Nha Trang, Vietnam": [
+                      0.23409568039508769,
+                      0.05664249216927818
+                    ],
+                    "Ningxia": [-0.15632649210101424, -0.01919541666671604],
+                    "No recent travel": [
+                      0.11891093044881496,
+                      0.08818074235445117
+                    ],
+                    "None": [0.11457408867220865, 0.10392976502389953],
+                    "Nonthaburi": [-0.1993505594209727, 0.03435991045272615],
+                    "Northern Ireland": [
+                      0.27747055870682547,
+                      0.2364611154415955
+                    ],
+                    "Northwest Business Center": [
+                      0.2011551256256785,
+                      -0.016754943608645923
+                    ],
+                    "Nouvelle-Aquitaine": [
+                      0.8829793373768725,
+                      0.2690131997788141
+                    ],
+                    "Ontario": [-0.1534872880619893, 0.03573222825974044],
+                    "Osaka": [-0.19289602152315682, -0.07034433453209903],
+                    "Osaka to Tokyo; on tour bus for chinese tourists": [
+                      -0.2932625960621941,
+                      -0.012855034099558516
+                    ],
+                    "Prachuap Khiri Khan": [
+                      -0.16928799300702946,
+                      -0.014432280683953237
+                    ],
+                    "Puglia": [0.08572486283330803, -0.8417762096065454],
+                    "Qiaokou District, Wuhan": [
+                      0.0769326952768303,
+                      0.2574540597285438
+                    ],
+                    "Qinghai": [-0.14002659255424793, -0.050464108546524375],
+                    "Qitaihe City, Heilongjiang Province": [
+                      -0.15806014822338882,
+                      0.2152288718359084
+                    ],
+                    "Qom, Iran": [-0.4808081326196776, 0.06559205939093851],
+                    "Queensland": [-0.12722625729410594, 0.05847260729666639],
+                    "Rhineland-Palatinate": [
+                      -0.16685359412193237,
+                      0.029505741063602285
+                    ],
+                    "Rushan City": [0.5392287190905914, -0.7603332058108643],
+                    "Saitama": [-0.053744403720405, -0.027234066276302652],
+                    "Sanxiang, Zhongshan": [
+                      -0.13912805801282097,
+                      0.10324805704877396
+                    ],
+                    "Sapporo": [-0.290558782420908, -0.03016867755955786],
+                    "Selangor": [-0.030194950640023935, 0.27236023888952243],
+                    "Seoul": [-0.0020371547153468297, -0.02393115829941178],
+                    "Shaanxi": [0.16160981264841712, 0.041529191877391756],
+                    "Shandong": [0.5056782429231843, -0.7220422597135393],
+                    "Shanghai": [0.003484877903562042, 0.0825482016399307],
+                    "Shanxi": [-0.09831743351187087, -0.05812752890983276],
+                    "Shapingba District, Chongqing City": [
+                      -0.010401460964820418,
+                      -0.10291504111616265
+                    ],
+                    "She drove from Wuhan via Guizhou to Yunnan and then to Luo Ping, Maitreya, Yuanyang, Jianshui, Longyang, Ruili, and other places": [
+                      0.052284911125375845,
+                      0.18753061871222634
+                    ],
+                    "Shenyang": [-0.1961855949222308, 0.21424007443506463],
+                    "Shenyang, Meihekou": [
+                      -0.20516338367237572,
+                      0.2017887616366988
+                    ],
+                    "Shenzhen": [0.25018670542230753, 0.05215816951957196],
+                    "Shilin, Chuxiong, Dali": [
+                      0.08011447104925591,
+                      0.18450552591714592
+                    ],
+                    "Shiyan City, Hubei; Qingyuan County, Guangdong": [
+                      -0.029033686786268338,
+                      -0.12700516417796218
+                    ],
+                    "Shiyan county, Hubei Province": [
+                      0.22563469866181543,
+                      0.07079994727876114
+                    ],
+                    "Shizuoka": [0.6791185740971877, -0.47354943734782445],
+                    "Sichuan": [-0.06289546284573226, -0.04611718173406552],
+                    "Sihanoukville": [
+                      -0.10473387715653608,
+                      -0.039905021169880615
+                    ],
+                    "Sindh": [-0.35419518132586325, 0.04796452377283421],
+                    "Singapore": [-0.026464745157671464, 0.1706752880043219],
+                    "South Australia": [
+                      -0.13106010502645726,
+                      -0.030292286917396494
+                    ],
+                    "Southern Finland": [
+                      -0.9893055670042012,
+                      0.09078219248013245
+                    ],
+                    "Suizhou City, Hubei": [
+                      0.21407481900188788,
+                      0.08966071177755264
+                    ],
+                    "Taiwan": [0.055159455111377056, 0.08399851786544665],
+                    "Taizhou, Jiangsu": [
+                      0.015480292071738668,
+                      -0.10726212901283916
+                    ],
+                    "Texas": [0.08460177691785438, -0.05671652630165645],
+                    "Thailand": [-0.0885388476630253, 0.06073687077930576],
+                    "Thanh Hoa": [-0.14751769639260906, 0.015201160606364311],
+                    "Tianjin": [-0.0007736805289384379, -0.10857280971020684],
+                    "Tianmen City, Hubei; Wuhan; Xuancheng City, Anhui": [
+                      -0.1305487405290701,
+                      0.2765074480688429
+                    ],
+                    "Tibet": [-0.07773965165963426, -0.027755475601627236],
+                    "Ticino": [0.8268725904805239, 0.40528816017406094],
+                    "Tokyo": [-0.24849774787862108, -0.05779082216150178],
+                    "Tonglu County": [0.05119149609459384, 0.2617433942539566],
+                    "Transbaikalia": [
+                      0.07247089670580271,
+                      -0.07363770099034224
+                    ],
+                    "Traveled extensively": [
+                      -0.021402786259333607,
+                      -0.11147649678219392
+                    ],
+                    "Tyumen": [0.08765265269908891, -0.0711882979068827],
+                    "Valencian Community": [
+                      0.8555878910515392,
+                      0.4038912777093429
+                    ],
+                    "Verona, Italy": [0.694935768855546, -0.7184347974715656],
+                    "Victoria": [-0.05455137325243539, 0.039937604916366984],
+                    "Vietnam": [-0.0588800333113221, 0.20069449135008918],
+                    "Vinh Phuc": [-0.17839974269887357, 0.07494753234420659],
+                    "Washington": [-0.11431488622535174, -0.06353752424534767],
+                    "Weinan": [0.21051666590832538, 0.04731737422002425],
+                    "Went to Thailand; had dinner with firedns prior to trip": [
+                      0.062212527728340676,
+                      0.28042052932830913
+                    ],
+                    "Wilayah Persekutuan Kuala Lumpur": [
+                      0.020086560196813586,
+                      0.08085802555824291
+                    ],
+                    "Wisconsin": [-0.012627951406847705, 0.14063258974394605],
+                    "Wuchang": [0.7965544661389545, -0.15851703637036413],
+                    "Wuchang District, Wuhan": [
+                      0.06375037909147711,
+                      0.2533479386412816
+                    ],
+                    "Wuhan": [-0.08493803435632977, 0.010044483980144923],
+                    "Wuhan - Hefei - Lujiang": [
+                      0.04697726892577584,
+                      0.276228689129006
+                    ],
+                    "Wuhan City": [-0.13263367350467864, 0.26018791321598217],
+                    "Wuhan City, China": [
+                      -0.3148476653748258,
+                      -0.09405464655326624
+                    ],
+                    "Wuhan City, Hubei Province": [
+                      -0.2540782340352837,
+                      0.11051861165615777
+                    ],
+                    "Wuhan then to Sanya, Hainan": [
+                      0.22460989040906054,
+                      0.02215008651863139
+                    ],
+                    "Wuhan to Chuxiong to Dayao": [
+                      0.06686565298937192,
+                      0.17791312028266693
+                    ],
+                    "Wuhan to Xi'an": [
+                      0.2181168877129615,
+                      0.0030558849545984424
+                    ],
+                    "Wuhan to Xuanwei": [
+                      0.03400520129368002,
+                      0.17844176183045404
+                    ],
+                    "Wuhan via Hong Kong": [
+                      -0.24854535666902977,
+                      -0.1606903798049271
+                    ],
+                    "Wuhan via Qingdao": [
+                      0.058189591290810506,
+                      -0.0443722001523537
+                    ],
+                    "Wuhan via Shanghai": [
+                      0.8316059750420323,
+                      0.2623392498818514
+                    ],
+                    "Wuhan via Xi'an": [
+                      -0.057735652491170165,
+                      -0.1123425734678829
+                    ],
+                    "Wuhan, China": [0.04453493721484385, 0.06509209844806006],
+                    "Wuhan, Guiyang, Zhaotong": [
+                      0.09503616592472794,
+                      0.17232429077015363
+                    ],
+                    "Wuhan, Hubei": [0.23948281326687768, 0.0256955326801909],
+                    "Wuhan, Lijiang": [0.05393665544904172, 0.1674922373554629],
+                    "Wuhan, Xiaogan City,Hengyang": [
+                      -0.1724985981594158,
+                      -0.19756362812457368
+                    ],
+                    "Wuhan, Yongzhou, Guizhou": [
+                      0.09813292983588813,
+                      0.1566970207366746
+                    ],
+                    "Wuhan; Liaoning Province": [
+                      0.11484178646662414,
+                      0.0692488695343609
+                    ],
+                    "Wuhan; Nanning": [
+                      -0.18341054957071287,
+                      0.12463729208510395
+                    ],
+                    "Wuhan; Shanghai": [
+                      -0.18692101981812997,
+                      -0.1975719358003411
+                    ],
+                    "Wuzhou": [0.08957266393709298, 0.26107032834018395],
+                    "Xi'an": [0.20750960577543737, 0.020805726151149253],
+                    "Xiangtan": [0.02797266020348699, 0.2883299209864894],
+                    "Xiangyang, Hubei": [
+                      0.23724051078625977,
+                      0.00791094921088307
+                    ],
+                    "Xianyang City": [
+                      0.20016203233474883,
+                      -0.00032455018181436126
+                    ],
+                    "Xiaogan": [0.5163286277142562, -0.7605623551274837],
+                    "Xiaogan City": [0.2326579860011679, -0.005983482124576617],
+                    "Xiaogan City, Huber province": [
+                      0.038152078949567264,
+                      -0.17484333553589285
+                    ],
+                    "Xinjiang": [-0.13723328128260975, 0.03552566904618417],
+                    "Yichang City, Hubei": [
+                      -0.014108287355998375,
+                      -0.12967372807850885
+                    ],
+                    "Yichang City, Hubei Province": [
+                      0.0002438655071842845,
+                      -0.12090240853045514
+                    ],
+                    "Yinchuan": [-0.058814805888588555, -0.12590039740554612],
+                    "Yingcheng City, Hubei Province to Xi'an": [
+                      0.23085452808898005,
+                      0.08494261529179767
+                    ],
+                    "Yinzhou Hunan, via Wuhan": [
+                      0.011559779367349178,
+                      0.2821341235037158
+                    ],
+                    "Yokohama": [-0.22660226729702984, 0.13590171582009428],
+                    "Yunnan": [0.03047933837342457, 0.12124618825221709],
+                    "Zhejiang": [-0.0254055380472335, 0.04094077547355978],
+                    "Zhengzhou Henan": [
+                      0.04370250707866617,
+                      -0.09906998096269583
+                    ],
+                    "Ziyang County, Ankang": [
+                      0.2181030933864419,
+                      -0.015009053444803291
+                    ],
+                    "asymptomatic carrier": [
+                      -0.9956081943073122,
+                      -0.17718589518447744
+                    ],
+                    "from Wuhan , traveled to Johor from Singapore": [
+                      0.7949396229392076,
+                      -0.3173043070666091
+                    ],
+                    "mainland via the Lok Ma Chau border crossing": [
+                      -0.230060661839191,
+                      0.11989019592429999
+                    ],
+                    "no": [-0.1449028817026218, 0.11226069667106385],
+                    "none": [0.08148698827071427, -0.02562146011039089],
+                    "shopping mall in Xi'an": [
+                      0.24556405035181592,
+                      0.03879097199778049
+                    ]
+                  }
+                },
+                "id": "4781",
+                "type": "StaticLayoutProvider"
+              },
+              {
+                "attributes": {
+                  "active_drag": "auto",
+                  "active_inspect": "auto",
+                  "active_multi": null,
+                  "active_scroll": "auto",
+                  "active_tap": "auto",
+                  "tools": [
+                    { "id": "5029" },
+                    { "id": "5030" },
+                    { "id": "5031" },
+                    { "id": "5032" }
+                  ]
+                },
+                "id": "4793",
+                "type": "Toolbar"
+              },
+              { "attributes": {}, "id": "4806", "type": "Selection" },
+              { "attributes": {}, "id": "4808", "type": "Selection" },
+              {
+                "attributes": {
+                  "data_source": { "id": "4774" },
+                  "glyph": { "id": "4782" },
+                  "hover_glyph": null,
+                  "muted_glyph": null,
+                  "view": { "id": "4776" }
+                },
+                "id": "4775",
+                "type": "GlyphRenderer"
+              },
+              { "attributes": {}, "id": "5029", "type": "PanTool" },
+              { "attributes": {}, "id": "4797", "type": "NodesOnly" },
+              {
+                "attributes": {
+                  "background_fill_color": "#131313",
+                  "plot_height": 1500,
+                  "plot_width": 1500,
+                  "renderers": [{ "id": "4772" }],
+                  "title": { "id": "4771" },
+                  "toolbar": { "id": "4793" },
+                  "x_range": { "id": "4766" },
+                  "x_scale": { "id": "4795" },
+                  "y_range": { "id": "4767" },
+                  "y_scale": { "id": "4792" }
+                },
+                "id": "4768",
+                "type": "Plot"
+              },
+              {
+                "attributes": {
+                  "data": {
+                    "ID": [
+                      6739.0,
+                      29.0,
+                      56.0,
+                      83.0,
+                      12044.0,
+                      122.0,
+                      9181.0,
+                      8499.0,
+                      174.0,
+                      176.0,
+                      191.0,
+                      3053.0,
+                      199.0,
+                      9862.0,
+                      222.0,
+                      1992.0,
+                      255.0,
+                      1461.0,
+                      259.0,
+                      8354.0,
+                      10763.0,
+                      591.0,
+                      308.0,
+                      6182.0,
+                      317.0,
+                      10946.0,
+                      349.0,
+                      6045.0,
+                      9244.0,
+                      647.0,
+                      12025.0,
+                      12098.0,
+                      663.0,
+                      667.0,
+                      668.0,
+                      669.0,
+                      1086.0,
+                      4876.0,
+                      5433.0,
+                      679.0,
+                      11300.0,
+                      683.0,
+                      1066.0,
+                      1087.0,
+                      1486.0,
+                      1772.0,
+                      2469.0,
+                      2595.0,
+                      2596.0,
+                      2961.0,
+                      5322.0,
+                      6588.0,
+                      6135.0,
+                      2977.0,
+                      2994.0,
+                      3004.0,
+                      3005.0,
+                      3227.0,
+                      7394.0,
+                      4865.0,
+                      4875.0,
+                      4892.0,
+                      8788.0,
+                      10674.0,
+                      11549.0,
+                      12619.0,
+                      2.0,
+                      3.0,
+                      462.0,
+                      463.0,
+                      464.0,
+                      465.0,
+                      471.0,
+                      478.0,
+                      902.0,
+                      1297.0,
+                      2028.0,
+                      10765.0,
+                      2934.0,
+                      4150.0,
+                      6740.0,
+                      6743.0,
+                      6744.0,
+                      6746.0,
+                      41.0,
+                      6307.0,
+                      10253.0,
+                      7000.0,
+                      12034.0,
+                      253.0,
+                      1872.0,
+                      2963.0,
+                      6904.0,
+                      8785.0,
+                      4283.0,
+                      5120.0,
+                      5122.0,
+                      5123.0,
+                      5126.0,
+                      6946.0,
+                      8916.0,
+                      8906.0,
+                      8927.0,
+                      8929.0,
+                      8940.0,
+                      10764.0,
+                      12030.0,
+                      12037.0,
+                      5200.0,
+                      164.0,
+                      165.0,
+                      9152.0,
+                      11926.0,
+                      10246.0,
+                      169.0,
+                      6679.0,
+                      8497.0,
+                      9188.0,
+                      9190.0,
+                      9191.0,
+                      9192.0,
+                      9193.0,
+                      9202.0,
+                      9204.0,
+                      10953.0,
+                      1056.0,
+                      4903.0,
+                      6149.0,
+                      9675.0,
+                      12539.0,
+                      6687.0,
+                      11422.0,
+                      4866.0,
+                      6132.0,
+                      6133.0,
+                      7891.0,
+                      261.0,
+                      1396.0,
+                      1840.0,
+                      2363.0,
+                      5111.0,
+                      5115.0,
+                      5118.0,
+                      5597.0,
+                      5601.0,
+                      5765.0,
+                      5766.0,
+                      8353.0,
+                      6196.0,
+                      6230.0,
+                      6231.0,
+                      6237.0,
+                      6241.0,
+                      6930.0,
+                      7413.0,
+                      7414.0,
+                      7415.0,
+                      8351.0,
+                      8356.0,
+                      265.0,
+                      267.0,
+                      11474.0,
+                      6181.0,
+                      6263.0,
+                      7878.0,
+                      6456.0,
+                      7163.0,
+                      10941.0,
+                      10943.0,
+                      10944.0,
+                      10945.0,
+                      10949.0,
+                      10951.0,
+                      10952.0,
+                      10961.0,
+                      10962.0,
+                      10963.0,
+                      6378.0,
+                      6690.0,
+                      11423.0,
+                      11424.0,
+                      645.0,
+                      12102.0,
+                      10911.0,
+                      11283.0,
+                      11812.0,
+                      653.0,
+                      6130.0,
+                      6682.0,
+                      6131.0,
+                      11270.0,
+                      662.0,
+                      2021.0,
+                      7890.0,
+                      7899.0,
+                      7900.0,
+                      12095.0,
+                      12097.0,
+                      673.0,
+                      3333.0,
+                      3334.0,
+                      10900.0,
+                      11269.0,
+                      11540.0,
+                      12060.0,
+                      670.0,
+                      672.0,
+                      5432.0,
+                      8787.0,
+                      4877.0,
+                      4882.0,
+                      13462.0,
+                      13463.0,
+                      13464.0,
+                      13465.0,
+                      13466.0,
+                      13467.0,
+                      13468.0,
+                      13469.0,
+                      13470.0,
+                      13471.0,
+                      13472.0,
+                      13473.0,
+                      11544.0,
+                      13476.0,
+                      13477.0,
+                      4870.0,
+                      6150.0,
+                      10919.0,
+                      4146.0,
+                      12059.0,
+                      12602.0,
+                      5345.0,
+                      5557.0,
+                      6455.0,
+                      10242.0,
+                      10247.0,
+                      10254.0,
+                      10270.0,
+                      10273.0,
+                      10276.0,
+                      6352.0,
+                      4886.0,
+                      11811.0,
+                      11186.0,
+                      12052.0,
+                      12089.0,
+                      12113.0,
+                      12591.0,
+                      12893.0,
+                      11281.0,
+                      13475.0,
+                      10656.0,
+                      11315.0,
+                      12103.0,
+                      12600.0,
+                      12094.0,
+                      12601.0,
+                      12088.0,
+                      12598.0,
+                      12049.0,
+                      12056.0,
+                      12100.0,
+                      12107.0,
+                      12892.0,
+                      12105.0,
+                      12599.0,
+                      12622.0,
+                      12895.0,
+                      12896.0,
+                      12897.0,
+                      13295.0,
+                      13418.0,
+                      13297.0,
+                      13421.0,
+                      13459.0,
+                      13460.0,
+                      13461.0,
+                      13474.0,
+                      13479.0
+                    ],
+                    "end": [
+                      "Anhui",
+                      "Beijing",
+                      "Chongqing",
+                      "Fujian",
+                      "Gansu",
+                      "Guangdong",
+                      "Guangxi",
+                      "Guizhou",
+                      "Hebei",
+                      "Heilongjiang",
+                      "Henan",
+                      "Hong Kong",
+                      "Hunan",
+                      "Inner Mongolia",
+                      "Jiangsu",
+                      "Jiangxi",
+                      "Liaoning",
+                      "Macau",
+                      "Ningxia",
+                      "Shaanxi",
+                      "Shanghai",
+                      "Shanxi",
+                      "Sichuan",
+                      "Tianjin",
+                      "Xinjiang",
+                      "Yunnan",
+                      "Zhejiang",
+                      "Qinghai",
+                      "Hainan",
+                      "Ile-de-France",
+                      "Tokyo",
+                      "Taiwan",
+                      "Nakhon Pathom",
+                      "Bangkok Metropolis",
+                      "Illinois",
+                      "Washington",
+                      "New South Wales",
+                      "Victoria",
+                      "California",
+                      "Prachuap Khiri Khan",
+                      "Seoul",
+                      "Ontario",
+                      "Arizona",
+                      "Sihanoukville",
+                      "Gyeonggi",
+                      "Hokkaido",
+                      "British Columbia",
+                      "Osaka",
+                      "Kanagawa Prefecture",
+                      "National Capital Region (NCR)",
+                      "Kerala",
+                      "Queensland",
+                      "Vinh Phuc",
+                      "Tibet",
+                      "Thanh Hoa",
+                      "Mie",
+                      "Kyoto Prefecture",
+                      "Lazio",
+                      "Jilin",
+                      "Rhineland-Palatinate",
+                      "South Australia",
+                      "Massachusetts",
+                      "Chiba Prefecture",
+                      "Emilia-Romagna",
+                      "Saitama",
+                      "Nonthaburi",
+                      "Luzhou Hunan, via Wuhan",
+                      "Yinzhou Hunan, via Wuhan",
+                      "Bengbu",
+                      "Hongshan District, Wuhan",
+                      "Qiaokou District, Wuhan",
+                      "Wuchang District, Wuhan",
+                      "Macheng",
+                      "Xiangtan",
+                      "Tonglu County",
+                      "Hangzhou",
+                      "Wuzhou",
+                      "Shanghai",
+                      "Hanuang District, Wuhan",
+                      "Went to Thailand; had dinner with firedns prior to trip",
+                      "Beijing",
+                      "Vietnam",
+                      "Wuhan - Hefei - Lujiang",
+                      "Luzhou",
+                      "Hubei",
+                      "Hubei province",
+                      "Jilin",
+                      "Wisconsin",
+                      "Gansu",
+                      "Liaoning",
+                      "Ile-de-France",
+                      "Victoria",
+                      "Yunnan",
+                      "British Columbia",
+                      "Beijing, Zhuzhou, Hunan, and Chengdu, Sichuan",
+                      "Guangzhou",
+                      "Taizhou, Jiangsu",
+                      "Wuhan via Xi'an",
+                      "Yichang City, Hubei",
+                      "Traveled extensively",
+                      "Thailand",
+                      "Shiyan City, Hubei; Qingyuan County, Guangdong",
+                      "Shapingba District, Chongqing City",
+                      "Yinchuan",
+                      "Jiangxi",
+                      "Shanghai",
+                      "Yichang City, Hubei Province",
+                      "Chengdu",
+                      "Jilin",
+                      "Ezhou City, Hubei",
+                      "Thailand",
+                      "Guangzhou",
+                      "Wuhan; Nanning",
+                      "Jilin",
+                      "Changsha",
+                      "Shanghai",
+                      "Chibi City",
+                      "Jiangxi, Guangzhou",
+                      "Dongguan City, Guangdong Province",
+                      "Wuhan City",
+                      "Tianmen City, Hubei; Wuhan; Xuancheng City, Anhui",
+                      "Guiyang via Yunnan from Wuhan",
+                      "Guizhou, China",
+                      "Lijiawan then Bijie City",
+                      "Yunnan",
+                      "Macau",
+                      "Yokohama",
+                      "no",
+                      "mainland via the Lok Ma Chau border crossing",
+                      "Japan",
+                      "Zhengzhou Henan",
+                      "Hainan",
+                      "Sanxiang, Zhongshan",
+                      "Guangzhou",
+                      "no",
+                      "Taiwan",
+                      "Hangzhou",
+                      "Shiyan county, Hubei Province",
+                      "Xianyang City",
+                      "Xiaogan City",
+                      "Suizhou City, Hubei",
+                      "Wuhan then to Sanya, Hainan",
+                      "Wuhan to Xi'an",
+                      "Xi'an",
+                      "Yingcheng City, Hubei Province to Xi'an",
+                      "Weinan",
+                      "Ziyang County, Ankang",
+                      "Nha Trang, Vietnam",
+                      "Luxi County, Hubei",
+                      "Wuhan, Hubei",
+                      "Xiangyang, Hubei",
+                      "Shanghai",
+                      "Beihai, Guangxi",
+                      "shopping mall in Xi'an",
+                      "Hubei province",
+                      "Guangzhou, Guangdong",
+                      "Northwest Business Center",
+                      "Shenzhen",
+                      "Kunshan City, Jiangsu Province",
+                      "Shandong",
+                      "Xiaogan",
+                      "Zhejiang",
+                      "Malaysia",
+                      "Baodi district department store in Tianjin",
+                      "Xiaogan City, Huber province",
+                      "Wuhan to Chuxiong to Dayao",
+                      "Wuhan to Xuanwei",
+                      "Wuhan, Guiyang, Zhaotong",
+                      "Huangshi, Wuhan, Guiyang",
+                      "Kundi, Hunan",
+                      "Guangzhou",
+                      "Shilin, Chuxiong, Dali",
+                      "Wuhan, Lijiang",
+                      "Wuhan, Yongzhou, Guizhou",
+                      "Wuhan, China",
+                      "She drove from Wuhan via Guizhou to Yunnan and then to Luo Ping, Maitreya, Yuanyang, Jianshui, Longyang, Ruili, and other places",
+                      "He took a flight from Wuhan to Lijiang with his family on January 22 and a train from Lijiang to Dali on the 24th",
+                      "Mudanjian City, Heilongjiang; Guangxi; Qiong; Thailand",
+                      "Wuhan; Shanghai",
+                      "Wuhan, Xiaogan City,Hengyang",
+                      "Gao'an City Jiangxi",
+                      "Nouvelle-Aquitaine",
+                      "China",
+                      "Aichi Prefecture",
+                      "Wuhan City, China",
+                      "Indonesia",
+                      "Wilayah Persekutuan Kuala Lumpur",
+                      "Selangor",
+                      "Gyeonggi",
+                      "China",
+                      "Wuhan, China",
+                      "China",
+                      "None",
+                      "Italy",
+                      "Wuhan; Liaoning Province",
+                      "Taiwan",
+                      "Guangzhou",
+                      "No recent travel",
+                      "New South Wales",
+                      "Transbaikalia",
+                      "Tyumen",
+                      "Texas",
+                      "England",
+                      "California",
+                      "British Columbia",
+                      "Khanh Hoa",
+                      "Johor",
+                      "none",
+                      "Wuhan, China",
+                      "Wuhan via Qingdao",
+                      "Japan",
+                      "#195/Hokkaido 55",
+                      "#196/Hokkaido 56",
+                      "#197/Hokkaido 57",
+                      "#198/Hokkaido 58",
+                      "#199/Hokkaido 59",
+                      "#200/Hokkaido 60",
+                      "#201/Hokkaido 61",
+                      "#202/Hokkaido 62",
+                      "#203/Hokkaido 63",
+                      "#204/Hokkaido 64",
+                      "#205/Hokkaido 65",
+                      "#206/Hokkaido 66",
+                      "Iran",
+                      "#208",
+                      "#209",
+                      "Wuhan via Hong Kong",
+                      "no",
+                      "Wuhan City, Hubei Province",
+                      "Canary Islands",
+                      "Lombardy Italy",
+                      "Italy",
+                      "Jiran",
+                      "Baotou city",
+                      "Shenyang",
+                      "Harbin",
+                      "Vietnam",
+                      "Shenyang, Meihekou",
+                      "Meihekou City",
+                      "Dunhua City",
+                      "Qitaihe City, Heilongjiang Province",
+                      "Cebu",
+                      "Chiba Prefecture",
+                      "Sapporo",
+                      "Macau, mainland China",
+                      "Catalonia",
+                      "Macedonia",
+                      "Gorj",
+                      "Northern Ireland",
+                      "Castilla y Leon",
+                      "Aichi Prefecture",
+                      "#207",
+                      "Baleares",
+                      "Auvergne-Rhone-Alpes",
+                      "Lombardy, Italy",
+                      "Beirut",
+                      "Herat",
+                      "Iran",
+                      "Sindh",
+                      "Kirkuk",
+                      "Southern Finland",
+                      "Valencian Community",
+                      "Baden-Wuerttemberg",
+                      "Ticino",
+                      "Lagos",
+                      "Grand Est",
+                      "Najaf",
+                      "Hokkaido, Japan",
+                      "Liguria",
+                      "Codogno",
+                      "Puglia",
+                      "Campania",
+                      "Milan; not hospitalized",
+                      "Abruzzo",
+                      "Aargau",
+                      "Kanagawa",
+                      "#193",
+                      "Shizuoka",
+                      "Ishikawa",
+                      "Guayas"
+                    ],
+                    "start": [
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Wuhan",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Anhui",
+                      "Beijing",
+                      "Beijing",
+                      "Beijing",
+                      "Beijing",
+                      "Beijing",
+                      "Hubei",
+                      "Hubei",
+                      "Hubei",
+                      "Hubei",
+                      "Hubei",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Gansu",
+                      "Guangdong",
+                      "Guangxi",
+                      "Guangxi",
+                      "Guangxi",
+                      "Guangxi",
+                      "Thailand",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Guizhou",
+                      "Henan",
+                      "Hong Kong",
+                      "Hong Kong",
+                      "Hong Kong",
+                      "Hong Kong",
+                      "Hong Kong",
+                      "Inner Mongolia",
+                      "Jiangxi",
+                      "Macau",
+                      "Macau",
+                      "Macau",
+                      "Macau",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Shaanxi",
+                      "Rushan City",
+                      "Shandong",
+                      "Shanghai",
+                      "Tianjin",
+                      "Tianjin",
+                      "Tianjin",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Yunnan",
+                      "Hainan",
+                      "Hainan",
+                      "Hainan",
+                      "Hainan",
+                      "Wuhan via Shanghai",
+                      "Ile-de-France",
+                      "Tokyo",
+                      "Tokyo",
+                      "Tokyo",
+                      "Singapore",
+                      "Singapore",
+                      "Singapore",
+                      "Wilayah Persekutuan Kuala Lumpur",
+                      "Wilayah Persekutuan Kuala Lumpur",
+                      "Taiwan",
+                      "Taiwan",
+                      "Taiwan",
+                      "Taiwan",
+                      "Taiwan",
+                      "Taiwan",
+                      "Taiwan",
+                      "China",
+                      "China",
+                      "China",
+                      "China",
+                      "China",
+                      "China",
+                      "China",
+                      "Wuchang",
+                      "from Wuhan , traveled to Johor from Singapore",
+                      "California",
+                      "California",
+                      "Seoul",
+                      "Gyeonggi",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "Hokkaido",
+                      "British Columbia",
+                      "Osaka",
+                      "Osaka",
+                      "National Capital Region (NCR)",
+                      "Vinh Phuc",
+                      "Vinh Phuc",
+                      "Bavaria, Germany",
+                      "Canary Islands",
+                      "Canary Islands",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Jilin",
+                      "Wuhan via Hong Kong",
+                      "Osaka to Tokyo; on tour bus for chinese tourists",
+                      "Chiba Prefecture",
+                      "Selangor",
+                      "Italy",
+                      "Italy",
+                      "Italy",
+                      "Italy",
+                      "Italy",
+                      "Hawaii, USA",
+                      "Aichi Prefecture",
+                      "France",
+                      "Contamines-Montjoie chalet",
+                      "Auvergne-Rhone-Alpes",
+                      "Qom, Iran",
+                      "Qom, Iran",
+                      "Beirut",
+                      "Iran",
+                      "Iran",
+                      "Milan",
+                      "Milan, Italy",
+                      "Milan, Italy",
+                      "Milan, Italy",
+                      "Milan, Italy",
+                      "Lombardy, Italy",
+                      "Iran; returned to Iran",
+                      "Nonthaburi",
+                      "Castiglione d'Adda, Lombardy",
+                      "Liguria",
+                      "Codogno",
+                      "Milan; went to hospital on 25.02.2020 but was not hospitalized",
+                      "Campania",
+                      "Brianza, Italy",
+                      "Verona, Italy",
+                      "#192",
+                      "Kanagawa",
+                      "#194 return to home after disembarking the cruise ship Diamond Princess",
+                      "asymptomatic carrier",
+                      "Madrid, Spain"
+                    ]
+                  },
+                  "selected": { "id": "4808" },
+                  "selection_policy": { "id": "4809" }
+                },
+                "id": "4778",
+                "type": "ColumnDataSource"
+              },
+              { "attributes": {}, "id": "4809", "type": "UnionRenderers" },
+              {
+                "attributes": {
+                  "data_source": { "id": "4778" },
+                  "glyph": { "id": "4787" },
+                  "hover_glyph": null,
+                  "muted_glyph": null,
+                  "view": { "id": "4780" }
+                },
+                "id": "4779",
+                "type": "GlyphRenderer"
+              },
+              {
+                "attributes": { "end": 1.1, "start": -1.1 },
+                "id": "4766",
+                "type": "Range1d"
+              },
+              {
+                "attributes": {
+                  "line_color": { "value": "white" },
+                  "line_width": { "value": 0.3 }
+                },
+                "id": "4787",
+                "type": "MultiLine"
+              },
+              {
+                "attributes": {
+                  "data": {
+                    "color": [
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A",
+                      "#CD8A3A"
+                    ],
+                    "connections": [
+                      66,
+                      19,
+                      1,
+                      1,
+                      7,
+                      6,
+                      1,
+                      1,
+                      16,
+                      2,
+                      5,
+                      1,
+                      3,
+                      11,
+                      1,
+                      1,
+                      1,
+                      2,
+                      6,
+                      1,
+                      2,
+                      1,
+                      3,
+                      2,
+                      6,
+                      1,
+                      24,
+                      2,
+                      1,
+                      2,
+                      1,
+                      6,
+                      1,
+                      1,
+                      4,
+                      1,
+                      15,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      6,
+                      1,
+                      1,
+                      3,
+                      4,
+                      3,
+                      3,
+                      10,
+                      10,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      2,
+                      4,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      3,
+                      13,
+                      1,
+                      1,
+                      1,
+                      1,
+                      4,
+                      3,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      3,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      3,
+                      1,
+                      1,
+                      13,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      3,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      5,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      3,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      7,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      3,
+                      3,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      2,
+                      2,
+                      4,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      4,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      2,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      2,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1,
+                      1
+                    ],
+                    "index": [
+                      "Wuhan",
+                      "Anhui",
+                      "Luzhou Hunan, via Wuhan",
+                      "Yinzhou Hunan, via Wuhan",
+                      "Beijing",
+                      "Hubei",
+                      "Chongqing",
+                      "Fujian",
+                      "Gansu",
+                      "Guangdong",
+                      "Guangxi",
+                      "Ezhou City, Hubei",
+                      "Thailand",
+                      "Guizhou",
+                      "Changsha",
+                      "Hebei",
+                      "Heilongjiang",
+                      "Henan",
+                      "Hong Kong",
+                      "Hunan",
+                      "Inner Mongolia",
+                      "Jiangsu",
+                      "Jiangxi",
+                      "Liaoning",
+                      "Macau",
+                      "Ningxia",
+                      "Shaanxi",
+                      "Hangzhou",
+                      "Rushan City",
+                      "Shandong",
+                      "Xiaogan",
+                      "Shanghai",
+                      "Shanxi",
+                      "Sichuan",
+                      "Tianjin",
+                      "Xinjiang",
+                      "Yunnan",
+                      "Zhejiang",
+                      "Bengbu",
+                      "Hongshan District, Wuhan",
+                      "Qiaokou District, Wuhan",
+                      "Wuchang District, Wuhan",
+                      "Macheng",
+                      "Xiangtan",
+                      "Qinghai",
+                      "Hainan",
+                      "Wuhan via Shanghai",
+                      "Nouvelle-Aquitaine",
+                      "Ile-de-France",
+                      "Tokyo",
+                      "Singapore",
+                      "Wilayah Persekutuan Kuala Lumpur",
+                      "Taiwan",
+                      "China",
+                      "Nakhon Pathom",
+                      "Bangkok Metropolis",
+                      "Illinois",
+                      "Washington",
+                      "Wuchang",
+                      "Khanh Hoa",
+                      "from Wuhan , traveled to Johor from Singapore",
+                      "Johor",
+                      "New South Wales",
+                      "Victoria",
+                      "California",
+                      "Prachuap Khiri Khan",
+                      "Seoul",
+                      "Ontario",
+                      "Tonglu County",
+                      "Arizona",
+                      "Sihanoukville",
+                      "Shiyan county, Hubei Province",
+                      "Gyeonggi",
+                      "Hokkaido",
+                      "Xianyang City",
+                      "None",
+                      "Wuzhou",
+                      "Xiaogan City",
+                      "British Columbia",
+                      "Osaka",
+                      "Kanagawa Prefecture",
+                      "Hanuang District, Wuhan",
+                      "National Capital Region (NCR)",
+                      "Kerala",
+                      "Queensland",
+                      "Vinh Phuc",
+                      "Tibet",
+                      "Thanh Hoa",
+                      "Mie",
+                      "Kyoto Prefecture",
+                      "Lazio",
+                      "Transbaikalia",
+                      "Tyumen",
+                      "Bavaria, Germany",
+                      "Canary Islands",
+                      "Went to Thailand; had dinner with firedns prior to trip",
+                      "Beijing, Zhuzhou, Hunan, and Chengdu, Sichuan",
+                      "Jilin",
+                      "Rhineland-Palatinate",
+                      "Sanxiang, Zhongshan",
+                      "Wuhan via Hong Kong",
+                      "South Australia",
+                      "Wuhan via Qingdao",
+                      "Japan",
+                      "Osaka to Tokyo; on tour bus for chinese tourists",
+                      "Chiba Prefecture",
+                      "Massachusetts",
+                      "Yokohama",
+                      "Suizhou City, Hubei",
+                      "Wuhan then to Sanya, Hainan",
+                      "Wuhan to Xi'an",
+                      "Guangzhou",
+                      "Taizhou, Jiangsu",
+                      "Wuhan via Xi'an",
+                      "Yichang City, Hubei",
+                      "Jiran",
+                      "none",
+                      "Baotou city",
+                      "Xi'an",
+                      "Yingcheng City, Hubei Province to Xi'an",
+                      "Weinan",
+                      "Ziyang County, Ankang",
+                      "Malaysia",
+                      "Selangor",
+                      "no",
+                      "Nha Trang, Vietnam",
+                      "Luxi County, Hubei",
+                      "Wuhan, Hubei",
+                      "Xiangyang, Hubei",
+                      "Beihai, Guangxi",
+                      "Baodi district department store in Tianjin",
+                      "Hubei province",
+                      "Wuhan City, Hubei Province",
+                      "Cebu",
+                      "Mudanjian City, Heilongjiang; Guangxi; Qiong; Thailand",
+                      "Shenyang",
+                      "Wuhan to Chuxiong to Dayao",
+                      "Zhengzhou Henan",
+                      "Wuhan; Shanghai",
+                      "Vietnam",
+                      "Wuhan - Hefei - Lujiang",
+                      "Luzhou",
+                      "shopping mall in Xi'an",
+                      "Traveled extensively",
+                      "Wisconsin",
+                      "Wuhan to Xuanwei",
+                      "Guangzhou, Guangdong",
+                      "Northwest Business Center",
+                      "Xiaogan City, Huber province",
+                      "Italy",
+                      "Wuhan; Liaoning Province",
+                      "Shenzhen",
+                      "Kunshan City, Jiangsu Province",
+                      "Chibi City",
+                      "Hawaii, USA",
+                      "Aichi Prefecture",
+                      "Wuhan, China",
+                      "Shiyan City, Hubei; Qingyuan County, Guangdong",
+                      "Shapingba District, Chongqing City",
+                      "Yinchuan",
+                      "Jiangxi, Guangzhou",
+                      "Dongguan City, Guangdong Province",
+                      "Wuhan City",
+                      "Tianmen City, Hubei; Wuhan; Xuancheng City, Anhui",
+                      "Guiyang via Yunnan from Wuhan",
+                      "Guizhou, China",
+                      "Lijiawan then Bijie City",
+                      "mainland via the Lok Ma Chau border crossing",
+                      "Harbin",
+                      "Shenyang, Meihekou",
+                      "Meihekou City",
+                      "Dunhua City",
+                      "Qitaihe City, Heilongjiang Province",
+                      "France",
+                      "Baleares",
+                      "Emilia-Romagna",
+                      "Saitama",
+                      "Texas",
+                      "Wuhan, Guiyang, Zhaotong",
+                      "Huangshi, Wuhan, Guiyang",
+                      "Kundi, Hunan",
+                      "Shilin, Chuxiong, Dali",
+                      "Wuhan, Lijiang",
+                      "Wuhan, Yongzhou, Guizhou",
+                      "She drove from Wuhan via Guizhou to Yunnan and then to Luo Ping, Maitreya, Yuanyang, Jianshui, Longyang, Ruili, and other places",
+                      "He took a flight from Wuhan to Lijiang with his family on January 22 and a train from Lijiang to Dali on the 24th",
+                      "Macau, mainland China",
+                      "England",
+                      "Wuhan City, China",
+                      "Contamines-Montjoie chalet",
+                      "Auvergne-Rhone-Alpes",
+                      "Wuhan, Xiaogan City,Hengyang",
+                      "Gao'an City Jiangxi",
+                      "Qom, Iran",
+                      "Beirut",
+                      "Iran",
+                      "Sapporo",
+                      "Indonesia",
+                      "Wuhan; Nanning",
+                      "Yichang City, Hubei Province",
+                      "Chengdu",
+                      "Milan",
+                      "Southern Finland",
+                      "Catalonia",
+                      "Lombardy Italy",
+                      "Milan, Italy",
+                      "Valencian Community",
+                      "Sindh",
+                      "Macedonia",
+                      "Herat",
+                      "No recent travel",
+                      "Baden-Wuerttemberg",
+                      "Lombardy, Italy",
+                      "Grand Est",
+                      "Ticino",
+                      "Gorj",
+                      "Northern Ireland",
+                      "Kirkuk",
+                      "Iran; returned to Iran",
+                      "Najaf",
+                      "Nonthaburi",
+                      "Hokkaido, Japan",
+                      "Lagos",
+                      "Castilla y Leon",
+                      "Castiglione d'Adda, Lombardy",
+                      "Liguria",
+                      "Codogno",
+                      "Puglia",
+                      "Milan; went to hospital on 25.02.2020 but was not hospitalized",
+                      "Campania",
+                      "Brianza, Italy",
+                      "Abruzzo",
+                      "Milan; not hospitalized",
+                      "Verona, Italy",
+                      "Aargau",
+                      "#192",
+                      "Kanagawa",
+                      "#193",
+                      "#194 return to home after disembarking the cruise ship Diamond Princess",
+                      "Shizuoka",
+                      "#195/Hokkaido 55",
+                      "#196/Hokkaido 56",
+                      "#197/Hokkaido 57",
+                      "#198/Hokkaido 58",
+                      "#199/Hokkaido 59",
+                      "#200/Hokkaido 60",
+                      "#201/Hokkaido 61",
+                      "#202/Hokkaido 62",
+                      "#203/Hokkaido 63",
+                      "#204/Hokkaido 64",
+                      "#205/Hokkaido 65",
+                      "#206/Hokkaido 66",
+                      "asymptomatic carrier",
+                      "Ishikawa",
+                      "#207",
+                      "#208",
+                      "#209",
+                      "Madrid, Spain",
+                      "Guayas"
+                    ],
+                    "name": [
+                      "Wuhan",
+                      "Anhui",
+                      "Luzhou Hunan, via Wuhan",
+                      "Yinzhou Hunan, via Wuhan",
+                      "Beijing",
+                      "Hubei",
+                      "Chongqing",
+                      "Fujian",
+                      "Gansu",
+                      "Guangdong",
+                      "Guangxi",
+                      "Ezhou City, Hubei",
+                      "Thailand",
+                      "Guizhou",
+                      "Changsha",
+                      "Hebei",
+                      "Heilongjiang",
+                      "Henan",
+                      "Hong Kong",
+                      "Hunan",
+                      "Inner Mongolia",
+                      "Jiangsu",
+                      "Jiangxi",
+                      "Liaoning",
+                      "Macau",
+                      "Ningxia",
+                      "Shaanxi",
+                      "Hangzhou",
+                      "Rushan City",
+                      "Shandong",
+                      "Xiaogan",
+                      "Shanghai",
+                      "Shanxi",
+                      "Sichuan",
+                      "Tianjin",
+                      "Xinjiang",
+                      "Yunnan",
+                      "Zhejiang",
+                      "Bengbu",
+                      "Hongshan District, Wuhan",
+                      "Qiaokou District, Wuhan",
+                      "Wuchang District, Wuhan",
+                      "Macheng",
+                      "Xiangtan",
+                      "Qinghai",
+                      "Hainan",
+                      "Wuhan via Shanghai",
+                      "Nouvelle-Aquitaine",
+                      "Ile-de-France",
+                      "Tokyo",
+                      "Singapore",
+                      "Wilayah Persekutuan Kuala Lumpur",
+                      "Taiwan",
+                      "China",
+                      "Nakhon Pathom",
+                      "Bangkok Metropolis",
+                      "Illinois",
+                      "Washington",
+                      "Wuchang",
+                      "Khanh Hoa",
+                      "from Wuhan , traveled to Johor from Singapore",
+                      "Johor",
+                      "New South Wales",
+                      "Victoria",
+                      "California",
+                      "Prachuap Khiri Khan",
+                      "Seoul",
+                      "Ontario",
+                      "Tonglu County",
+                      "Arizona",
+                      "Sihanoukville",
+                      "Shiyan county, Hubei Province",
+                      "Gyeonggi",
+                      "Hokkaido",
+                      "Xianyang City",
+                      "None",
+                      "Wuzhou",
+                      "Xiaogan City",
+                      "British Columbia",
+                      "Osaka",
+                      "Kanagawa Prefecture",
+                      "Hanuang District, Wuhan",
+                      "National Capital Region (NCR)",
+                      "Kerala",
+                      "Queensland",
+                      "Vinh Phuc",
+                      "Tibet",
+                      "Thanh Hoa",
+                      "Mie",
+                      "Kyoto Prefecture",
+                      "Lazio",
+                      "Transbaikalia",
+                      "Tyumen",
+                      "Bavaria, Germany",
+                      "Canary Islands",
+                      "Went to Thailand; had dinner with firedns prior to trip",
+                      "Beijing, Zhuzhou, Hunan, and Chengdu, Sichuan",
+                      "Jilin",
+                      "Rhineland-Palatinate",
+                      "Sanxiang, Zhongshan",
+                      "Wuhan via Hong Kong",
+                      "South Australia",
+                      "Wuhan via Qingdao",
+                      "Japan",
+                      "Osaka to Tokyo; on tour bus for chinese tourists",
+                      "Chiba Prefecture",
+                      "Massachusetts",
+                      "Yokohama",
+                      "Suizhou City, Hubei",
+                      "Wuhan then to Sanya, Hainan",
+                      "Wuhan to Xi'an",
+                      "Guangzhou",
+                      "Taizhou, Jiangsu",
+                      "Wuhan via Xi'an",
+                      "Yichang City, Hubei",
+                      "Jiran",
+                      "none",
+                      "Baotou city",
+                      "Xi'an",
+                      "Yingcheng City, Hubei Province to Xi'an",
+                      "Weinan",
+                      "Ziyang County, Ankang",
+                      "Malaysia",
+                      "Selangor",
+                      "no",
+                      "Nha Trang, Vietnam",
+                      "Luxi County, Hubei",
+                      "Wuhan, Hubei",
+                      "Xiangyang, Hubei",
+                      "Beihai, Guangxi",
+                      "Baodi district department store in Tianjin",
+                      "Hubei province",
+                      "Wuhan City, Hubei Province",
+                      "Cebu",
+                      "Mudanjian City, Heilongjiang; Guangxi; Qiong; Thailand",
+                      "Shenyang",
+                      "Wuhan to Chuxiong to Dayao",
+                      "Zhengzhou Henan",
+                      "Wuhan; Shanghai",
+                      "Vietnam",
+                      "Wuhan - Hefei - Lujiang",
+                      "Luzhou",
+                      "shopping mall in Xi'an",
+                      "Traveled extensively",
+                      "Wisconsin",
+                      "Wuhan to Xuanwei",
+                      "Guangzhou, Guangdong",
+                      "Northwest Business Center",
+                      "Xiaogan City, Huber province",
+                      "Italy",
+                      "Wuhan; Liaoning Province",
+                      "Shenzhen",
+                      "Kunshan City, Jiangsu Province",
+                      "Chibi City",
+                      "Hawaii, USA",
+                      "Aichi Prefecture",
+                      "Wuhan, China",
+                      "Shiyan City, Hubei; Qingyuan County, Guangdong",
+                      "Shapingba District, Chongqing City",
+                      "Yinchuan",
+                      "Jiangxi, Guangzhou",
+                      "Dongguan City, Guangdong Province",
+                      "Wuhan City",
+                      "Tianmen City, Hubei; Wuhan; Xuancheng City, Anhui",
+                      "Guiyang via Yunnan from Wuhan",
+                      "Guizhou, China",
+                      "Lijiawan then Bijie City",
+                      "mainland via the Lok Ma Chau border crossing",
+                      "Harbin",
+                      "Shenyang, Meihekou",
+                      "Meihekou City",
+                      "Dunhua City",
+                      "Qitaihe City, Heilongjiang Province",
+                      "France",
+                      "Baleares",
+                      "Emilia-Romagna",
+                      "Saitama",
+                      "Texas",
+                      "Wuhan, Guiyang, Zhaotong",
+                      "Huangshi, Wuhan, Guiyang",
+                      "Kundi, Hunan",
+                      "Shilin, Chuxiong, Dali",
+                      "Wuhan, Lijiang",
+                      "Wuhan, Yongzhou, Guizhou",
+                      "She drove from Wuhan via Guizhou to Yunnan and then to Luo Ping, Maitreya, Yuanyang, Jianshui, Longyang, Ruili, and other places",
+                      "He took a flight from Wuhan to Lijiang with his family on January 22 and a train from Lijiang to Dali on the 24th",
+                      "Macau, mainland China",
+                      "England",
+                      "Wuhan City, China",
+                      "Contamines-Montjoie chalet",
+                      "Auvergne-Rhone-Alpes",
+                      "Wuhan, Xiaogan City,Hengyang",
+                      "Gao'an City Jiangxi",
+                      "Qom, Iran",
+                      "Beirut",
+                      "Iran",
+                      "Sapporo",
+                      "Indonesia",
+                      "Wuhan; Nanning",
+                      "Yichang City, Hubei Province",
+                      "Chengdu",
+                      "Milan",
+                      "Southern Finland",
+                      "Catalonia",
+                      "Lombardy Italy",
+                      "Milan, Italy",
+                      "Valencian Community",
+                      "Sindh",
+                      "Macedonia",
+                      "Herat",
+                      "No recent travel",
+                      "Baden-Wuerttemberg",
+                      "Lombardy, Italy",
+                      "Grand Est",
+                      "Ticino",
+                      "Gorj",
+                      "Northern Ireland",
+                      "Kirkuk",
+                      "Iran; returned to Iran",
+                      "Najaf",
+                      "Nonthaburi",
+                      "Hokkaido, Japan",
+                      "Lagos",
+                      "Castilla y Leon",
+                      "Castiglione d'Adda, Lombardy",
+                      "Liguria",
+                      "Codogno",
+                      "Puglia",
+                      "Milan; went to hospital on 25.02.2020 but was not hospitalized",
+                      "Campania",
+                      "Brianza, Italy",
+                      "Abruzzo",
+                      "Milan; not hospitalized",
+                      "Verona, Italy",
+                      "Aargau",
+                      "#192",
+                      "Kanagawa",
+                      "#193",
+                      "#194 return to home after disembarking the cruise ship Diamond Princess",
+                      "Shizuoka",
+                      "#195/Hokkaido 55",
+                      "#196/Hokkaido 56",
+                      "#197/Hokkaido 57",
+                      "#198/Hokkaido 58",
+                      "#199/Hokkaido 59",
+                      "#200/Hokkaido 60",
+                      "#201/Hokkaido 61",
+                      "#202/Hokkaido 62",
+                      "#203/Hokkaido 63",
+                      "#204/Hokkaido 64",
+                      "#205/Hokkaido 65",
+                      "#206/Hokkaido 66",
+                      "asymptomatic carrier",
+                      "Ishikawa",
+                      "#207",
+                      "#208",
+                      "#209",
+                      "Madrid, Spain",
+                      "Guayas"
+                    ],
+                    "size": [
+                      15,
+                      7,
+                      0,
+                      0,
+                      4,
+                      3,
+                      0,
+                      0,
+                      6,
+                      1,
+                      3,
+                      0,
+                      2,
+                      5,
+                      0,
+                      0,
+                      0,
+                      1,
+                      3,
+                      0,
+                      1,
+                      0,
+                      2,
+                      1,
+                      3,
+                      0,
+                      8,
+                      1,
+                      0,
+                      1,
+                      0,
+                      3,
+                      0,
+                      0,
+                      2,
+                      0,
+                      6,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      2,
+                      2,
+                      2,
+                      2,
+                      5,
+                      5,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      6,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      6,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      3,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      4,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      1,
+                      1,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      2,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      1,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      1,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0,
+                      0
+                    ]
+                  },
+                  "selected": { "id": "4806" },
+                  "selection_policy": { "id": "4807" }
+                },
+                "id": "4774",
+                "type": "ColumnDataSource"
+              },
+              {
+                "attributes": { "overlay": { "id": "5067" } },
+                "id": "5030",
+                "type": "BoxZoomTool"
+              },
+              { "attributes": {}, "id": "4796", "type": "NodesOnly" },
+              {
+                "attributes": {
+                  "fill_color": { "field": "color" },
+                  "name": "name",
+                  "size": { "field": "size", "units": "screen" }
+                },
+                "id": "4782",
+                "type": "Circle"
+              },
+              {
+                "attributes": {
+                  "edge_renderer": { "id": "4779" },
+                  "inspection_policy": { "id": "4796" },
+                  "layout_provider": { "id": "4781" },
+                  "node_renderer": { "id": "4775" },
+                  "selection_policy": { "id": "4797" }
+                },
+                "id": "4772",
+                "type": "GraphRenderer"
+              },
+              { "attributes": {}, "id": "4792", "type": "LinearScale" },
+              {
+                "attributes": { "end": 1.1, "start": -1.1 },
+                "id": "4767",
+                "type": "Range1d"
+              },
+              {
+                "attributes": {
+                  "bottom_units": "screen",
+                  "fill_alpha": 0.5,
+                  "fill_color": "lightgrey",
+                  "left_units": "screen",
+                  "level": "overlay",
+                  "line_alpha": 1.0,
+                  "line_color": "black",
+                  "line_dash": [4, 4],
+                  "line_width": 2,
+                  "render_mode": "css",
+                  "right_units": "screen",
+                  "top_units": "screen"
+                },
+                "id": "5067",
+                "type": "BoxAnnotation"
+              },
+              { "attributes": {}, "id": "5031", "type": "ResetTool" },
+              {
+                "attributes": { "source": { "id": "4774" } },
+                "id": "4776",
+                "type": "CDSView"
+              },
+              { "attributes": {}, "id": "4807", "type": "UnionRenderers" },
+              { "attributes": {}, "id": "4795", "type": "LinearScale" },
+              {
+                "attributes": { "text": "Coronavirus network" },
+                "id": "4771",
+                "type": "Title"
+              },
+              {
+                "attributes": { "source": { "id": "4778" } },
+                "id": "4780",
+                "type": "CDSView"
+              }
+            ],
+            "root_ids": ["4768"]
+          },
+          "title": "Bokeh Application",
+          "version": "2.0.0"
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      (function() {
+        var fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+                var docs_json = document.getElementById("5341").textContent;
+                var render_items = [
+                  {
+                    docid: "6e34aa68-657d-4a34-bac8-eaa7e6559563",
+                    root_ids: ["4768"],
+                    roots: { "4768": "846d7960-fb9e-436a-ae41-495cb88ef7b7" }
+                  }
+                ];
+                root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                var attempts = 0;
+                var timer = setInterval(
+                  function(root) {
+                    if (root.Bokeh !== undefined) {
+                      clearInterval(timer);
+                      embed_document(root);
+                    } else {
+                      attempts++;
+                      if (attempts > 100) {
+                        clearInterval(timer);
+                        console.log(
+                          "Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing"
+                        );
+                      }
+                    }
+                  },
+                  10,
+                  root
+                );
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+
+    <script type="text/javascript">
+      $("#switch").click(function() {
+        if ($("#fullpage").hasClass("night")) {
+          $("#fullpage").removeClass("night");
+          $("#switch").removeClass("switched");
+        } else {
+          $("#fullpage").addClass("night");
+          $("#switch").addClass("switched");
+        }
+      });
+    </script>
+    <script>
+      function openTab(evt, tabName) {
+        var i, z, x, tablinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " is-active",
+            ""
+          );
+        }
+        z = document.getElementById(tabName);
+        z.style.display = "block";
+        evt.currentTarget.className += " is-active";
+      }
+    </script>
+  </body>
+</html>

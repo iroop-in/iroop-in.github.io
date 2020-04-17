@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Roop Krrish</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+
+    <!-- FONTS  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/uwu6fni.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      id="changingFavicon"
+      type="image/png"
+      href="https://img.icons8.com/color/48/000000/captain-america.png"
+    />
+
+    <!-- JS -->
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(window).focus(function() {
+        $("#changingFavicon").attr(
+          "href",
+          "https://img.icons8.com/color/48/000000/captain-america.png"
+        );
+        document.title = "Roop Krrish";
+      });
+      $(window).blur(function() {
+        $("#changingFavicon").attr(
+          "href",
+          "https://img.icons8.com/color/48/000000/hulk.png"
+        );
+        document.title = "Aah! Come Back.";
+      });
+    </script>
+
+    <style>
+      .tabs li.is-active a {
+        border-bottom-color: #f7cac9;
+        color: #f7cac9;
+      }
+      .breadcrumb li.is-active a {
+        color: white;
+      }
+
+      .breadcrumb a {
+        color: #f7cac9;
+      }
+
+      .navbar-item {
+        font-size: large;
+      }
+
+      .cardbg {
+        width: 100%;
+        height: 2050%;
+
+        background: #272727;
+        background-repeat: repeat;
+      }
+
+      .gridify.tiny {
+        background-image: linear-gradient(
+            transparent 11px,
+            rgba(220, 220, 200, 0.1) 12px,
+            transparent 12px
+          ),
+          linear-gradient(
+            90deg,
+            transparent 11px,
+            rgba(220, 220, 200, 0.1) 12px,
+            transparent 12px
+          );
+        background-size: 100% 20px, 20px 100%;
+      }
+
+      .underlined {
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+        background-image: linear-gradient(to right, #56b8e6 0, #56b8e6 100%);
+        background-position: 0 1.2em;
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: background 0.5s;
+      }
+      .underlined:hover {
+        background-size: 100% 100%;
+      }
+      .underlined--thin {
+        background-image: linear-gradient(to right, black 0, black 100%);
+      }
+      .underlined--thick {
+        background-position: 0 -0.1em;
+      }
+      .underlined--offset {
+        background-position: 0 0.2em;
+        box-shadow: inset 0 -0.5em 0 0 white;
+      }
+      .underlined--gradient {
+        background-position: 0 -0.1em;
+        background-image: linear-gradient(to right, yellow 0, lightgreen 100%);
+      }
+      .underlined--reverse {
+        background-position: 100% -0.1em;
+        transition: background 1s;
+        background-image: linear-gradient(to right, yellow 0, yellow 100%);
+      }
+
+      .column.is-2 {
+        width: 9%;
+      }
+      .is-paddingless-horizontal {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .is-paddingless-horizontal-new {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 150px;
+      }
+      .is-paddingless-horizontal-new1 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+      }
+      .is-paddingless-horizontal-vertical {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: [xl-start] 1fr 2rem [md-start] minmax(0, 624px) [md-end] 2rem 1fr [xl-end];
+      }
+
+      .grid-1 {
+        display: grid;
+        grid-template-columns: [xl-start] 0fr 1.5rem [md-start] minmax(0, 624px) [md-end] 1.5rem 1fr [xl-end];
+      }
+
+      .grid * {
+        grid-column: md;
+      }
+      .grid-xl {
+        grid-column: xl;
+      }
+
+      .grid-1 * {
+        grid-column: md;
+      }
+      .grid-1-xl {
+        grid-column: xl;
+      }
+
+      .spec {
+        display: block;
+        position: relative;
+        transform: translate3d(0, 0, 0);
+        transition: all 400ms;
+        margin: 0 0 48px;
+        cursor: pointer;
+      }
+
+      .spec:hover::after {
+        content: "→";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        font-size: 4.4em;
+        opacity: 0;
+        transform: translate3d(24px, 0, 0);
+        transition: all 400ms;
+        color: white;
+        -webkit-animation: fadein 4s linear backwards;
+        animation: fadein 4s linear forwards;
+      }
+
+      @-webkit-keyframes fadein {
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadein {
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .spec1 {
+        position: relative;
+        display: inline-block;
+      }
+
+      .spec1:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #f7cac9;
+        /* transform: translate3d(0, 0, 0) scale(0, 1);
+          transform-origin: center left;
+          transition: all 400ms; */
+        z-index: -1;
+      }
+
+      #project-list .project-list-item--info {
+        font-family: "Inconsolata", monospace;
+      }
+
+      #project-list .project-list-item--coming-soon {
+        pointer-events: none;
+      }
+
+      #project-list
+        .project-list-item--coming-soon
+        .project-list-item--title:after {
+        background: rgba(238, 238, 238, 0.5);
+        left: calc(-1 * 8px);
+        right: calc(-1 * 8px);
+        transform: scale(1, 1);
+      }
+
+      .spec:focus {
+        outline-color: rgba(0, 0, 0, 0.1);
+        outline-width: 1px;
+        outline-offset: -3px;
+      }
+
+      .navbar-menu {
+        background-color: none;
+      }
+
+      .hero-body {
+        padding-top: 30px;
+      }
+
+      .center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .card {
+        box-shadow: none;
+      }
+
+      html,
+      body {
+        height: 100%;
+        font-family: "larsseitregular", "Karla", "Lora";
+        background-color: #272727;
+      }
+
+      h1 {
+        font-weight: 900;
+        color: white;
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        font-family: "larsseitregular", "Lora", sans-serif;
+        color: white;
+      }
+
+      p {
+        line-height: 1.5em;
+        font-size: 1.2em;
+      }
+
+      a,
+      a > span {
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        line-height: 24px;
+      }
+
+      a:before,
+      a:after,
+      a > span:before,
+      a > span:after {
+        content: "";
+        position: absolute;
+        transition: transform 0.5s ease;
+      }
+
+      .effect-1 {
+        padding-top: 10px;
+      }
+      .effect-1:before {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #0883a4;
+        transform: scaleX(0);
+      }
+      .effect-1:hover:before {
+        transform: scaleX(1);
+      }
+
+      .name {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bolder;
+        font-family: "larsseitregular", "Karla", "Lora";
+      }
+
+      .namesmall {
+        margin-top: 1.6rem;
+        font-size: 1rem;
+        color: white;
+        font-weight: bolder;
+        font-family: "larsseitregular", "Karla", "Lora";
+        text-decoration: underline;
+        text-decoration-color: #f7cac9;
+        text-decoration-thickness: 1.2rem;
+      }
+
+      .nameunder {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bolder;
+        text-decoration: underline;
+
+        font-family: "larsseitregular", "Karla", "Lora";
+      }
+
+      .name1 {
+        font-size: 1.2rem;
+        color: white;
+        font-weight: bolder;
+      }
+
+      .hero.is-medium .hero-body {
+        padding-top: 1.4rem;
+        padding-bottom: 0rem;
+      }
+
+      .tabs a {
+        padding-left: 0px;
+      }
+
+      .title.is-3 {
+        margin: 0;
+      }
+
+      .title.is-2 {
+        margin-bottom: 0;
+      }
+
+      .title.is-1 {
+        margin: 0;
+      }
+
+      .title.is-5 {
+        margin: 0;
+      }
+
+      .title.is-4 {
+        margin: 0;
+      }
+
+      .title {
+        max-width: 100%;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: rgba(255, 255, 255, 0.6);
+        font-family: "larsseitregular", "Karla", "Lora", sans-serif;
+      }
+
+      .title-1 {
+        max-width: 70%;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.5em;
+        color: white;
+        font-family: "Lora", "Karla", sans-serif;
+      }
+
+      .link-highlight {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        padding: 0px 7px;
+        transition: all 0.2s ease-in-out;
+        box-sizing: border-box;
+        text-decoration: none;
+        box-shadow: inset 0 -17px 0 #56b8e6;
+      }
+
+      .link-highlight:hover {
+        box-shadow: inset 0 -55px 0 0 rgb(25, 196, 226);
+        color: white;
+      }
+
+      .colis {
+        max-width: 100%;
+        padding-top: 1rem;
+      }
+
+      #palm {
+        background-image: url("india_palm.png");
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        background-position-y: -8rem;
+      }
+
+      button {
+        margin: 0;
+        padding: 8px 19px 0 16px;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        color: transparent;
+        position: relative;
+        overflow: hidden;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .column {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media (min-width: 768px and max-width: 1024px;) {
+        .navbar-menu {
+          background-color: none;
+        }
+
+        .center {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+        }
+
+        .colis {
+          max-width: 100%;
+          padding-top: 2rem;
+        }
+
+        .card {
+          box-shadow: none;
+        }
+
+        html,
+        body {
+          height: 100%;
+          font-family: "karla", sans-serif;
+        }
+
+        h1 {
+          font-family: "minion-pro-condensed-subhead", sans-serif;
+          font-weight: 900;
+          color: white;
+        }
+
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          font-family: "karla", sans-serif;
+          color: white;
+        }
+
+        .name {
+          margin-top: 1.5rem;
+          font-size: 1.2rem;
+          color: white;
+          font-weight: bolder;
+          font-family: "Karla", "Lora";
+        }
+
+        .name1 {
+          font-size: 1.2rem;
+          color: white;
+          font-weight: bolder;
+        }
+
+        .hero.is-medium .hero-body {
+          padding-top: 4rem;
+          padding-bottom: 0;
+        }
+
+        .title {
+          max-width: 100%;
+          font-size: 60px;
+          font-weight: 900;
+          color: white;
+          font-family: "minion-pro", "karla", sans-serif;
+        }
+
+        .navbar,
+        .nav-item,
+        .navbar-start,
+        .navbar-menu,
+        .navbar-end {
+          display: flex;
+          align-items: stretch;
+        }
+
+        .hero.is-medium .hero-body {
+          padding-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="cardbg gridify tiny">
+    <section class="hero is-backgroundwhite is-medium" id="fullpage">
+      <!-- Hero head: will stick at the top -->
+      <div
+        class="hero-head container grid"
+        style="padding-bottom: 0rem; max-width: 1024px; padding-right: 1rem ;"
+      >
+        <nav class="navbar is-transparent">
+          <div class="container">
+            <div id="navbarMenuHeroA" class="navbar-menu">
+              <div class="navbar-start">
+                <h2
+                  class="navbar-item is-active name"
+                  id="fullpage"
+                  id="introtext"
+                >
+                  Roopesh Krishna L
+                </h2>
+              </div>
+
+              <div class="navbar-end">
+                <a class="navbar-item namesmall" href="index.html">
+                  Work
+                </a>
+
+                <a href="about.html" class="navbar-item namesmall">
+                  About
+                </a>
+
+                <a class="navbar-item namesmall">
+                  Résumé
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Hero content: will be in the middle -->
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Selected Works</a></li>
+              <li
+                class="is-active"
+                style="color: white; background-color: null;"
+              >
+                <a href="#" aria-current="page">Chess game app</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="title is-1" style="font-size: 64px;">
+            <h1>Chess game app</h1>
+          </div>
+
+          <p class="title">
+            <span>"Play , Win, Learn through nurtr"</span>
+          </p>
+          <p
+            style="color: rgba(255,255,255, 0.6); font-weight: 600;  padding-top:10px;"
+            href="#"
+          >
+            Project Description
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body" style="padding-top : 0px;">
+        <div
+          class="container grid"
+          style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"
+        >
+          <div class="tabs is-medium">
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'design')">
+                <a>Challenge</a>
+              </li>
+              <li class="tab" onclick="openTab(event,'network')">
+                <a>Role</a>
+              </li>
+              <li class="tab" onclick="openTab(event,'skills')">
+                <a>Company & Year</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-body" style="padding-top: 0px;">
+        <div
+          class="container grid"
+          style="padding: 0.5rem 0.75rem; padding-top: -100px;max-width: 1024px; padding-left: 1.2rem;"
+        >
+          <div class="columns">
+            <div class="column is-11" href="#">
+              <div id="design" class="content-tab">
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    Design an interface for users to play chess online with
+                    people around the world and with friends.
+                  </h1>
+                </div>
+              </div>
+
+              <div id="network" class="content-tab" style="display: none;">
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    UX Design
+                  </h1>
+                </div>
+                <div>
+                  <h1 class="title is-5" style="font-weight: 400; color:white;">
+                    User Interface
+                  </h1>
+                </div>
+              </div>
+
+              <div id="skills" class="content-tab" style="display: none;">
+                <h1 class="title is-5" style="font-weight: 400; color:white;">
+                  nurtr.com ( Thought Roots India Pvt Ltd )
+                </h1>
+                <h1 class="title is-5" style="font-weight: 400;">
+                  February - March 2020
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-body ">
+        <div
+          class="container grid"
+          style="max-width: 1024px;padding-left: 0.4rem; "
+        >
+          <div
+            class="title is-2"
+            style=" padding-top: 20px; padding-bottom: 17px;"
+          >
+            <h1>Promo Video</h1>
+           
+          </div>
+          <video width="320" height="240" controls >
+            <source src="img/nurtr-chess-app-promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+          
+        </div>
+      </div>
+      </div>
+
+
+
+      
+    </section>
+
+    <script type="text/javascript">
+      $("#switch").click(function() {
+        if ($("#fullpage").hasClass("night")) {
+          $("#fullpage").removeClass("night");
+          $("#switch").removeClass("switched");
+        } else {
+          $("#fullpage").addClass("night");
+          $("#switch").addClass("switched");
+        }
+      });
+    </script>
+    <script>
+      function openTab(evt, tabName) {
+        var i, z, x, tablinks;
+        x = document.getElementsByClassName("content-tab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " is-active",
+            ""
+          );
+        }
+        z = document.getElementById(tabName);
+        z.style.display = "block";
+        evt.currentTarget.className += " is-active";
+      }
+    </script>
+  </body>
+</html>
